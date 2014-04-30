@@ -138,4 +138,7 @@
     <string name="allow_signature_fake">Allow signature spoofing</string>
     <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string> 
 
+    <!-- Bluetooth accept all files -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
+
 </resources>
