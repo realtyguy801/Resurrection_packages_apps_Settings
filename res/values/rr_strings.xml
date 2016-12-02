@@ -300,6 +300,10 @@
     <!-- Volume dialog timeout -->
     <string name="volume_dialog_timeout_title">Volume dialog timeout</string>
 
+    <!-- Themes -->
+    <string name="themes_title">Themes</string>
+    <string name="themes_dashboard_summary">Manage your themes</string>
+
     <!-- Toast Icons -->
     <string name="toast_icon_title">Toast icon</string>
     <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
