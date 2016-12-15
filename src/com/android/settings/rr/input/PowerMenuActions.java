@@ -25,7 +25,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.CheckBoxPreference;
+import android.support.v7.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 
@@ -49,19 +49,19 @@ public class PowerMenuActions extends SettingsPreferenceFragment  implements OnP
 
     private static final String POWER_MENU_ONTHEGO_ENABLED = "power_menu_onthego_enabled";
 
-    private CheckBoxPreference mRebootPref;
-    private CheckBoxPreference mScreenshotPref;
-    private CheckBoxPreference mAirplanePref;
-    private CheckBoxPreference mUsersPref;
-    private CheckBoxPreference mSettingsPref;
-    private CheckBoxPreference mLockdownPref;
-    private CheckBoxPreference mBugReportPref;
-    private CheckBoxPreference mSilentPref;
-    private CheckBoxPreference mVoiceAssistPref;
-    private CheckBoxPreference mAssistPref;
-	private CheckBoxPreference mScreenrecordPref;
-	private CheckBoxPreference mFlashlightPref;
-	private CheckBoxPreference mOnTheGoPowerMenu;
+    private SwitchPreference mRebootPref;
+    private SwitchPreference mScreenshotPref;
+    private SwitchPreference mAirplanePref;
+    private SwitchPreference mUsersPref;
+    private SwitchPreference mSettingsPref;
+    private SwitchPreference mLockdownPref;
+    private SwitchPreference mBugReportPref;
+    private SwitchPreference mSilentPref;
+    private SwitchPreference mVoiceAssistPref;
+    private SwitchPreference mAssistPref;
+    private SwitchPreference mScreenrecordPref;
+    private SwitchPreference mFlashlightPref;
+    private SwitchPreference mOnTheGoPowerMenu;
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
@@ -87,32 +87,32 @@ public class PowerMenuActions extends SettingsPreferenceFragment  implements OnP
             }
 
             if (action.equals(GLOBAL_ACTION_KEY_RESTART)) {
-                mRebootPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_RESTART);
+                mRebootPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_RESTART);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENSHOT)) {
-                mScreenshotPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
+                mScreenshotPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
             } else if (action.equals(GLOBAL_ACTION_KEY_AIRPLANE)) {
-                mAirplanePref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_AIRPLANE);
+                mAirplanePref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_AIRPLANE);
             } else if (action.equals(GLOBAL_ACTION_KEY_USERS)) {
-                mUsersPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_USERS);
+                mUsersPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_USERS);
             } else if (action.equals(GLOBAL_ACTION_KEY_SETTINGS)) {
-                mSettingsPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SETTINGS);
+                mSettingsPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SETTINGS);
             } else if (action.equals(GLOBAL_ACTION_KEY_LOCKDOWN)) {
-                mLockdownPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_LOCKDOWN);
+                mLockdownPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_LOCKDOWN);
             } else if (action.equals(GLOBAL_ACTION_KEY_BUGREPORT)) {
-                mBugReportPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_BUGREPORT);
+                mBugReportPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_BUGREPORT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SILENT)) {
-                mSilentPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SILENT);
+                mSilentPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SILENT);
             } else if (action.equals(GLOBAL_ACTION_KEY_VOICEASSIST)) {
-                mSilentPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_VOICEASSIST);
+                mSilentPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_VOICEASSIST);
             } else if (action.equals(GLOBAL_ACTION_KEY_ASSIST)) {
-                mSilentPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_ASSIST);
+                mSilentPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_ASSIST);
             }  else if (action.equals(GLOBAL_ACTION_KEY_TORCH)) {
-                mFlashlightPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_TORCH);
+                mFlashlightPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_TORCH);
 			} else if (action.equals(GLOBAL_ACTION_KEY_SCREENRECORD)) {
-                mScreenrecordPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SCREENRECORD);
+                mScreenrecordPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENRECORD);
 			}
 
-        mOnTheGoPowerMenu = (CheckBoxPreference) findPreference(POWER_MENU_ONTHEGO_ENABLED);
+        mOnTheGoPowerMenu = (SwitchPreference) findPreference(POWER_MENU_ONTHEGO_ENABLED);
         mOnTheGoPowerMenu.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWER_MENU_ONTHEGO_ENABLED, 0) == 1));
         mOnTheGoPowerMenu.setOnPreferenceChangeListener(this);
