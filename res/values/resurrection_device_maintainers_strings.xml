@@ -154,7 +154,7 @@
 	<string name="device_a7_summary">SM-A700FD\nMaintainer -</string>
 	
 	<string name="device_i9305">Galaxy S III LTE</string>
-	<string name="device_i9305_summary">GT-I9305 \nMaintainer -</string>
+	<string name="device_i9305_summary">GT-I9305 \nMaintainer - rodman01</string>
 
 	<string name="device_I897">Captivate</string>
 	<string name="device_I897_summary">I897 \nMaintainer - </string>
@@ -427,7 +427,7 @@
 	<string name="device_zenfone5_summary">A500CG \nMaintainer -</string>
 
 	<string name="device_ferrari">Xiaomi MI 4i</string>
-	<string name="device_ferrari_summary">ferrari\nMaintainer -</string>
+	<string name="device_ferrari_summary">ferrari\nMaintainer - haikalizz</string>
 	
 	<string name="device_libra">Xiaomi MI 4c/s</string>
 	<string name="device_libra_summary">libra\nMaintainer - AndropaX </string>
@@ -476,5 +476,8 @@
 
 	<string name="device_paella">BQ Aquaris X5</string>
 	<string name="device_paella_summary">Paella\nMaintainer - Darkmet98</string>
+	
+	<string name="device_onyx">OnePlus X</string>
+	<string name="device_onyx_summary">Onyx \nMaintainer - Sanjay Varun</string>
 
 </resources>
