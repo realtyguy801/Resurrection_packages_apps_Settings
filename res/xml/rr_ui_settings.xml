@@ -38,6 +38,7 @@
             android:key="rr_blur"
             android:fragment="com.android.settings.rr.BlurPersonalizations"
             android:title="@string/settings_blur_cat" 
+            android:summary="@string/settings_blur_sum"
             android:icon="@drawable/rr_blur_icon"/>
         
         <PreferenceScreen
