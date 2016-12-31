@@ -402,4 +402,7 @@
     <string name="crypt_keeper_replace_password_title">Replace encryption password</string>
     <string name="crypt_keeper_replace_password_summary">Remove the separate encryption password</string>
 
+    <!-- Wake on plug -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Wake screen when connecting or disconnecting a power source</string>
 </resources>
