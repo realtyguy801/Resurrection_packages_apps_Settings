@@ -15,4 +15,7 @@
 <resources>
 
     <color name="selectable_card_background_grey">@color/selectable_card_background</color>
+
+    <!-- External Icon Tint -->
+    <color name="external_tile_icon_tint_color">?android:attr/colorAccent</color>
 </resources>
