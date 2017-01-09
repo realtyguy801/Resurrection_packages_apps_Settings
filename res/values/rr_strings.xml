@@ -2124,4 +2124,9 @@
     <string name="show_settings_drawer_enabled">Settings drawer enabled</string>
     <string name="show_settings_drawer_disabled">Settings drawer disabled</string>
 
+    <!-- Custom LCD density -->
+    <string name="custom_density_settings">Custom LCD density</string>
+    <string name="custom_density_summary" translatable="false">
+	<xliff:g name="count" example="614">%d</xliff:g> dpi</string>
+
 </resources>
