@@ -130,23 +130,22 @@ public class HeaderSettings extends SettingsPreferenceFragment implements
 
 
     public boolean onPreferenceChange(Preference preference, Object objValue){
-            ContentResolver resolver = getActivity().getContentResolver();
-            int intValue;
-            int index;
-            if (preference == mDaylightHeaderPack) {
-                String value = (String) objValue;
-                Settings.System.putString(resolver,
-                        Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
-                int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
-                mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
-                return true;
-            } else if (preference == mHeaderShadow) {
-                Integer headerShadow = (Integer) objValue;
-                int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
-                Settings.System.putInt(resolver,
-                        Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
-                return true;
-            }
+        ContentResolver resolver = getActivity().getContentResolver();
+        int intValue;
+        int index;
+        if (preference == mDaylightHeaderPack) {
+            String value = (String) objValue;
+            Settings.System.putString(resolver,
+                    Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
+            int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
+            mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
+            return true;
+        } else if (preference == mHeaderShadow) {
+            Integer headerShadow = (Integer) objValue;
+            int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+            return true;
         } else if (preference == mHeaderProvider) {
             String value = (String) objValue;
             Settings.System.putString(getContentResolver(),
@@ -154,6 +153,8 @@ public class HeaderSettings extends SettingsPreferenceFragment implements
             int valueIndex = mHeaderProvider.findIndexOfValue(value);
             mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
             mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
+            return true;
+        }
      return false;
     }
 
