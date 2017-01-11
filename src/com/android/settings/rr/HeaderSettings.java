@@ -55,9 +55,14 @@ public class HeaderSettings extends SettingsPreferenceFragment implements
     private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
     private static final String DEFAULT_HEADER_PACKAGE = "com.android.systemui";
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
+    private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
+    private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
 
     private ListPreference mDaylightHeaderPack;
     private SeekBarPreference mHeaderShadow;
+    private ListPreference mHeaderProvider;
+    private String mDaylightHeaderProvider;
+    private PreferenceScreen mHeaderBrowse;
 
     @Override
     protected int getMetricsCategory() {
@@ -68,43 +73,88 @@ public class HeaderSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-            Activity activity = getActivity();
-            final ContentResolver resolver = getActivity().getContentResolver();
+        Activity activity = getActivity();
+        final ContentResolver resolver = getActivity().getContentResolver();
 
-            int defaultValue;
+        int defaultValue;
 
-            addPreferencesFromResource(R.xml.rr_header_items);
+        addPreferencesFromResource(R.xml.rr_header_items);
+ 
+        String settingHeaderPackage = Settings.System.getString(resolver,
+                Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK);
+        if (settingHeaderPackage == null) {
+            settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+        }
+        mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
 
-            String settingHeaderPackage = Settings.System.getString(resolver,
-                    Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK);
-            if (settingHeaderPackage == null) {
-                settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
-            }
-            mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
+        List<String> entries = new ArrayList<String>();
+        List<String> values = new ArrayList<String>();
+        getAvailableHeaderPacks(entries, values);
+        mDaylightHeaderPack.setEntries(entries.toArray(new String[entries.size()]));
+        mDaylightHeaderPack.setEntryValues(values.toArray(new String[values.size()]));
 
-            List<String> entries = new ArrayList<String>();
-            List<String> values = new ArrayList<String>();
-            getAvailableHeaderPacks(entries, values);
-            mDaylightHeaderPack.setEntries(entries.toArray(new String[entries.size()]));
-            mDaylightHeaderPack.setEntryValues(values.toArray(new String[values.size()]));
+        int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+        if (valueIndex == -1) {
+            // no longer found
+            settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+            Settings.System.putString(resolver,
+                    Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, settingHeaderPackage);
+            valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+        }
+        mDaylightHeaderPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+        mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
+        mDaylightHeaderPack.setOnPreferenceChangeListener(this);
 
-            int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
-            if (valueIndex == -1) {
-                // no longer found
-                settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+        mHeaderShadow = (SeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
+        final int headerShadow = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 80);
+        mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
+        mHeaderShadow.setOnPreferenceChangeListener(this);
+
+        mDaylightHeaderProvider = getResources().getString(R.string.daylight_header_provider);
+        String providerName = Settings.System.getString(getContentResolver(),
+                Settings.System.STATUS_BAR_CUSTOM_HEADER_PROVIDER);
+        if (providerName == null) {
+            providerName = mDaylightHeaderProvider;
+        }
+        mHeaderProvider = (ListPreference) findPreference(CUSTOM_HEADER_PROVIDER);
+        valueIndex = mHeaderProvider.findIndexOfValue(providerName);
+        mHeaderProvider.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+        mHeaderProvider.setSummary(mHeaderProvider.getEntry());
+        mHeaderProvider.setOnPreferenceChangeListener(this);
+        mDaylightHeaderPack.setEnabled(providerName.equals(mDaylightHeaderProvider));
+
+        mHeaderBrowse = (PreferenceScreen) findPreference(CUSTOM_HEADER_BROWSE);
+        mHeaderBrowse.setEnabled(isBrowseHeaderAvailable());
+    }
+
+
+    public boolean onPreferenceChange(Preference preference, Object objValue){
+            ContentResolver resolver = getActivity().getContentResolver();
+            int intValue;
+            int index;
+            if (preference == mDaylightHeaderPack) {
+                String value = (String) objValue;
                 Settings.System.putString(resolver,
-                        Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, settingHeaderPackage);
-                valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+                        Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
+                int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
+                mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
+                return true;
+            } else if (preference == mHeaderShadow) {
+                Integer headerShadow = (Integer) objValue;
+                int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
+                Settings.System.putInt(resolver,
+                        Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+                return true;
             }
-            mDaylightHeaderPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
-            mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
-            mDaylightHeaderPack.setOnPreferenceChangeListener(this);
-
-            mHeaderShadow = (SeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
-            final int headerShadow = Settings.System.getInt(resolver,
-                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 80);
-            mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
-            mHeaderShadow.setOnPreferenceChangeListener(this);
+        } else if (preference == mHeaderProvider) {
+            String value = (String) objValue;
+            Settings.System.putString(getContentResolver(),
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_PROVIDER, value);
+            int valueIndex = mHeaderProvider.findIndexOfValue(value);
+            mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
+            mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
+     return false;
     }
 
   private void getAvailableHeaderPacks(List<String> entries, List<String> values) {
@@ -140,24 +190,10 @@ public class HeaderSettings extends SettingsPreferenceFragment implements
         }
     }
 
-    public boolean onPreferenceChange(Preference preference, Object objValue){
-            ContentResolver resolver = getActivity().getContentResolver();
-            int intValue;
-            int index;
-            if (preference == mDaylightHeaderPack) {
-                String value = (String) objValue;
-                Settings.System.putString(resolver,
-                        Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
-                int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
-                mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
-                return true;
-            } else if (preference == mHeaderShadow) {
-                Integer headerShadow = (Integer) objValue;
-                int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
-                Settings.System.putInt(resolver,
-                        Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
-                return true;
-            }
-     return false;
+    private boolean isBrowseHeaderAvailable() {
+        PackageManager pm = getPackageManager();
+        Intent browse = new Intent();
+        browse.setClassName("org.omnirom.omnistyle", "org.omnirom.omnistyle.BrowseHeaderActivity");
+        return pm.resolveActivity(browse, 0) != null;
     }
 }
