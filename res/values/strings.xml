@@ -7846,7 +7846,7 @@
     <string name="double_twist_for_camera_mode_title">Flip camera</string>
 
     <!-- Summary text for double twist for camera mode  [CHAR LIMIT=160]-->
-    <string name="double_twist_for_camera_mode_summary"></string>
+    <string name="double_twist_for_camera_mode_summary">To switch in and out of selfie mode in Google Camera, double-twist when you’re in the app</string>
 
     <!-- Title text for ambient display double tap (phone) [CHAR LIMIT=60]-->
     <string name="ambient_display_title" product="default">Double-tap to check phone</string>
