@@ -2178,6 +2178,7 @@
     <string name="task_manager_kill_button_2">Text</string>
     <string name="task_manager_kill_button_3">Classic</string>
 
+<<<<<<< HEAD
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock blocker</string>
     <string name="wakelock_blocker_summary">Block system wakelocks</string>

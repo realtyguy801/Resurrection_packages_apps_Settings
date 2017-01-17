@@ -156,4 +156,8 @@
     <string name="weather_show_condition_title">Show condition text</string>
     <string name="weather_show_condition_summary">Enable to show the condition text</string>
 
+    <!-- Extra Info -->
+    <string name="lsextrainfo">Extra information</string>
+    <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
+
 </resources>

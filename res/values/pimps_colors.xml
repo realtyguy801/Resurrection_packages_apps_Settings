@@ -21,4 +21,10 @@
 
     <!-- Gesture settings switchbar background -->
     <color name="gestures_switchbar_color">@android:color/white</color>
+
+    <!-- Extra info -->
+    <color name="extrainfo_separator">#ffffffff</color>
+    <color name="extrainfo_cat_background">#ff263238</color>
+    <color name="extrainfo_cat_text">#ffffffff</color>
+    <color name="extrainfo_value_text">#ff263238</color>
 </resources>
