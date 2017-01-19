@@ -66,12 +66,17 @@
     <string name="maintainer_categorie_title">Official Devices</string>
     <string name="sourcebase_title">Source Base</string>
     <string name="title_about">About resurrection</string>
-    <string name="dev_categorie_title">Developer &amp; Maintainer</string>
+    <string name="dev_categorie_title">Developer</string>
     <string name="rr_lockscreen_title">Lock screen</string>
     <string name="rr_ls_gestures">Gestures</string>
     <string name="rr_ls_ui">Lock UI</string>
     <string name="rr_ls_security">Security</string>
     <string name="updater_title">Updates</string>
+
+    <string name="altan_summary">● Founder \n● Head developer \n● UX designer \n● Maintainer</string>
+    <string name="varun_summary">● Head developer \n● Maintainer</string>
+    <string name="akhil_summary">● Developer \n● Maintainer \n● Javascript master</string>
+    <string name="brian_summary">● Developer \n● Maintainer</string>
 
     <string name="device_maintainers_title">Devices and maintainers</string>
     <string name="device_maintainers_title_summary">List of devices and their Resurrection ROM maintainers</string>
@@ -80,6 +85,7 @@
  
     <!-- The Drill -->
     <string name="rr_drill_title">The drill</string>
+    <string name="drill_summary">Logcat or GTFO</string>
 
     <!-- RR Feature lists-->
     <string name="features_title">ROM Feature list</string>
