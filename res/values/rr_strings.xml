@@ -32,8 +32,8 @@
     <string name="restart_systemui">Restart UI</string>
 
     <!-- About RR -->
-    <string name="about_rr_settings">About the R.R.O.S</string>
-    <string name="about_rr">About the R.R.O.S</string>
+    <string name="about_rr_settings">About</string>
+    <string name="about_rr">About</string>
     <string name="about_rr_summary">@null</string>
     <string name="about_r0m_summary">Everything about the Resurrection Remix OS</string>
     <string name="rr_donate">Donate to development</string>
@@ -56,7 +56,7 @@
     <string name="rr_google_plus_title">Google+</string>
     <string name="rr_google_plus_summary">Google+ community</string>
     <string name="maintainer_categorie_title">Official Devices</string>
-    <string name="title_about">About the R.R.O.S</string>
+    <string name="title_about">About</string>
     <string name="dev_categorie_title">Dev Tag</string>
     <string name="rr_lockscreen_title">Lock screen</string>
     <string name="rr_ls_gestures">Gestures</string>
@@ -80,7 +80,7 @@
 
     <!-- RR Feature lists-->
     <string name="features_title">Features</string>
-    <string name="features_title_summary">View available R.R.O.S features</string>
+    <string name="features_title_summary">View available features</string>
     <string name="features_loading">Loading list ...</string>
     <string name="features_error">Unable to load list</string>
     <string name="features_unknown">Unknown</string>
@@ -90,7 +90,7 @@
     <string name="rr_power_title">Power dialog</string>
 
     <!-- Share RR ROM -->
-    <string name="share_rr">Share R.R.O.S</string>
+    <string name="share_rr">Share</string>
     <string name="share_rr_summary">Let people know you use Resurrection Remix OS</string>
     <string name="share_message">Try Resurrection Remix OS! https://plus.google.com/communities/109352646351468373340</string>
     <string name="share_chooser_title">Share Resurrection Remix OS via..</string>
