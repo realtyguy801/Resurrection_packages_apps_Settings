@@ -118,7 +118,7 @@
 
     <string name="rr_category_title">Personalization</string>
     <string name="rr_title">Configurations</string>
-    <string name="rr_title_summary">#Getresurrected</string>
+    <string name="rr_title_summary">Ultimate customizations</string>
     <string name="rr_config_main_title">RR-OS</string>
     <string name="rr_ota_fab_title">Show floating button</string>
     <string name="rr_ota_fab_summary">Enable/disable to show/hide floating button in configurations. Enter/exit once when switch used</string>
@@ -2178,5 +2178,11 @@
     <!--One handed mode -->
     <string name="one_handed_mode_title">One handed mode</string>
     <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
+
+    <!-- SystemUI restart prompt -->
+    <string name="systemui_restart_title">WARNING</string>
+    <string name="systemui_restart_message">SystemUI will be restarted so that selected setting can be applied correctly.</string>
+    <string name="restarting_ui">Restarting UI\u2026</string>
+    <string name="print_restart">Restart</string>
 
 </resources>
