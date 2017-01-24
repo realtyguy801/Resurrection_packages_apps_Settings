@@ -52,7 +52,4 @@
     <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
     <string name="media_scanner_on_boot_disabled">Do not scan media</string>
 
-    <string name="fling_lavalamp_color_from">Lava Lamp start color</string>
-    <string name="fling_lavalamp_color_to">Lava Lamp end color</string>
-
 </resources>

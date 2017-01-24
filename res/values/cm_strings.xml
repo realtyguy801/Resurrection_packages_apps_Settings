@@ -419,7 +419,7 @@
     <string name="data_usage_app_restrict_all_wifi_summary">Prevent any use of data access via Wi\u2011Fi networks</string>
 
     <!-- Volume link notification -->
-    <string name="link_volume_option_title">Link ringtone &amp; notification volumes</string>
+    <string name="volume_link_notification_title">Link ringtone &amp; notification volumes</string>
 
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Launch music player</string>
