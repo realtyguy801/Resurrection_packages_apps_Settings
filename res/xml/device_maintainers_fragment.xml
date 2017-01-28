@@ -230,6 +230,19 @@
   </PreferenceCategory> 
         
     <PreferenceCategory
+        android:id="@+id/device_category_lenovo"
+        android:title="@string/device_category_lenovo_title" >
+        
+    <Preference
+        android:id="@+id/device_A6020"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_A6020_summary"
+        android:selectable="false" 
+        android:title="@string/device_A6020" />
+                       
+  </PreferenceCategory> 
+        
+    <PreferenceCategory
         android:id="@+id/device_category_samsung"
         android:title="@string/device_category_samsung_title" >
 
@@ -762,6 +775,18 @@
         android:selectable="false"
         android:title="@string/device_shamrock" />
 	</PreferenceCategory>
+
+ <PreferenceCategory
+        android:id="@+id/device_category_leeco"
+        android:title="@string/device_category_leeco_title" >
+
+    <Preference
+        android:id="@+id/device_s2"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_s2_summary"
+        android:selectable="false"
+        android:title="@string/device_s2" />
+  </PreferenceCategory>
 	
   <PreferenceCategory
 	android:id="@+id/device_category_oppo"
