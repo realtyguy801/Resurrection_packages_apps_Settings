@@ -1175,9 +1175,9 @@
     <string-array name="weather_condition_icon_entries">
         <item>@string/weather_condition_icon_monochrome_title</item>
         <item>@string/weather_condition_icon_colored_title</item>
-        <item>@string/weather_condition_icon_vclouds_title</item>
         <item>@string/weather_condition_icon_marshmallow_title</item>
         <item>@string/weather_condition_icon_weezle_title</item>
+        <item>@string/weather_condition_icon_vclouds_title</item>
     </string-array>
 
     <string-array name="weather_condition_icon_values" translatable="false">
