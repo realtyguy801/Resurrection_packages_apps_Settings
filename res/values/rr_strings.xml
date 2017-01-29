@@ -1254,6 +1254,10 @@
     <string name="weather_condition_icon_vclouds_title">VClouds</string>
     <string name="weather_condition_icon_marshmallow_title">Marshmallow</string>
     <string name="weather_condition_icon_weezle_title">Weezle</string>
+    <string name="weather_condition_icon_gs6_title">Galaxy S6</string>
+    <string name="weather_condition_icon_gnw_title">Google Now</string>
+    <string name="weather_condition_icon_miui_title">MIUI</string>
+    <string name="weather_condition_icon_sthul_title">Sthul</string>
     <string name="icons_title">Icons</string>
     <string name="position_right_title">Right</string>
     <string name="position_centered_title">Centered</string>
