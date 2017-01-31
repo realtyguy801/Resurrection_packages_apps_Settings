@@ -48,4 +48,8 @@
     <string name="lockscreen_blur_enabled">Blur is enabled</string>
     <string name="lockscreen_blur_disabled">Blur is disabled</string>
 
+    <!-- Omni Walls -->
+    <string name="custom_wall_browse_title">Omni Wallpapers</string>
+    <string name="custom_wall_browse_summary"></string>
+
 </resources>
