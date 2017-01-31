@@ -117,21 +117,22 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
     public List<Tile> getSuggestions() {
         if ((Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DISABLE_SUGGESTIONS, 0) == 1)) {
-             return null;
-        } else {
+                    Settings.System.DISABLE_SUGGESTIONS, 1) == 1)) {
              return mSuggestions;
+        } else {
+             return null;
         }
     }
 
     public void setCategoriesAndSuggestions(List<DashboardCategory> categories,
             List<Tile> suggestions) {
         mCategories = categories;
+
         if ((Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DISABLE_SUGGESTIONS, 0) == 1)) {
-             mSuggestions = null;
-        } else {
+                    Settings.System.DISABLE_SUGGESTIONS, 1) == 1)) {
              mSuggestions = suggestions;
+        } else {
+             mSuggestions = null;
         }
 
         TypedValue tintColorValue = new TypedValue();
@@ -295,7 +296,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
     private void showRemoveOption(View v, final Tile suggestion) {
         PopupMenu popup = new PopupMenu(
-                new ContextThemeWrapper(mContext, R.style.Theme_AppCompat_DayNight), v);
+                 new ContextThemeWrapper(mContext, R.style.Theme_AppCompat_DayNight), v);
         popup.getMenu().add(R.string.suggestion_remove).setOnMenuItemClickListener(
                 new MenuItem.OnMenuItemClickListener() {
             @Override
@@ -372,6 +373,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
         int landscapeColumns = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.DASHBOARD_LANDSCAPE_COLUMNS, DashboardSummary.mNumColumns);
+
         holder.icon.setImageDrawable(mCache.getIcon(tile.icon));
         holder.title.setText(tile.title);
         if (!TextUtils.isEmpty(tile.summary)) {
