@@ -1071,19 +1071,16 @@ public class SettingsActivity extends SettingsDrawerActivity
      */
     private Fragment switchToFragment(String fragmentName, Bundle args, boolean validate,
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
-        if (THEMES_FRAGMENT.equals(fragmentName)) {
-            Intent themesIntent = new Intent();
-            themesIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
-            startActivity(themesIntent);
-            finish();
-            return null;
-        }
-
-
   		 if (KA_FRAGMENT.equals(fragmentName)) {
             Intent kaIntent = new Intent();
             kaIntent.setClassName("com.grarak.kerneladiutor", "com.grarak.kerneladiutor.activities.MainActivity");
             startActivity(kaIntent);
+            finish();
+            return null;
+        } else if (THEMES_FRAGMENT.equals(fragmentName)) {
+            Intent themesIntent = new Intent();
+            themesIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
+            startActivity(themesIntent);
             finish();
             return null;
         }
