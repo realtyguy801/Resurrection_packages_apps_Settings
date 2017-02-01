@@ -68,6 +68,11 @@
                  android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </Preference>
 
+    <!-- Weather providers -->
+    <org.cyanogenmod.internal.cmparts.CMPartsPreference
+        	android:key="weather_settings"
+        	android:icon="@drawable/rr_weather_main_icon" />
+
         <!-- Updater -->
         <PreferenceScreen
             android:key="update_settings"
