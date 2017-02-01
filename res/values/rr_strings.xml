@@ -1262,6 +1262,7 @@
     <string name="weather_condition_icon_gnw_title">Google Now</string>
     <string name="weather_condition_icon_miui_title">MIUI</string>
     <string name="weather_condition_icon_sthul_title">Sthul</string>
+    <string name="weather_condition_icon_tapas_title">Tapas</string>
     <string name="icons_title">Icons</string>
     <string name="position_right_title">Right</string>
     <string name="position_centered_title">Centered</string>

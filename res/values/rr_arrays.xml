@@ -1181,6 +1181,7 @@
         <item>@string/weather_condition_icon_gnw_title</item>
         <item>@string/weather_condition_icon_miui_title</item>
         <item>@string/weather_condition_icon_sthul_title</item>
+        <item>@string/weather_condition_icon_tapas_title</item>
         <item>@string/weather_condition_icon_vclouds_title</item>
     </string-array>
 
@@ -1194,6 +1195,7 @@
         <item>6</item>
         <item>7</item>
         <item>8</item>
+        <item>9</item>
     </string-array>
 
     <string-array name="weather_hide_panel_entries">
