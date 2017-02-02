@@ -31,10 +31,6 @@
            </intent>
      </Preference>
 
-    <!-- Weather providers -->
-    <org.cyanogenmod.internal.cmparts.CMPartsPreference
-        android:key="weather_settings" />
-
     <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
         android:key="lock_screen_show_weather"
         android:title="@string/weather_show_weather_title"
