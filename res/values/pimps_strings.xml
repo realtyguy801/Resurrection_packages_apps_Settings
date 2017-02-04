@@ -160,4 +160,7 @@
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
 
+    <string name="magisk_title">Magisk Manager</string>
+    <string name="magisk_summary">Control modules and settings</string>
+
 </resources>

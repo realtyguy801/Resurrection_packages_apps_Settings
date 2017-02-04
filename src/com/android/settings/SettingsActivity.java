@@ -253,6 +253,8 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private static final String ACTION_TIMER_SWITCH = "qualcomm.intent.action.TIMER_SWITCH";
 
+    private static final String MAGISK_FRAGMENT = "com.android.settings.MagiskManager";
+
     private static final String THEMES_FRAGMENT = "com.android.settings.Themes";
 
     private String mFragmentClass;
@@ -1085,6 +1087,12 @@ public class SettingsActivity extends SettingsDrawerActivity
             startActivity(kaIntent);
             finish();
             return null;
+        } else if (MAGISK_FRAGMENT.equals(fragmentName)) {
+            Intent magiskIntent = new Intent();
+            magiskIntent.setClassName("com.topjohnwu.magisk", "com.topjohnwu.magisk.SplashActivity");
+            startActivity(magiskIntent);
+            finish();
+            return null;
         } else if (THEMES_FRAGMENT.equals(fragmentName)) {
             Intent themesIntent = new Intent();
             themesIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
@@ -1187,6 +1195,7 @@ public class SettingsActivity extends SettingsDrawerActivity
                         Settings.DevelopmentSettingsActivity.class.getName()),
                 showDev, isAdmin, pm);
 
+        // Kernel Adiutor
         boolean kapresent = false;
         try {
             kapresent = (getPackageManager().getPackageInfo("com.grarak.kerneladiutor", 0).versionCode > 0);
@@ -1196,6 +1205,17 @@ public class SettingsActivity extends SettingsDrawerActivity
                         Settings.KActivity.class.getName()),
                 kapresent, isAdmin, pm);
 
+        // Magisk Manager
+        boolean magiskSupported = false;
+        try {
+            magiskSupported = (getPackageManager().getPackageInfo("com.topjohnwu.magisk", 0).versionCode > 0);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.MagiskActivity.class.getName()),
+                magiskSupported, isAdmin, pm);
+
+        // Substratum
         boolean themesSupported = false;
         try {
             themesSupported = (getPackageManager().getPackageInfo("projekt.substratum", 0).versionCode > 0);
