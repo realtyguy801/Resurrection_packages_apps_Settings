@@ -56,6 +56,6 @@
             android:title="@string/data_activity_icons_title"
             android:summaryOn="@string/data_activity_icons_summaryOn"
             android:summaryOff="@string/data_activity_icons_summaryOff"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
 </PreferenceScreen>

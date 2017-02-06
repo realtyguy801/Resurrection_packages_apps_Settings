@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.mrapocalypse.rr.fragments;
+package com.android.settings.rr.fragments;
 
 import android.os.Bundle;
 import android.content.ContentResolver;
