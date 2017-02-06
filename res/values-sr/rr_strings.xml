@@ -128,6 +128,8 @@
   <!--RR Configurations Summaries-->
   <string name="clock_custom_summary">Прилагодите разне елементе статусне траке, време и датум</string>
   <string name="status_bar_logo_summary">Укључи или искључи Resurrection лого у статусној траци. Прилагоди елементе и позицију</string>
+  <!-- Manage applications: show substratum overlays -->
+  <!-- Manage applications: show substratum icon overlays -->
   <!-- AOKP custom system animations -->
   <!-- Toast Animation -->
   <!-- ListView animation -->
@@ -150,7 +152,6 @@
   <!-- Power menu Animations  -->
   <!-- Tiles animation style  -->
   <!-- Immersive Recents -->
-  <!-- Dashboard suggestions -->
   <!-- Gesture Anywhere -->
   <!-- Label, button used to add a gesture -->
   <!-- Label, button used to reload all gestures -->
@@ -354,7 +355,11 @@
   <!-- Header images -->
   <!-- Task Manager -->
   <!-- Wakelock blocker -->
+  <!-- Alarm blocker -->
   <!-- DUI Double Tap to Sleep -->
   <!--One handed mode -->
   <!-- SystemUI restart prompt -->
+  <!-- Dashboard options -->
+  <!-- Dashboard columns -->
+  <!-- Themes settings -->
 </resources>

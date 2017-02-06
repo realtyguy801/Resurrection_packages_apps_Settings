@@ -137,6 +137,8 @@
   <string name="rr_heads_up_summary">Kies uit te schakelen of heads-up meldingen en ook hun time-outs instellen </string>
   <string name="rr_dash_board_summary">Aanpassen van de dashboard lay-out en samenvattingen</string>
   <string name="misc_weather_settings_summary">Verschillende opties voor de cClock app aanpassen</string>
+  <!-- Manage applications: show substratum overlays -->
+  <!-- Manage applications: show substratum icon overlays -->
   <!-- AOKP custom system animations -->
   <string name="animation_title">Animaties</string>
   <string name="system_animation_title">Systeem Animaties</string>
@@ -367,10 +369,6 @@
   <string name="immersive_recents_fullscreen">Volledig scherm</string>
   <string name="immersive_recents_statusbar">Alleen statusbalk</string>
   <string name="immersive_recents_navbar">Enkel navigatiebalk</string>
-  <!-- Dashboard suggestions -->
-  <string name="dashboard_category">Dashboard opties</string>
-  <string name="disable_suggestions_title">Suggesties uitschakelen</string>
-  <string name="disable_suggestions_summary">Schakel de suggesties uit die bovenaan het dashboard verschijnen</string>
   <string name="network_traffic_hidearrow_summary">Pijlen in verkeer indicator verbergen</string>
   <string name="network_traffic_hidearrow_title">Verberg pijlen</string>
   <string name="show_4g_title">Toon 4G</string>
@@ -891,7 +889,12 @@
   <!-- Header images -->
   <!-- Task Manager -->
   <!-- Wakelock blocker -->
+  <!-- Alarm blocker -->
   <!-- DUI Double Tap to Sleep -->
   <!--One handed mode -->
   <!-- SystemUI restart prompt -->
+  <!-- Dashboard options -->
+  <string name="dashboard_category">Dashboard opties</string>
+  <!-- Dashboard columns -->
+  <!-- Themes settings -->
 </resources>

@@ -75,6 +75,8 @@
   <string name="fab_restartui">UI को पुन: आरभं करें</string>
   <string name="animation_title">एनिमेशन</string>
   <!--RR Configurations Summaries-->
+  <!-- Manage applications: show substratum overlays -->
+  <!-- Manage applications: show substratum icon overlays -->
   <!-- AOKP custom system animations -->
   <string name="animation_title">एनिमेशन</string>
   <string name="animation_duration_default">डिफ़ाल्ट</string>
@@ -138,7 +140,6 @@
   <!-- Power menu Animations  -->
   <!-- Tiles animation style  -->
   <!-- Immersive Recents -->
-  <!-- Dashboard suggestions -->
   <!-- Gesture Anywhere -->
   <!-- Label, button used to add a gesture -->
   <!-- Label, button used to reload all gestures -->
@@ -259,7 +260,11 @@
   <!-- Header images -->
   <!-- Task Manager -->
   <!-- Wakelock blocker -->
+  <!-- Alarm blocker -->
   <!-- DUI Double Tap to Sleep -->
   <!--One handed mode -->
   <!-- SystemUI restart prompt -->
+  <!-- Dashboard options -->
+  <!-- Dashboard columns -->
+  <!-- Themes settings -->
 </resources>

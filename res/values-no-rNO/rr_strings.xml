@@ -25,6 +25,8 @@
   <!-- RR Changelog-->
   <!--RR Configurations-->
   <!--RR Configurations Summaries-->
+  <!-- Manage applications: show substratum overlays -->
+  <!-- Manage applications: show substratum icon overlays -->
   <!-- AOKP custom system animations -->
   <!-- Toast Animation -->
   <!-- ListView animation -->
@@ -47,7 +49,6 @@
   <!-- Power menu Animations  -->
   <!-- Tiles animation style  -->
   <!-- Immersive Recents -->
-  <!-- Dashboard suggestions -->
   <!-- Gesture Anywhere -->
   <!-- Label, button used to add a gesture -->
   <!-- Label, button used to reload all gestures -->
@@ -165,7 +166,11 @@
   <!-- Header images -->
   <!-- Task Manager -->
   <!-- Wakelock blocker -->
+  <!-- Alarm blocker -->
   <!-- DUI Double Tap to Sleep -->
   <!--One handed mode -->
   <!-- SystemUI restart prompt -->
+  <!-- Dashboard options -->
+  <!-- Dashboard columns -->
+  <!-- Themes settings -->
 </resources>

@@ -106,6 +106,8 @@
   <string name="ka_title">Performans</string>
   <!--RR Configurations Summaries-->
   <string name="clock_custom_summary">Vəziyyət çubuğunun saat və tarixinin müxtəlif elementlərini özəlləşdirin</string>
+  <!-- Manage applications: show substratum overlays -->
+  <!-- Manage applications: show substratum icon overlays -->
   <!-- AOKP custom system animations -->
   <string name="animation_title">Animasiyalar</string>
   <string name="system_animation_title">Sistem animasiyaları</string>
@@ -268,7 +270,6 @@
   <string name="qs_set_animation_interpolator">%1$s</string>
   <!-- Immersive Recents -->
   <string name="immersive_recents_fullscreen">Bütöv ekran</string>
-  <!-- Dashboard suggestions -->
   <!-- Gesture Anywhere -->
   <string name="gesture_anywhere_enabled_title">Hər Yerdə Hərəkət</string>
   <string name="gesture_anywhere_enabled_summary">Hər Yerdə Hərəkət özəlliyini aktivləşdir</string>
@@ -707,7 +708,11 @@
   <!-- Header images -->
   <!-- Task Manager -->
   <!-- Wakelock blocker -->
+  <!-- Alarm blocker -->
   <!-- DUI Double Tap to Sleep -->
   <!--One handed mode -->
   <!-- SystemUI restart prompt -->
+  <!-- Dashboard options -->
+  <!-- Dashboard columns -->
+  <!-- Themes settings -->
 </resources>

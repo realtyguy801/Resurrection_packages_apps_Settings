@@ -31,10 +31,6 @@
     <string name="reset">Reset</string>
     <string name="restart_systemui">Restart UI</string>
 
-    <!-- Themes -->
-    <string name="themes_title">Themes</string>
-    <string name="themes_dashboard_summary">Manage your themes</string>
-
     <!-- About RR -->
     <string name="about_rr_settings">About</string>
     <string name="about_rr">About</string>
@@ -2054,7 +2050,7 @@
     <string name="battery_large_text_summary_off">Normal text displayed</string>
 
     <string name="nav_bar_dynamic_title">Dynamic navbar color</string>
-    <string name="nav_bar_dynamic_summary">Enable disable this swicth for navbar to adapt to apps primary dark color.Restart your desired app to see effect</string>
+    <string name="nav_bar_dynamic_summary">Enable disable this switch for navbar to adapt to apps primary dark color.Restart your desired app to see effect</string>
 
 
     <!-- Keyboard and Input ASS methods  -->
@@ -2183,6 +2179,15 @@
     <string name="wakelock_blocker_warning_title">Proceed with caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss</string>
 
+    <!-- Alarm blocker -->
+    <string name="alarm_blocker">Alarm blocker</string>
+    <string name="alarm_blocker_title">Enable</string>
+    <string name="alarm_blocker_summary">Block alarms while screen off</string>
+    <string name="alarm_blocker_save">Save</string>
+    <string name="alarm_list_header">Available alarms</string>
+    <string name="alarm_blocker_reload">Reload</string>
+    <string name="alarm_blocker_warning_title">Proceed with caution</string>
+    <string name="alarm_blocker_warning">Blocking alarms have the potential to cause instability, crashes or data loss.</string>
 
     <!-- DUI Double Tap to Sleep -->
     <string name="smartbar_doubletap_sleep_title">Double tap to sleep</string>
@@ -2222,5 +2227,9 @@
     <string name="dashboard_summary_double_lines_title">Dashboard summary lines</string>
     <string name="dashboard_summary_double_lines_summary_on">Show dashboard tile summaries in more lines</string>
     <string name="dashboard_summary_double_lines_summary_off">Show dashboard tile summaries in 1 line</string>
+
+    <!-- Themes settings -->
+    <string name="themes_title">Themes</string>
+    <string name="themes_summary">Overlay manager service</string>
 
 </resources>

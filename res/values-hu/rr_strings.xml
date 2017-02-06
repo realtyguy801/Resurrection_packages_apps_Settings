@@ -178,6 +178,14 @@
   <string name="misc_weather_settings_summary">cClock alkalmazás különböző beállításainak testreszabása</string>
   <string name="system_app_remover_summary">Szükségtelen rendszeralkalmazások eltávolítása</string>
   <string name="rr_updater_summary">OTA-frissítések és egyéb linkek ellenőrzése</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum fedvények</string>
+  <string name="menu_show_substratum">Fedvények megjelenítése</string>
+  <string name="menu_hide_substratum">Fedvények elrejtése</string>
+  <!-- Manage applications: show substratum icon overlays -->
+  <string name="filter_substratum_icons">Substratum ikonfedvények</string>
+  <string name="menu_show_substratum_icons">Ikonfedvények megjelenítése</string>
+  <string name="menu_hide_substratum_icons">Ikonfedvények elrejtése</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Animációk</string>
   <string name="system_animation_title">Rendszeranimációk</string>
@@ -409,15 +417,6 @@
   <string name="immersive_recents_fullscreen">Teljes képernyő</string>
   <string name="immersive_recents_statusbar">Csak állapotsor</string>
   <string name="immersive_recents_navbar">Csak navigációs sáv</string>
-  <!-- Dashboard suggestions -->
-  <string name="dashboard_category">Irányítópult beállítások</string>
-  <string name="disable_suggestions_title">Javaslatok letiltása</string>
-  <string name="disable_suggestions_summary">Az irányítópult tetején megjelenő javaslatok letiltása</string>
-  <string name="remove_tile_summaries_title">Csempe összefoglalók eltávolítása</string>
-  <string name="remove_tile_summaries_summary">Csempe összefoglalók eltávolítása, melyek a csempék alatt jelennek meg</string>
-  <string name="dashboard_conditions_title">Irányítópult feltételek</string>
-  <string name="summary_dashboard_conditions_enabled">Irányítópult feltételek bekapcsolva</string>
-  <string name="summary_dashboard_conditions_disabled">Irányítópult feltételek kikapcsolva</string>
   <string name="network_traffic_hidearrow_summary">Forgalmat jelző nyilak elrejtése</string>
   <string name="network_traffic_hidearrow_title">Nyilak elrejtése</string>
   <string name="show_4g_title">4G kijelzése</string>
@@ -1876,7 +1875,6 @@
   <string name="battery_large_text_summary_on">Nagy szöveg jelenik meg</string>
   <string name="battery_large_text_summary_off">Normál szöveg jelenik meg</string>
   <string name="nav_bar_dynamic_title">Dinamikus navigációs sáv szín</string>
-  <string name="nav_bar_dynamic_summary">Engedélyezze ahhoz, hogy a navigációs sáv felvegye az alkalmazás sötét fő színét (általában az állapotsáv színe is ez). Szükséges lehet az alkalmazások újraindítása a változtatás életbe lépéséhez</string>
   <!-- Keyboard and Input ASS methods  -->
   <string name="attention">Figyelem</string>
   <string name="title_keyboard_input">Beviteli beállítások</string>
@@ -1920,7 +1918,7 @@
   <string name="blurred_radius_summary">Homályosítás nagysága</string>
   <string name="blur_cat_notice">Megjegyzés</string>
   <string name="blur_cat_notice_summary">A homályosítás testreszabása le van tiltva a képernyőzáron. Csak az áttetsző értesítések vannak engedélyezve!</string>
-  <string name="rr_build_type_title">Építés típusa</string>
+  <string name="rr_build_type_title">Készítés típusa</string>
   <string name="rr_build_type_default">Nem hivatalos</string>
   <string name="rr_maintainer_title">Közreműködők</string>
   <string name="rr_maintainer_default">Ismeretlen</string>
@@ -1983,6 +1981,7 @@
   <string name="wakelock_blocker_reload">Újratöltés</string>
   <string name="wakelock_blocker_warning_title">Járjon el körültekintően</string>
   <string name="wakelock_blocker_warning">A wakelock-ok blokkolása instabilitáshoz, összeomláshoz vagy adatvesztéshez vezethet</string>
+  <!-- Alarm blocker -->
   <!-- DUI Double Tap to Sleep -->
   <string name="smartbar_doubletap_sleep_title">Dupla érintésre alvás</string>
   <string name="smartbar_doubletap_sleep_summary">A navigációs sáv üres területére kétszer koppintva kikapcsol a képernyő</string>
@@ -1994,4 +1993,29 @@
   <string name="systemui_restart_message">SystemUI újraindítása szükséges, hogy a kiválasztott beállítás megfelelően alkalmazásra kerülhessen.</string>
   <string name="restarting_ui">Felhasználói felület újraindítása\u2026</string>
   <string name="print_restart">Újraindítás</string>
+  <!-- Dashboard options -->
+  <string name="dashboard_category">Irányítópult beállítások</string>
+  <string name="dashboard_suggestions_title">Javaslatok</string>
+  <string name="summary_dashboard_suggestions_enabled">Irányítópult javaslatok bekapcsolva</string>
+  <string name="summary_dashboard_suggestions_disabled">Irányítópult javaslatok kikapcsolva</string>
+  <string name="remove_tile_summaries_title">Összefoglalók</string>
+  <string name="remove_tile_summaries_summary_enabled">Irányítópult összefoglalók bekapcsolva</string>
+  <string name="remove_tile_summaries_summary_disabled">Irányítópult összefoglalók kikapcsolva</string>
+  <string name="dashboard_conditions_title">Feltételek</string>
+  <string name="summary_dashboard_conditions_enabled">Irányítópult feltételek bekapcsolva</string>
+  <string name="summary_dashboard_conditions_disabled">Irányítópult feltételek kikapcsolva</string>
+  <string name="dashboard_columns_portrait_title">Oszlopok (álló)</string>
+  <string name="dashboard_columns_landscape_title">Oszlopok (fekvő)</string>
+  <!-- Dashboard columns -->
+  <string name="dashboard_columns_title">Irányítópult oszlopok</string>
+  <string name="dashboard_columns_summary">Az irányítópulton megjelenő oszlopok számának módosítása</string>
+  <string name="dashboard_columns_dialog_title">Irányítópult oszlopok száma</string>
+  <string name="dashboard_columns_default">Egy (kéttő fekve)</string>
+  <string name="dashboard_columns_two">Kettő (három fekve)</string>
+  <string name="dashboard_columns_three">Három (négy fekve)</string>
+  <string name="dashboard_summary_double_lines_title">Indítópult összefoglaló sorok</string>
+  <string name="dashboard_summary_double_lines_summary_on">Indítópult csempék összefoglalói több sorban</string>
+  <string name="dashboard_summary_double_lines_summary_off">Indítópult csempék összefoglalói 1 sorban</string>
+  <!-- Themes settings -->
+  <string name="themes_title">Témák</string>
 </resources>

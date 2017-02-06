@@ -108,7 +108,7 @@
   <string name="rr_reset_cancel">取消</string>
   <string name="rr_category_title">個人化</string>
   <string name="rr_title">配置</string>
-  <string name="rr_title_summary">各種自訂設定</string>
+  <string name="rr_title_summary">自訂設定</string>
   <string name="rr_config_main_title">RR-OS</string>
   <string name="rr_ota_fab_title">顯示浮動按鈕</string>
   <string name="rr_ota_fab_summary">啟用/停用配置中的浮動按鍵即可顯示/隱藏。當使用開關時，只要輸入/退出一次</string>
@@ -178,6 +178,14 @@
   <string name="misc_weather_settings_summary">自訂 Cclock 應用程式的各種選項</string>
   <string name="system_app_remover_summary">移除不必要的系統應用程式</string>
   <string name="rr_updater_summary">檢查 OTA 更新和其他連結</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">底層覆蓋</string>
+  <string name="menu_show_substratum">顯示覆蓋</string>
+  <string name="menu_hide_substratum">隱藏覆蓋</string>
+  <!-- Manage applications: show substratum icon overlays -->
+  <string name="filter_substratum_icons">底層圖示覆蓋</string>
+  <string name="menu_show_substratum_icons">顯示圖示覆蓋</string>
+  <string name="menu_hide_substratum_icons">隱藏圖示覆蓋</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">動畫</string>
   <string name="system_animation_title">系統動畫</string>
@@ -409,15 +417,6 @@
   <string name="immersive_recents_fullscreen">全螢幕</string>
   <string name="immersive_recents_statusbar">僅顯示狀態列</string>
   <string name="immersive_recents_navbar">僅顯示導覽列</string>
-  <!-- Dashboard suggestions -->
-  <string name="dashboard_category">面板選項</string>
-  <string name="disable_suggestions_title">停用建議</string>
-  <string name="disable_suggestions_summary">停用面板頂部的建議</string>
-  <string name="remove_tile_summaries_title">刪除方塊摘要</string>
-  <string name="remove_tile_summaries_summary">刪除方塊標題下面顯示的方塊摘要</string>
-  <string name="dashboard_conditions_title">面板條件</string>
-  <string name="summary_dashboard_conditions_enabled">面板條件被啟用</string>
-  <string name="summary_dashboard_conditions_disabled">面板條件被停用</string>
   <string name="network_traffic_hidearrow_summary">隱藏流量指示器上的箭頭</string>
   <string name="network_traffic_hidearrow_title">隱藏箭頭</string>
   <string name="show_4g_title">顯示 4 G</string>
@@ -1876,7 +1875,6 @@
   <string name="battery_large_text_summary_on">大文字顯示</string>
   <string name="battery_large_text_summary_off">正常文字顯示</string>
   <string name="nav_bar_dynamic_title">動態導航列顏色</string>
-  <string name="nav_bar_dynamic_summary">啟用停用此切換導航適應應用程式主暗顏色。重新啟動您所需的應用程式即可看到效果</string>
   <!-- Keyboard and Input ASS methods  -->
   <string name="attention">注意</string>
   <string name="title_keyboard_input">輸入選項</string>
@@ -1983,6 +1981,7 @@
   <string name="wakelock_blocker_reload">重新載入</string>
   <string name="wakelock_blocker_warning_title">請謹慎操作</string>
   <string name="wakelock_blocker_warning">攔截一些項目的喚醒功能將極大提升裝置的續航能力，但可能導致系統不穩定、崩潰或數據丟失。</string>
+  <!-- Alarm blocker -->
   <!-- DUI Double Tap to Sleep -->
   <string name="smartbar_doubletap_sleep_title">輕觸兩下即可休眠</string>
   <string name="smartbar_doubletap_sleep_summary">輕觸兩下導覽列空白區域以關閉螢幕</string>
@@ -1994,4 +1993,29 @@
   <string name="systemui_restart_message">將重新啟動使用者介面，以便可以正確套用所選設定。</string>
   <string name="restarting_ui">正在重新啟動使用者介面\u2026</string>
   <string name="print_restart">重新啟動</string>
+  <!-- Dashboard options -->
+  <string name="dashboard_category">面板選項</string>
+  <string name="dashboard_suggestions_title">建議</string>
+  <string name="summary_dashboard_suggestions_enabled">面板建議已啟用</string>
+  <string name="summary_dashboard_suggestions_disabled">面板建議已停用</string>
+  <string name="remove_tile_summaries_title">摘要</string>
+  <string name="remove_tile_summaries_summary_enabled">面板摘要已啟用</string>
+  <string name="remove_tile_summaries_summary_disabled">面板摘要已停用</string>
+  <string name="dashboard_conditions_title">條件</string>
+  <string name="summary_dashboard_conditions_enabled">面板條件被啟用</string>
+  <string name="summary_dashboard_conditions_disabled">面板條件被停用</string>
+  <string name="dashboard_columns_portrait_title">行 (縱向)</string>
+  <string name="dashboard_columns_landscape_title">行 (橫向)</string>
+  <!-- Dashboard columns -->
+  <string name="dashboard_columns_title">面板欄位</string>
+  <string name="dashboard_columns_summary">變更設定面板中顯示的欄位數</string>
+  <string name="dashboard_columns_dialog_title">選擇設定面板欄位</string>
+  <string name="dashboard_columns_default">一個 (兩個橫向)</string>
+  <string name="dashboard_columns_two">兩個 (三個橫向)</string>
+  <string name="dashboard_columns_three">三個 (四個橫向)</string>
+  <string name="dashboard_summary_double_lines_title">面板摘要行</string>
+  <string name="dashboard_summary_double_lines_summary_on">在更多行中顯示面板圖塊摘要</string>
+  <string name="dashboard_summary_double_lines_summary_off">在一行中顯示面板圖塊摘要</string>
+  <!-- Themes settings -->
+  <string name="themes_title">主題</string>
 </resources>
