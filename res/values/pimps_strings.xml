@@ -110,4 +110,9 @@
     <string name="data_activity_icons_summaryOn">Activity icons are enabled</string>
     <string name="data_activity_icons_summaryOff">Activity icons are disabled</string>
 
+    <!-- low battery notification toggle -->
+    <string name="battery_low_notif_title">Low battery notification</string>
+    <string name="battery_low_notif_summaryOn">Low battery notification is enabled</string>
+    <string name="battery_low_notif_summaryOff">Low battery notification is disabled</string>
+
 </resources>
