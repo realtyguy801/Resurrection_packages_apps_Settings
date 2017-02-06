@@ -51,4 +51,11 @@
             android:summary="@string/show_su_indicator_summary"
             android:defaultValue="false" />
 
+        <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
+            android:key="data_activity_arrows"
+            android:title="@string/data_activity_icons_title"
+            android:summaryOn="@string/data_activity_icons_summaryOn"
+            android:summaryOff="@string/data_activity_icons_summaryOff"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
