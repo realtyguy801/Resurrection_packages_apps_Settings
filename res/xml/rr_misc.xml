@@ -79,16 +79,6 @@
                     android:targetClass="com.resurrection.ota.MainActivity" />
        </PreferenceScreen>
 
-        <PreferenceScreen
-            android:key="custom_wall_browse"
-            android:title="@string/custom_wall_browse_title"
-            android:summary="@string/custom_wall_browse_summary"
-            android:persistent="false" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.omnirom.omnistyle"
-                    android:targetClass="org.omnirom.omnistyle.BrowseWallsActivity" />
-            </PreferenceScreen>
-
         <!-- Wakelock blocker -->
         <PreferenceScreen
             android:key="wakelock_blocker"
@@ -120,5 +110,12 @@
             android:icon="@drawable/rr_volume_icon"
             android:entries="@array/media_scanner_on_boot_entries"
             android:entryValues="@array/media_scanner_on_boot_values" />
+
+     <Preference
+        android:key="screenstate_category"
+        android:title="@string/screen_state_toggles_title"
+        android:summary="@string/screen_state_toggles_summary"
+        android:icon="@drawable/rr_qs_advanced_icon"
+        android:fragment="com.android.settings.rr.fragments.ScreenStateToggles" />
 
 </PreferenceScreen>
