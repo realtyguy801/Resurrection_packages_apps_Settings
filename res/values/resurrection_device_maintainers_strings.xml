@@ -37,6 +37,7 @@
 	<string name="device_category_one_title">ANDROİD ONE</string>
 	<string name="device_category_bq_title">BQ</string>
 	<string name="device_category_leeco_title">LeEco</string>
+	<string name="device_category_zuk_title">ZUK</string>
 	
 	<string name="device_A6020">Vibe K5</string>
 	<string name="device_A6020_summary">A6020\nMaintainer - Henrique Silva (jhenrique09)</string>
@@ -91,6 +92,9 @@
 	
 	<string name="device_oneplus3">OnePlus Three</string>
 	<string name="device_oneplus3_summary">OnePlus 3 \nMaintainer sud.vastav</string>
+
+        <string name="device_oneplus3t">OnePlus Three T</string>
+	<string name="device_oneplus3t_summary">OnePlus 3T \nMaintainer - apascual89</string>
 	
 	<string name="device_klte">Galaxy S5</string>
 	<string name="device_klte_summary">All klte variants \nMaintainer - ScrawnyB</string>
@@ -151,6 +155,9 @@
 
 	<string name="device_htc_10">HTC 10</string>
 	<string name="device_htc_10_summary">10 \nMaintainer -</string>
+
+	<string name="device_google_marlin">GOOGLE</string>
+	<string name="device_google_marlin_summary">PIXEL XL \nMaintainer - BDogg718</string>
 	
 	<string name="device_i9300">Galaxy S III</string>
 	<string name="device_i9300_summary">GT-I9300 \nMaintainer - Varun Date</string>
@@ -499,5 +506,8 @@
 	
 	<string name="device_flounder">HTC Nexus 9</string>
 	<string name="device_flounder_summary">Flounder \nMaintainer - Jithu Mathew Joseph</string>
+	
+	<string name="device_ham">ZUK Z1</string>
+	<string name="device_ham_summary">Ham \nMaintainer - OrdenKrieger</string>
 
 </resources>
