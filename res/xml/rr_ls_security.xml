@@ -21,26 +21,32 @@
             android:title="@string/unlock_quick_unlock_control_title"
             android:summary="@string/unlock_quick_unlock_control_summary" />
 
-    	 <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
-            android:key="lockscreen_enable_power_menu"
-            android:title="@string/lockscreen_enable_power_menu_title"
-            android:summary="@string/lockscreen_enable_power_menu_summary"
-            android:defaultValue="true" />
+    <SwitchPreference
+        android:key="fingerprint_success_vib"
+        android:title="@string/fprint_sucess_vib_title"
+        android:summary="@string/fprint_sucess_vib_summary"
+        android:persistent="false" />
+
+       <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
+           android:key="lockscreen_enable_power_menu"
+           android:title="@string/lockscreen_enable_power_menu_title"
+           android:summary="@string/lockscreen_enable_power_menu_summary"
+           android:defaultValue="true" />
 
  
-        <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
-               android:key="lock_screen_custom_notif"
-               android:title="@string/lockscreen_maxnotif_title"
-               android:summary="@string/lockscreen_maxnotif_sumary"
-               android:defaultValue="false" />
+       <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
+           android:key="lock_screen_custom_notif"
+           android:title="@string/lockscreen_maxnotif_title"
+           android:summary="@string/lockscreen_maxnotif_sumary"
+           android:defaultValue="false" />
 
-        <com.android.settings.rr.SeekBarPreference
-               android:key="lockscreen_max_notif_cofig"
-               android:title="@string/lockscreen_maxnotif_config"
-               settings:max="8"
-               settings:minimum="3"
-               settings:units=""
-               android:persistent="false"
-               android:dependency="lock_screen_custom_notif" />
+       <com.android.settings.rr.SeekBarPreference
+           android:key="lockscreen_max_notif_cofig"
+           android:title="@string/lockscreen_maxnotif_config"
+           settings:max="8"
+           settings:minimum="3"
+           settings:units=""
+           android:persistent="false"
+           android:dependency="lock_screen_custom_notif" />
 
 </PreferenceScreen>

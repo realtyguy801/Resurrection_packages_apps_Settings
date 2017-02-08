@@ -16,6 +16,7 @@ package com.android.settings.rr;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContentResolver;
+import android.hardware.fingerprint.FingerprintManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -41,9 +42,12 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
     private static final String TAG = "LockScreenSecurity";
 
 
-	private static final String LOCKSCREEN_MAX_NOTIF_CONFIG = "lockscreen_max_notif_cofig";
+    private static final String LOCKSCREEN_MAX_NOTIF_CONFIG = "lockscreen_max_notif_cofig";
+    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
 
-	private SeekBarPreference mMaxKeyguardNotifConfig;
+    private SeekBarPreference mMaxKeyguardNotifConfig;
+    private SwitchPreference mFingerprintVib;
+    private FingerprintManager mFingerprintManager;
 
 
     @Override
@@ -62,14 +66,29 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
                 Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, 5);
         mMaxKeyguardNotifConfig.setValue(kgconf);
         mMaxKeyguardNotifConfig.setOnPreferenceChangeListener(this);
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        if (!mFingerprintManager.isHardwareDetected()){
+            prefScreen.removePreference(mFingerprintVib);
+        } else {
+        mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
+        mFingerprintVib.setOnPreferenceChangeListener(this);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue){
         	ContentResolver resolver = getActivity().getContentResolver();
- 			if (preference == mMaxKeyguardNotifConfig) {
+ 	if (preference == mMaxKeyguardNotifConfig) {
             int kgconf = (Integer) objValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, kgconf);
+            return true;
+        } else if (preference == mFingerprintVib) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
             return true;
         	}
 	return false;
