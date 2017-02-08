@@ -24,13 +24,16 @@
     <SwitchPreference
         android:key="fp_unlock_keystore"
         android:title="@string/fp_unlock_keystore_title"
+        android:icon="@drawable/rr_fingerprint_icon"
         android:summary="@string/fp_unlock_keystore_summary"
         android:persistent="false" />
 
     <SwitchPreference
         android:key="fingerprint_success_vib"
         android:title="@string/fprint_sucess_vib_title"
-        android:summary="@string/fprint_sucess_vib_summary"
+        android:icon="@drawable/rr_fingerprint_icon"
+        android:summaryOn="@string/fprint_sucess_vib_summaryOn"
+        android:summaryOff="@string/fprint_sucess_vib_summaryOff"
         android:persistent="false" />
 
        <com.android.settings.rr.Preferences.SystemSettingSwitchPreference

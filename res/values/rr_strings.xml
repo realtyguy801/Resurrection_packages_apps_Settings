@@ -902,7 +902,8 @@
 
     <!-- Fingerprint vibrate -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
-    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+    <string name="fprint_sucess_vib_summaryOn">Vibrate on successful fingerprint authentication enabled</string>
+    <string name="fprint_sucess_vib_summaryOff">Vibrate on successful fingerprint authentication disabled</string>
 
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
