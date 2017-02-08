@@ -35,14 +35,6 @@
             android:defaultValue="false" />
 
     <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
-            android:key="fingerprint_success_vib"
-            android:title="@string/fprint_sucess_vib_title"
-            android:summary="@string/fprint_sucess_vib_summary"
-            android:icon="@drawable/rr_fingerprint_icon"
-            android:defaultValue="true" />
-
-
-    <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
             android:key="battery_save_mode_color"
             android:title="@string/battery_saver_color_title"
             android:summary="@string/battery_saver_color_summary"
