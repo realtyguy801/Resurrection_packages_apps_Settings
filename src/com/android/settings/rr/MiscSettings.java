@@ -22,7 +22,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import android.os.Build;
 import com.android.settings.util.AbstractAsyncSuCMDProcessor;
@@ -59,8 +58,6 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
 
     private SwitchPreference mConfig;
     private SwitchPreference mSelinux;
-    private FingerprintManager mFingerprintManager;
-    private SwitchPreference mFingerprintVib;
     private ListPreference mMsob;
 
     @Override
@@ -93,11 +90,6 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
                             Settings.System.RR_OTA_FAB, 0) == 1));
         mConfig.setOnPreferenceChangeListener(this);
 
-        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);        
-        mFingerprintVib = (SwitchPreference) findPreference("fingerprint_success_vib");
-        if (!mFingerprintManager.isHardwareDetected()){
-            getPreferenceScreen().removePreference(mFingerprintVib);
-        }
     }
 
     @Override
