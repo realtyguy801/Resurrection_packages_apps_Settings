@@ -134,4 +134,8 @@
     <string name="ambient_display_show_weather_title">Show while dozing</string>
     <string name="ambient_display_show_weather_summary">Show weather information when ambient display is on</string>
 
+    <!-- Allow fake signature -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string> 
+
 </resources>
