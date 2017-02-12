@@ -2565,7 +2565,7 @@
 
         <!-- Headsup -->
         <activity android:name="Settings$HeadsUpSettingsActivity"
-             android:label="@string/heads_up_notifications"
+             android:label="@string/heads_up_switch_title"
              android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
