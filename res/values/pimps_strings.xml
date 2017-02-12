@@ -144,4 +144,13 @@
     <string name="slim_recents_aicp_empty_drawable_title">AICP empty recents</string>
     <string name="slim_recents_aicp_empty_drawable_summary">Image to show when no recent apps</string>
 
+    <string name="lockscreen_weather_colors_reset_title">Lockscreen weather colors</string>
+    <string name="weather_number_of_notifications_dlg_title">Choose the number of notifications to hide the weather panel</string>
+    <string name="weather_number_of_notifications_always_title">Always</string>
+    <string name="weather_number_of_notifications_two_title">2</string>
+    <string name="weather_number_of_notifications_three_title">3</string>
+    <string name="weather_number_of_notifications_four_title">4</string>
+    <string name="weather_number_of_notifications_five_title">5</string>
+    <string name="weather_number_of_notifications_six_title">6</string>
+
 </resources>

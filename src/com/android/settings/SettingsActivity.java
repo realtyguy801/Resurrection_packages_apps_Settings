@@ -402,7 +402,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
-            HeadsUpSettings.class.getName(),
+            Headsup.class.getName(),
             DataSaverSummary.class.getName()
     };
 
