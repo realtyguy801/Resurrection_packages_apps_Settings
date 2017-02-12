@@ -180,4 +180,6 @@ public class Settings extends SettingsActivity {
     public static class GestrueAnywhereActivity extends SettingsActivity { /* empty */ }
     public static class AppSidebarActivity extends SettingsActivity { /* empty */ }
     public static class AppCircleBarActivity extends SettingsActivity { /* empty */ }
+    public static class HeadsUpSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class DataSaverSettingsActivity extends SettingsActivity { /* empty */ }
 }

@@ -77,6 +77,7 @@ import com.android.settings.applications.WriteSettingsDetails;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.dashboard.DashboardContainerFragment;
 import com.android.settings.dashboard.SearchResultsSummary;
+import com.android.settings.datausage.DataSaverSummary;
 import com.android.settings.datausage.DataUsageSummary;
 import com.android.settings.deletionhelper.AutomaticStorageManagerSettings;
 import com.android.settings.deviceinfo.ImeiInformation;
@@ -146,6 +147,7 @@ import com.android.settings.rr.navbar.SmartbarSettings;
 import com.android.settings.rr.navbar.PulseSettings;
 import com.android.settings.rr.AppCircleBar;
 import com.android.settings.rr.AppSidebar;
+import com.android.settings.rr.Headsup;
 import com.android.settings.rr.pie.PieControl;
 import com.android.settings.rr.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.rr.ambientdisplay.AmbientSettings;
@@ -399,7 +401,9 @@ public class SettingsActivity extends SettingsDrawerActivity
             MasterClear.class.getName(),
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
-            AutomaticStorageManagerSettings.class.getName()
+            AutomaticStorageManagerSettings.class.getName(),
+            HeadsUpSettings.class.getName(),
+            DataSaverSummary.class.getName()
     };
 
 

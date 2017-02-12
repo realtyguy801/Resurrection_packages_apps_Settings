@@ -2563,6 +2563,32 @@
                 android:value="com.android.settings.rr.gestureanywhere.GestureAnywhereSettings" />
         </activity>
 
+        <!-- Headsup -->
+        <activity android:name="Settings$HeadsUpSettingsActivity"
+             android:label="@string/heads_up_notifications"
+             android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.rr.Headsup" />
+        </activity>
+
+        <!-- Data Saver -->
+        <activity android:name="Settings$DataSaverSettingsActivity"
+                android:label="@string/data_saver_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.datausage.DataSaverSummary" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@string/data_saver_title" />
+        </activity>
+
         <!-- App Sidebar -->
         <activity android:name="Settings$AppSidebarActivity"
              android:label="@string/app_circle_bar_title"
