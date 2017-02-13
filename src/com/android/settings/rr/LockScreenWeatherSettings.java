@@ -49,6 +49,8 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             "lock_screen_show_weather";
     private static final String PREF_SHOW_LOCATION =
             "lock_screen_show_weather_location";
+    private static final String PREF_SHOW_CON =
+            "lock_screen_show_weather_condition";
     private static final String PREF_CONDITION_ICON =
             "weather_condition_icon";
     private static final String PREF_HIDE_WEATHER =
@@ -75,6 +77,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
     private SwitchPreference mShowWeather;
     private SwitchPreference mShowAmbient;
     private SwitchPreference mShowLocation;
+    private SwitchPreference mShowCon;
     private ListPreference mConditionIcon;
     private ColorPickerPreference mConColor;
     private ColorPickerPreference mIconColor;
@@ -129,6 +132,12 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             mShowLocation.setChecked(Settings.System.getInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_WEATHER_LOCATION, 1) == 1);
             mShowLocation.setOnPreferenceChangeListener(this);
+
+            mShowCon =
+                    (SwitchPreference) findPreference(PREF_SHOW_CON);
+            mShowCon.setChecked(Settings.System.getInt(mResolver,
+                    Settings.System.LOCK_SCREEN_SHOW_WEATHER_CONDITION, 1) == 1);
+            mShowCon.setOnPreferenceChangeListener(this);
 
             mShowAmbient =
                     (SwitchPreference) findPreference(PREF_SHOW_AMBIENT);
@@ -216,6 +225,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
 
         } else {
             removePreference(PREF_SHOW_LOCATION);
+            removePreference(PREF_SHOW_CON);
             removePreference(PREF_SHOW_AMBIENT);
             removePreference(PREF_CONDITION_ICON);
             catNotifications.removePreference(mHideWeather);
@@ -249,6 +259,12 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             value = (Boolean) newValue;
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_WEATHER_LOCATION,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mShowCon) {
+            value = (Boolean) newValue;
+            Settings.System.putInt(mResolver,
+                    Settings.System.LOCK_SCREEN_SHOW_WEATHER_CONDITION,
                     value ? 1 : 0);
             return true;
         } else if (preference == mShowAmbient) {
