@@ -33,6 +33,7 @@ import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.provider.Settings;
 import com.android.settings.util.Helpers;
@@ -55,10 +56,14 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
     private static final String SELINUX = "selinux";
     private static final String RR_OTA = "rr_ota_fab";
     private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
+    private static final String APPS_SECURITY = "apps_security";
+    private static final String SMS_OUTGOING_CHECK_MAX_COUNT = "sms_outgoing_check_max_count";
 
     private SwitchPreference mConfig;
     private SwitchPreference mSelinux;
     private ListPreference mMsob;
+    private ListPreference mSmsCount;
+    private int mSmsCountValue;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,6 +71,10 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
 
         addPreferencesFromResource(R.xml.rr_misc);
   	final ContentResolver resolver = getActivity().getContentResolver();
+
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        PreferenceCategory appsSecCategory = (PreferenceCategory) findPreference(APPS_SECURITY);
 
 	//SELinux
         mSelinux = (SwitchPreference) findPreference(SELINUX);
@@ -89,6 +98,17 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
         mConfig.setChecked((Settings.System.getInt(getContentResolver(),
                             Settings.System.RR_OTA_FAB, 0) == 1));
         mConfig.setOnPreferenceChangeListener(this);
+
+        mSmsCount = (ListPreference) findPreference(SMS_OUTGOING_CHECK_MAX_COUNT);
+        mSmsCountValue = Settings.Global.getInt(resolver,
+                Settings.Global.SMS_OUTGOING_CHECK_MAX_COUNT, 30);
+        mSmsCount.setValue(Integer.toString(mSmsCountValue));
+        mSmsCount.setSummary(mSmsCount.getEntry());
+        mSmsCount.setOnPreferenceChangeListener(this);
+        if (!Utils.isVoiceCapable(getActivity())) {
+            appsSecCategory.removePreference(mSmsCount);
+            prefScreen.removePreference(appsSecCategory);
+        }
 
     }
 
@@ -138,6 +158,14 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
 
             mMsob.setValue(String.valueOf(value));
             mMsob.setSummary(mMsob.getEntry());
+            return true;
+        } else if (preference == mSmsCount) {
+            mSmsCountValue = Integer.valueOf((String) value);
+            int index = mSmsCount.findIndexOfValue((String) value);
+            mSmsCount.setSummary(
+                    mSmsCount.getEntries()[index]);
+            Settings.Global.putInt(resolver,
+                    Settings.Global.SMS_OUTGOING_CHECK_MAX_COUNT, mSmsCountValue);
             return true;
         }
         return false;
