@@ -87,7 +87,7 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
         }
 		
         mMaxKeyguardNotifConfig = (SeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
-        int kgconf = Settings.System.getInt(resoler,
+        int kgconf = Settings.System.getInt(resolver,
                 Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, 5);
         mMaxKeyguardNotifConfig.setValue(kgconf);
         mMaxKeyguardNotifConfig.setOnPreferenceChangeListener(this);
