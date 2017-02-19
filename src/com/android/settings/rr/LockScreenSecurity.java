@@ -19,6 +19,7 @@ import android.content.ContentResolver;
 import android.hardware.fingerprint.FingerprintManager;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
@@ -29,12 +30,17 @@ import android.support.v7.preference.PreferenceScreen;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.android.settings.rr.SeekBarPreference;
+import com.android.settings.util.CMDProcessor;
+import com.android.settings.util.Helpers;
+import com.android.settings.Utils;
 
 import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import android.hardware.fingerprint.FingerprintManager;
 import com.android.settings.Utils;
+import com.android.internal.widget.LockPatternUtils;
 
 
 public class LockScreenSecurity extends SettingsPreferenceFragment implements
@@ -45,12 +51,14 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
     private static final String LOCKSCREEN_MAX_NOTIF_CONFIG = "lockscreen_max_notif_cofig";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
-
+    private static final String PREF_SHOW_EMERGENCY_BUTTON = "show_emergency_button";
     private SeekBarPreference mMaxKeyguardNotifConfig;
     private SwitchPreference mFingerprintVib;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFpKeystore;
+    private SwitchPreference mEmergencyButton;
 
+    private static final int MY_USER_ID = UserHandle.myUserId();
 
     @Override
     protected int getMetricsCategory() {
@@ -60,15 +68,26 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
+        ContentResolver resolver = getActivity().getContentResolver();
+
 
         addPreferencesFromResource(R.xml.rr_ls_security);
 
-        ContentResolver resolver = getActivity().getContentResolver();
-        final PreferenceScreen prefScreen = getPreferenceScreen();
         Resources resources = getResources();
+
+        mEmergencyButton = (SwitchPreference) findPreference(PREF_SHOW_EMERGENCY_BUTTON);
+        if (lockPatternUtils.isSecure(MY_USER_ID)) {
+            mEmergencyButton.setChecked((Settings.System.getInt(resolver,
+                Settings.System.SHOW_EMERGENCY_BUTTON, 1) == 1));
+            mEmergencyButton.setOnPreferenceChangeListener(this);
+        } else {
+            prefScreen.removePreference(mEmergencyButton);
+        }
 		
         mMaxKeyguardNotifConfig = (SeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
-        int kgconf = Settings.System.getInt(getContentResolver(),
+        int kgconf = Settings.System.getInt(resoler,
                 Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, 5);
         mMaxKeyguardNotifConfig.setValue(kgconf);
         mMaxKeyguardNotifConfig.setOnPreferenceChangeListener(this);
@@ -80,11 +99,11 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
             prefScreen.removePreference(mFingerprintVib);
             prefScreen.removePreference(mFpKeystore);
         } else {
-        mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
+        mFingerprintVib.setChecked((Settings.System.getInt(resolver,
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
         mFingerprintVib.setOnPreferenceChangeListener(this);
 
-        mFpKeystore.setChecked((Settings.System.getInt(getContentResolver(),
+        mFpKeystore.setChecked((Settings.System.getInt(resolver,
                 Settings.System.FP_UNLOCK_KEYSTORE, 0) == 1));
         mFpKeystore.setOnPreferenceChangeListener(this);
         }
@@ -94,20 +113,26 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
         	ContentResolver resolver = getActivity().getContentResolver();
  	if (preference == mMaxKeyguardNotifConfig) {
             int kgconf = (Integer) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, kgconf);
             return true;
         } else if (preference == mFingerprintVib) {
             boolean value = (Boolean) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
             return true;
         } else if (preference == mFpKeystore) {
             boolean value = (Boolean) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.FP_UNLOCK_KEYSTORE, value ? 1 : 0);
             return true;
-        }
+        } else if  (preference == mEmergencyButton) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.SHOW_EMERGENCY_BUTTON, checked ? 1:0);
+            Helpers.showSystemUIrestartDialog(getActivity());
+            return true;
+            }
 	return false;
     }
 }
