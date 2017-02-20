@@ -42,6 +42,8 @@ import java.util.List;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.util.CMDProcessor;
+import com.android.settings.util.Helpers;
 import com.android.settings.Utils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
@@ -220,9 +222,10 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
                     ((SwitchPreference) preference).isChecked() ? 1 : 0);
             return true;
         } else if (preference == mBatteryBarAmbient) {
-            Settings.System.putInt(resolver,
+             Settings.System.putInt(resolver,
                     Settings.System.SHOW_BATTERYBAR_AMBIENT,
                     ((SwitchPreference) preference).isChecked() ? 1 : 0);
+            Helpers.showSystemUIrestartDialog(getActivity());
             return true;
         }
         return false;
