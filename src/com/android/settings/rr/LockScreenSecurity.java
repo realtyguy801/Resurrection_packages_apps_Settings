@@ -68,7 +68,7 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final PreferenceScreen prefScreen = getPreferenceScreen();
+        PreferenceScreen prefScreen = getPreferenceScreen();
         final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
         ContentResolver resolver = getActivity().getContentResolver();
 
@@ -83,7 +83,7 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
                 Settings.System.SHOW_EMERGENCY_BUTTON, 1) == 1));
             mEmergencyButton.setOnPreferenceChangeListener(this);
         } else {
-            prefScreen.removePreference(mEmergencyButton);
+            getPreferenceScreen().removePreference(mEmergencyButton);
         }
 		
         mMaxKeyguardNotifConfig = (SeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
@@ -96,8 +96,8 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
         mFpKeystore = (SwitchPreference) findPreference(FP_UNLOCK_KEYSTORE);
         if (!mFingerprintManager.isHardwareDetected()){
-            prefScreen.removePreference(mFingerprintVib);
-            prefScreen.removePreference(mFpKeystore);
+            getPreferenceScreen().removePreference(mFingerprintVib);
+            getPreferenceScreen().removePreference(mFpKeystore);
         } else {
         mFingerprintVib.setChecked((Settings.System.getInt(resolver,
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
@@ -127,9 +127,9 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
                     Settings.System.FP_UNLOCK_KEYSTORE, value ? 1 : 0);
             return true;
         } else if  (preference == mEmergencyButton) {
-            boolean checked = ((SwitchPreference)preference).isChecked();
+            boolean value = (Boolean) objValue;
             Settings.System.putInt(resolver,
-                    Settings.System.SHOW_EMERGENCY_BUTTON, checked ? 1:0);
+                    Settings.System.SHOW_EMERGENCY_BUTTON, value ? 1 : 0);
             Helpers.showSystemUIrestartDialog(getActivity());
             return true;
             }
