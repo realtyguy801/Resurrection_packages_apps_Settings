@@ -56,6 +56,7 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
     private static final String PREF_BATT_BAR_STYLE = "battery_bar_style";
     private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
     private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
+    private static final String PREF_BATT_AMBIENT = "show_batterybar_ambient";
     private static final String PREF_BATT_BAR_COLOR = "battery_bar_color";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
@@ -67,6 +68,7 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
 
     private ListPreference mBatteryBar;
     private ListPreference mBatteryBarStyle;
+    private SwitchPreference mBatteryBarAmbient;
     private SeekBarPreference mBatteryBarThickness;
     private SwitchPreference mBatteryBarChargingAnimation;
     private ColorPickerPreference mBatteryBarColor;
@@ -107,6 +109,10 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
         mBatteryBarChargingAnimation = (SwitchPreference) findPreference(PREF_BATT_ANIMATE);
         mBatteryBarChargingAnimation.setChecked(Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, 0) == 1);
+
+        mBatteryBarAmbient = (SwitchPreference) findPreference(PREF_BATT_AMBIENT);
+        mBatteryBarAmbient.setChecked(Settings.System.getInt(resolver,
+                Settings.System.SHOW_BATTERYBAR_AMBIENT, 0) == 1);
 
         mBatteryBarThickness = (SeekBarPreference) findPreference(PREF_BATT_BAR_WIDTH);
         int thick = (Settings.System.getInt(resolver,
@@ -213,6 +219,11 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
                     Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE,
                     ((SwitchPreference) preference).isChecked() ? 1 : 0);
             return true;
+        } else if (preference == mBatteryBarAmbient) {
+            Settings.System.putInt(resolver,
+                    Settings.System.SHOW_BATTERYBAR_AMBIENT,
+                    ((SwitchPreference) preference).isChecked() ? 1 : 0);
+            return true;
         }
         return false;
     }
@@ -223,6 +234,7 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
                 mBatteryBarStyle.setEnabled(false);
                 mBatteryBarThickness.setEnabled(false);
                 mBatteryBarChargingAnimation.setEnabled(false);
+                mBatteryBarAmbient.setEnabled(false);
                 mBatteryBarColor.setEnabled(false);
                 mBatteryBarChargingColor.setEnabled(false);
                 mBatteryBarBatteryLowColor.setEnabled(false);
@@ -233,6 +245,7 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
                 mBatteryBarStyle.setEnabled(true);
                 mBatteryBarThickness.setEnabled(true);
                 mBatteryBarChargingAnimation.setEnabled(true);
+                mBatteryBarAmbient.setEnabled(true);
                 mBatteryBarColor.setEnabled(true);
                 mBatteryBarChargingColor.setEnabled(true);
                 mBatteryBarBatteryLowColor.setEnabled(true);
