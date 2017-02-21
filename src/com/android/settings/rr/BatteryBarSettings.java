@@ -58,7 +58,7 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
     private static final String PREF_BATT_BAR_STYLE = "battery_bar_style";
     private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
     private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
-    private static final String PREF_BATT_AMBIENT = "show_batterybar_ambient";
+    private static final String PREF_BATT_AMBIENT = "battery_bar_ambient";
     private static final String PREF_BATT_BAR_COLOR = "battery_bar_color";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
