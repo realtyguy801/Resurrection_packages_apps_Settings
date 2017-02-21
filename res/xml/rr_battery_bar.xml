@@ -38,7 +38,7 @@
         android:summary="@string/battery_bar_animate_summary" />
 
    <SwitchPreference
-        android:key="battery_bar_ambient"
+        android:key="show_batterybar_ambient"
         android:title="@string/battery_bar_ambient_title"
         android:summary="@string/battery_bar_ambient_summary" />
 

@@ -58,7 +58,7 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
     private static final String PREF_BATT_BAR_STYLE = "battery_bar_style";
     private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
     private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
-    private static final String PREF_BATT_AMBIENT = "battery_bar_ambient";
+    private static final String PREF_AMBIENT = "show_batterybar_ambient";
     private static final String PREF_BATT_BAR_COLOR = "battery_bar_color";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
@@ -70,9 +70,9 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
 
     private ListPreference mBatteryBar;
     private ListPreference mBatteryBarStyle;
-    private SwitchPreference mBatteryBarAmbient;
     private SeekBarPreference mBatteryBarThickness;
     private SwitchPreference mBatteryBarChargingAnimation;
+    private SwitchPreference mAmbient;
     private ColorPickerPreference mBatteryBarColor;
     private ColorPickerPreference mBatteryBarChargingColor;
     private ColorPickerPreference mBatteryBarBatteryLowColor;
@@ -112,8 +112,8 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
         mBatteryBarChargingAnimation.setChecked(Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, 0) == 1);
 
-        mBatteryBarAmbient = (SwitchPreference) findPreference(PREF_BATT_AMBIENT);
-        mBatteryBarAmbient.setChecked(Settings.System.getInt(resolver,
+        mAmbient = (SwitchPreference) findPreference(PREF_AMBIENT);
+        mAmbient.setChecked(Settings.System.getInt(resolver,
                 Settings.System.SHOW_BATTERYBAR_AMBIENT, 0) == 1);
 
         mBatteryBarThickness = (SeekBarPreference) findPreference(PREF_BATT_BAR_WIDTH);
@@ -207,29 +207,27 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_BATTERY_BAR_COLOR, intHex);
             return true;
-         }
+        }
 	return false;
-	}
+      }
 
-   @Override
-   public boolean onPreferenceTreeClick(Preference preference) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        boolean value;
-
-        if (preference == mBatteryBarChargingAnimation) {
-            Settings.System.putInt(resolver,
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+            ContentResolver resolver = getActivity().getContentResolver();
+            boolean value;
+            if (preference == mBatteryBarChargingAnimation) {
+                Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE,
                     ((SwitchPreference) preference).isChecked() ? 1 : 0);
-            return true;
-        } else if (preference == mBatteryBarAmbient) {
-             Settings.System.putInt(resolver,
+                return true;
+            } else if (preference == mAmbient) {
+                Settings.System.putInt(resolver,
                     Settings.System.SHOW_BATTERYBAR_AMBIENT,
                     ((SwitchPreference) preference).isChecked() ? 1 : 0);
-            Helpers.showSystemUIrestartDialog(getActivity());
-            return true;
+                CMDProcessor.runSuCommand("pkill -f com.android.systemui");
+                return true;
+            }
+            return false;
         }
-        return false;
-    }
 
         private void updateBatteryBarOptions() {
             if (Settings.System.getInt(getActivity().getContentResolver(),
@@ -237,9 +235,8 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
                 mBatteryBarStyle.setEnabled(false);
                 mBatteryBarThickness.setEnabled(false);
                 mBatteryBarChargingAnimation.setEnabled(false);
-                mBatteryBarAmbient.setEnabled(false);
                 mBatteryBarColor.setEnabled(false);
-                mBatteryBarChargingColor.setEnabled(false);
+                mAmbient.setEnabled(false);
                 mBatteryBarBatteryLowColor.setEnabled(false);
                 mBatteryBarUseChargingColor.setEnabled(false);
                 mBatteryBarBlendColors.setEnabled(false);
@@ -248,9 +245,8 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
                 mBatteryBarStyle.setEnabled(true);
                 mBatteryBarThickness.setEnabled(true);
                 mBatteryBarChargingAnimation.setEnabled(true);
-                mBatteryBarAmbient.setEnabled(true);
                 mBatteryBarColor.setEnabled(true);
-                mBatteryBarChargingColor.setEnabled(true);
+                mAmbient.setEnabled(true);
                 mBatteryBarBatteryLowColor.setEnabled(true);
                 mBatteryBarUseChargingColor.setEnabled(true);
                 mBatteryBarBlendColors.setEnabled(true);

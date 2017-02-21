@@ -20,12 +20,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/rr_battery_title">
 
-     <PreferenceScreen
-            android:key="rr_battery_bar"
-            android:fragment="com.android.settings.rr.BatteryBarSettings"
-            android:summary="@string/battery_bar_summary"
-            android:title="@string/battery_bar"/>
-
      <PreferenceCategory
         android:title="@string/rr_sb_battery">
 

@@ -123,6 +123,13 @@
     <string name="pulse_colors_reset_title">Reset pulse colors</string>
     <string name="pulse_colors_reset_message">Are you sure you want to reset these colors to default?</string>
 
+    <string name="ticker_colors_reset_title">Reset ticker colors</string>
+    <string name="ticker_icon_title">Ticker icon color</string>
+    <string name="ticker_text_title">Ticker text color</string>
+    <string name="count_colors_reset_title">Reset count colors</string>
+    <string name="count_icon_title">Count icon color</string>
+    <string name="count_text_title">Count text color</string>
+
     <string name="battery_bar_summary">Battery bar options and colors</string>
     <string name="battery_colors_reset_title">Reset battery colors</string>
     <string name="battery_colors_reset_message">Are you sure you want to reset these colors to default?</string>
@@ -188,5 +195,10 @@
     <string name="sms_outgoing_check_max_count_default">30 per minute (default)</string>
     <string name="sms_outgoing_check_max_count_hundred">100 per minute</string>
     <string name="sms_outgoing_check_max_count_sixhundred">600 per minute</string>
+
+    <!-- Dynamic notification tint -->
+    <string name="notification_tint_title">Dynamic notification title color</string>
+    <string name="notification_tint_summary_off">Title color on notification will be handled by the theme</string>
+    <string name="notification_tint_summary_on">Title color on notification will be taken from app icon color</string>
 
 </resources>

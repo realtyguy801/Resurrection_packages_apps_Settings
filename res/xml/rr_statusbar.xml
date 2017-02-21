@@ -43,10 +43,17 @@
 
      <PreferenceScreen
         android:key="rr_battery"
-		android:fragment="com.android.settings.rr.BatterySettings"
+        android:fragment="com.android.settings.rr.BatterySettings"
         android:title="@string/rr_battery"
         android:summary="@string/rr_battery_summary"
-		android:icon="@drawable/rr_battery_icon" />
+        android:icon="@drawable/rr_battery_icon" />
+
+     <PreferenceScreen
+        android:key="rr_battery_bar"
+        android:fragment="com.android.settings.rr.BatteryBarSettings"
+        android:summary="@string/battery_bar_summary"
+        android:title="@string/battery_bar"
+        android:icon="@drawable/rr_header_icon"/>
 
      <PreferenceScreen
         android:key="rr_icons"
