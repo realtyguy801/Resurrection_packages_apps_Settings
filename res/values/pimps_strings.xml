@@ -201,4 +201,8 @@
     <string name="notification_tint_summary_off">Title color on notification will be handled by the theme</string>
     <string name="notification_tint_summary_on">Title color on notification will be taken from app icon color</string>
 
+    <string name="dnd_when_call_title">Do not Disturb</string>
+    <string name="dnd_when_call_summaryOn">Do not disturb is on when call is active</string>
+    <string name="dnd_when_call_summaryOff">Do not disturb is off when call is active</string>
+
 </resources>
