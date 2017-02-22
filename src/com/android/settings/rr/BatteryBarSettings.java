@@ -215,15 +215,13 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
             ContentResolver resolver = getActivity().getContentResolver();
             boolean value;
             if (preference == mBatteryBarChargingAnimation) {
-                Settings.System.putInt(resolver,
-                    Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE,
-                    ((SwitchPreference) preference).isChecked() ? 1 : 0);
+                value = mBatteryBarChargingAnimation.isChecked();
+                Settings.System.putInt(resolver, Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, value ? 1 : 0);
                 return true;
             } else if (preference == mAmbient) {
-                Settings.System.putInt(resolver,
-                    Settings.System.SHOW_BATTERYBAR_AMBIENT,
-                    ((SwitchPreference) preference).isChecked() ? 1 : 0);
-                CMDProcessor.runSuCommand("pkill -f com.android.systemui");
+                value = mAmbient.isChecked();
+                Settings.System.putInt(resolver, Settings.System.SHOW_BATTERYBAR_AMBIENT, value ? 1 : 0);
+                Helpers.showSystemUIrestartDialog(getActivity());
                 return true;
             }
             return false;

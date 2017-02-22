@@ -63,6 +63,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private static final String SOLID_LAVAMP_SPEED = "lavamp_solid_speed";
     private static final String FADING_LAVAMP_SPEED = "fling_pulse_lavalamp_speed";
     private static final String PULSE_SOLID_UNITS_COUNT = "pulse_solid_units_count";
+    private static final String PULSE_SOLID_UNITS_OPACITY = "pulse_solid_units_opacity";
 
     static final int DEFAULT = 0xffffffff;
     static final int DEFAULT_TO = 0xff8080ff;
@@ -85,6 +86,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     SeekBarPreference mSolidSpeed;
     SeekBarPreference mFadingSpeed;
     SeekBarPreference mSolidCount;
+    SeekBarPreference mSolidOpacity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -170,24 +172,29 @@ public class PulseSettings extends SettingsPreferenceFragment implements
 
         int speed = Settings.Secure.getIntForUser(getContentResolver(),
                 Settings.Secure.PULSE_LAVALAMP_SOLID_SPEED, 10000, UserHandle.USER_CURRENT);
-        mSolidSpeed =
-                (SeekBarPreference) findPreference(SOLID_LAVAMP_SPEED);
+        mSolidSpeed = (SeekBarPreference) findPreference(SOLID_LAVAMP_SPEED);
         mSolidSpeed.setValue(speed);
         mSolidSpeed.setOnPreferenceChangeListener(this);
 
         int fspeed = Settings.Secure.getIntForUser(getContentResolver(),
                 Settings.Secure.FLING_PULSE_LAVALAMP_SPEED, 10000, UserHandle.USER_CURRENT);
-        mFadingSpeed =
-                (SeekBarPreference) findPreference(FADING_LAVAMP_SPEED);
+        mFadingSpeed = (SeekBarPreference) findPreference(FADING_LAVAMP_SPEED);
         mFadingSpeed.setValue(fspeed);
         mFadingSpeed.setOnPreferenceChangeListener(this);
 
         int count = Settings.Secure.getIntForUser(getContentResolver(),
                 Settings.Secure.PULSE_SOLID_UNITS_COUNT, 64, UserHandle.USER_CURRENT);
-        mSolidCount =
-                (SeekBarPreference) findPreference(PULSE_SOLID_UNITS_COUNT);
+        mSolidCount = (SeekBarPreference) findPreference(PULSE_SOLID_UNITS_COUNT);
         mSolidCount.setValue(count);
         mSolidCount.setOnPreferenceChangeListener(this);
+
+        int opacity = Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_SOLID_UNITS_OPACITY, 200, UserHandle.USER_CURRENT);
+        mSolidOpacity =
+                (SeekBarPreference) findPreference(PULSE_SOLID_UNITS_OPACITY);
+        mSolidOpacity.setValue(opacity);
+        mSolidOpacity.setOnPreferenceChangeListener(this);
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -272,6 +279,11 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             int val = (Integer) newValue;
             Settings.Secure.putIntForUser(getContentResolver(),
                     Settings.Secure.PULSE_SOLID_UNITS_COUNT, val, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mSolidOpacity) {
+            int val = (Integer) newValue;
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.PULSE_SOLID_UNITS_OPACITY, val, UserHandle.USER_CURRENT);
             return true;
         }
         return false;
