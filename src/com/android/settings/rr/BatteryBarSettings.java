@@ -111,10 +111,12 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
         mBatteryBarChargingAnimation = (SwitchPreference) findPreference(PREF_BATT_ANIMATE);
         mBatteryBarChargingAnimation.setChecked(Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, 0) == 1);
+        mBatteryBarChargingAnimation.setOnPreferenceChangeListener(this);
 
         mAmbient = (SwitchPreference) findPreference(PREF_AMBIENT);
         mAmbient.setChecked(Settings.System.getInt(resolver,
                 Settings.System.SHOW_BATTERYBAR_AMBIENT, 0) == 1);
+        mAmbient.setOnPreferenceChangeListener(this);
 
         mBatteryBarThickness = (SeekBarPreference) findPreference(PREF_BATT_BAR_WIDTH);
         int thick = (Settings.System.getInt(resolver,
@@ -207,25 +209,22 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_BATTERY_BAR_COLOR, intHex);
             return true;
+        } else if (preference == mBatteryBarChargingAnimation) {
+            value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mAmbient) {
+            value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.SHOW_BATTERYBAR_AMBIENT,
+                    value ? 1 : 0);
+            Helpers.showSystemUIrestartDialog(getActivity());
+            return true;
         }
 	return false;
       }
-
-        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            ContentResolver resolver = getActivity().getContentResolver();
-            boolean value;
-            if (preference == mBatteryBarChargingAnimation) {
-                value = mBatteryBarChargingAnimation.isChecked();
-                Settings.System.putInt(resolver, Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, value ? 1 : 0);
-                return true;
-            } else if (preference == mAmbient) {
-                value = mAmbient.isChecked();
-                Settings.System.putInt(resolver, Settings.System.SHOW_BATTERYBAR_AMBIENT, value ? 1 : 0);
-                Helpers.showSystemUIrestartDialog(getActivity());
-                return true;
-            }
-            return false;
-        }
 
         private void updateBatteryBarOptions() {
             if (Settings.System.getInt(getActivity().getContentResolver(),
