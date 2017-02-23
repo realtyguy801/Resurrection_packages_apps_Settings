@@ -183,11 +183,6 @@
     <string name="magisk_title">Magisk Manager</string>
     <string name="magisk_summary">Control modules and settings</string>
 
-    <!-- Wired headset ringtone audio focus -->
-    <string name="wired_ringtone_focus_mode_title">Where to play ringtones from</string>
-    <string name="wired_ringtone_focus_mode_dynamic">Wired headset if connected and playing music</string>
-    <string name="wired_ringtone_focus_mode_stock">Speakerphone (default)</string>
-
     <!-- Sms security limit -->
     <string name="apps_security_options_title">Apps security</string>
     <string name="sms_outgoing_check_max_count_title">SMS apps message limit</string>
