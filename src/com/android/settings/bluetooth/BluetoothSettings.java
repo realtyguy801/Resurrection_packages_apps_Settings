@@ -296,7 +296,7 @@ public final class BluetoothSettings extends DeviceListPreferenceFragment implem
         int textId = isDiscovering ? R.string.bluetooth_searching_for_devices :
             R.string.bluetooth_search_for_devices;
 
-        boolean isAcceptAllFilesEnabled = Settings.System.getInt(getContentResolver(),
+        boolean isAcceptAllFilesEnabled = CMSettings.System.getInt(getContentResolver(),
                 CMSettings.System.BLUETOOTH_ACCEPT_ALL_FILES, 0) == 1;
 
         menu.add(Menu.NONE, MENU_ID_SCAN, 0, textId)
