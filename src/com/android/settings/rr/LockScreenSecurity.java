@@ -30,9 +30,6 @@ import android.support.v7.preference.PreferenceScreen;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.android.settings.rr.SeekBarPreference;
-import com.android.settings.util.CMDProcessor;
-import com.android.settings.util.Helpers;
-import com.android.settings.Utils;
 
 import android.provider.Settings;
 
@@ -40,7 +37,6 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import android.hardware.fingerprint.FingerprintManager;
 import com.android.settings.Utils;
-import com.android.internal.widget.LockPatternUtils;
 
 
 public class LockScreenSecurity extends SettingsPreferenceFragment implements
@@ -56,9 +52,7 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
     private SwitchPreference mFingerprintVib;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFpKeystore;
-    private SwitchPreference mEmergencyButton;
 
-    private static final int MY_USER_ID = UserHandle.myUserId();
 
     @Override
     protected int getMetricsCategory() {
@@ -72,15 +66,9 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
         final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
         ContentResolver resolver = getActivity().getContentResolver();
 
-
         addPreferencesFromResource(R.xml.rr_ls_security);
 
         Resources resources = getResources();
-
-        mEmergencyButton = (SwitchPreference) findPreference(PREF_SHOW_EMERGENCY_BUTTON);
-        mEmergencyButton.setChecked((Settings.System.getInt(resolver,
-                Settings.System.SHOW_EMERGENCY_BUTTON, 1) == 1));
-        mEmergencyButton.setOnPreferenceChangeListener(this);
 		
         mMaxKeyguardNotifConfig = (SeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
         int kgconf = Settings.System.getInt(resolver,
@@ -122,13 +110,7 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.FP_UNLOCK_KEYSTORE, value ? 1 : 0);
             return true;
-        } else if  (preference == mEmergencyButton) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.SHOW_EMERGENCY_BUTTON, value ? 1 : 0);
-            Helpers.showSystemUIrestartDialog(getActivity());
-            return true;
-            }
+        }
 	return false;
     }
 }

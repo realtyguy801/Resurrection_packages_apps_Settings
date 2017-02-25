@@ -129,7 +129,7 @@
 
         <com.android.settings.rr.SeekBarPreference
             android:key="pulse_solid_units_count"
-            android:title="@string/pulse_solid_lines_count"
+            android:title="@string/pulse_solid_units_count"
             settings:maximum="128"
             settings:minimum="32"
             settings:interval="16"
