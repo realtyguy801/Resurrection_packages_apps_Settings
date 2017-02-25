@@ -63,8 +63,8 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceScreen prefScreen = getPreferenceScreen();
-        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
         ContentResolver resolver = getActivity().getContentResolver();
+
 
         addPreferencesFromResource(R.xml.rr_ls_security);
 
@@ -79,6 +79,7 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
         mFpKeystore = (SwitchPreference) findPreference(FP_UNLOCK_KEYSTORE);
+        if (mFpKeystore !=null) {
         if (!mFingerprintManager.isHardwareDetected()){
             getPreferenceScreen().removePreference(mFingerprintVib);
             getPreferenceScreen().removePreference(mFpKeystore);
@@ -90,6 +91,7 @@ public class LockScreenSecurity extends SettingsPreferenceFragment implements
         mFpKeystore.setChecked((Settings.System.getInt(resolver,
                 Settings.System.FP_UNLOCK_KEYSTORE, 0) == 1));
         mFpKeystore.setOnPreferenceChangeListener(this);
+            }
         }
     }
 
