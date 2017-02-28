@@ -32,6 +32,7 @@ import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.util.Helpers;
 import com.android.settings.Utils;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
@@ -40,8 +41,10 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         Preference.OnPreferenceChangeListener {
 
 	private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
+        private static final String NOTIFICATION_GUTS_KILL_APP_BUTTON = "notification_guts_kill_app_button";
 
 	private SwitchPreference mDisableIM;
+        private Preference mNotificationKill;
 
 
     @Override
@@ -49,11 +52,14 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.rr_notification_drawer);
 
-		mDisableIM = (SwitchPreference) findPreference(DISABLE_IMMERSIVE_MESSAGE);
+        mDisableIM = (SwitchPreference) findPreference(DISABLE_IMMERSIVE_MESSAGE);
         mDisableIM.setOnPreferenceChangeListener(this);
         int DisableIM = Settings.System.getInt(getContentResolver(),
                 DISABLE_IMMERSIVE_MESSAGE, 0);
-mDisableIM.setChecked(DisableIM != 0);
+        mDisableIM.setChecked(DisableIM != 0);
+
+        mNotificationKill = findPreference(NOTIFICATION_GUTS_KILL_APP_BUTTON);
+        mNotificationKill.setOnPreferenceChangeListener(this);
     }
 
 
@@ -63,6 +69,11 @@ mDisableIM.setChecked(DisableIM != 0);
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), DISABLE_IMMERSIVE_MESSAGE,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mNotificationKill) {
+            // Setting will only apply to new created notifications.
+            // By restarting SystemUI, we can re-create all notifications
+            Helpers.showSystemUIrestartDialog(getActivity());
             return true;
         }
         return false;
