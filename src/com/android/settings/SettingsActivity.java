@@ -150,6 +150,7 @@ import com.android.settings.rr.AppCircleBar;
 import com.android.settings.rr.AppSidebar;
 import com.android.settings.rr.ExpandedDesktop;
 import com.android.settings.rr.Headsup;
+import com.android.settings.rr.OmniJawsSettings;
 import com.android.settings.rr.pie.PieControl;
 import com.android.settings.rr.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.rr.ambientdisplay.AmbientSettings;
@@ -399,6 +400,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
             PulseSettings.class.getName(),
+            OmniJawsSettings.class.getName(),
             AppCircleBar.class.getName(),
             AppSidebar.class.getName(),
             GestureAnywhereSettings.class.getName(),
