@@ -33,6 +33,7 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.util.Log;
 
@@ -43,9 +44,14 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
+import java.util.List;
+import java.util.ArrayList;
 
 public class QsAdvanced extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "QsAdvanced";
     private static final String CATEGORY_WEATHER = "weather_category";
     private static final String WEATHER_ICON_PACK = "weather_icon_pack";
@@ -64,53 +70,49 @@ public class QsAdvanced extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         addPreferencesFromResource(R.xml.rr_qs_advanced);
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
-        mWeatherCategory = (PreferenceCategory) prefSet.findPreference(CATEGORY_WEATHER);
+        mWeatherCategory = (PreferenceCategory) prefScreen.findPreference(CATEGORY_WEATHER);
         if (mWeatherCategory != null && !isOmniJawsServiceInstalled()) {
-            prefSet.removePreference(mWeatherCategory);
+            prefScreen.removePreference(mWeatherCategory);
         } else {
-            String settingsJaws = Settings.System.getString(getContentResolver(),
+            String settingHeaderPackage = Settings.System.getString(getContentResolver(),
                     Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
-            if (settingsJaws == null) {
-                settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE;
+            if (settingHeaderPackage == null) {
+                settingHeaderPackage = DEFAULT_WEATHER_ICON_PACKAGE;
             }
             mWeatherIconPack = (ListPreference) findPreference(WEATHER_ICON_PACK);
 
-            List<String> entriesJaws = new ArrayList<String>();
-            List<String> valuesJaws = new ArrayList<String>();
-            getAvailableWeatherIconPacks(entriesJaws, valuesJaws);
-            mWeatherIconPack.setEntries(entries.toArray(new String[entriesJaws.size()]));
-            mWeatherIconPack.setEntryValues(values.toArray(new String[valuesJaws.size()]));
+            List<String> entries = new ArrayList<String>();
+            List<String> values = new ArrayList<String>();
+            getAvailableWeatherIconPacks(entries, values);
+            mWeatherIconPack.setEntries(entries.toArray(new String[entries.size()]));
+            mWeatherIconPack.setEntryValues(values.toArray(new String[values.size()]));
 
-            int valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingHeaderPackage);
-            if (valueJawsIndex == -1) {
+            int valueIndex = mWeatherIconPack.findIndexOfValue(settingHeaderPackage);
+            if (valueIndex == -1) {
                 // no longer found
                 settingHeaderPackage = DEFAULT_WEATHER_ICON_PACKAGE;
                 Settings.System.putString(getContentResolver(),
                         Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingHeaderPackage);
-                valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingHeaderPackage);
+                valueIndex = mWeatherIconPack.findIndexOfValue(settingHeaderPackage);
             }
-            mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
+            mWeatherIconPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
             mWeatherIconPack.setOnPreferenceChangeListener(this);
         }
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) 		{
-        int intValue;
-        int index;
-        ContentResolver resolver = getActivity().getContentResolver();
-         if (preference == mWeatherIconPack) {
-            String value = (String) newValue;
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mWeatherIconPack) {
+            String value = (String) objValue;
             Settings.System.putString(getContentResolver(),
                     Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
             int valueIndex = mWeatherIconPack.findIndexOfValue(value);
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
-            return true;
-         }
-     return false;
+        }
+        return true;
     }
 
     private boolean isOmniJawsServiceInstalled() {
@@ -123,7 +125,6 @@ public class QsAdvanced extends SettingsPreferenceFragment implements
         i.setAction("org.omnirom.WeatherIconPack");
         for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
             String packageName = r.activityInfo.packageName;
-            Log.d("maxwen", packageName);
             if (packageName.equals(DEFAULT_WEATHER_ICON_PACKAGE)) {
                 values.add(0, r.activityInfo.name);
             } else {
@@ -172,4 +173,26 @@ public class QsAdvanced extends SettingsPreferenceFragment implements
         }
         return true;
     }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.rr_qs_advanced;
+                    result.add(sir);
+
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    ArrayList<String> result = new ArrayList<String>();
+                    return result;
+                }
+    };
 }
