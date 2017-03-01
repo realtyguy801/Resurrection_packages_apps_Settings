@@ -433,6 +433,7 @@
                 android:launchMode="singleTask"
                 android:taskAffinity="com.android.settings"
                 android:configChanges="orientation|keyboardHidden|screenSize"
+                android:parentActivityName="Settings$WirelessSettingsActivity"
                 android:process="com.android.phone">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.APN_SETTINGS" />
@@ -1002,7 +1003,7 @@
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
-            <intent-filter android:priority="9">
+            <intent-filter android:priority="10">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
@@ -1097,7 +1098,7 @@
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
-            <intent-filter android:priority="6">
+            <intent-filter android:priority="7">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
@@ -1352,11 +1353,11 @@
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
-            <intent-filter android:priority="9">
+            <intent-filter android:priority="6">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
-                android:value="com.android.settings.category.system" />
+                android:value="com.android.settings.category.device" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.applications.AppOpsSummary" />
             <meta-data android:name="com.android.settings.summary"
@@ -2853,11 +2854,11 @@
                 android:label="@string/crypt_keeper_encrypt_title">
             <intent-filter android:priority="1">
                 <action android:name="android.app.action.START_ENCRYPTION" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.CryptKeeperSettings" />
@@ -2957,6 +2958,8 @@
             <intent-filter android:priority="1">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.device" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.nfc.PaymentSettings" />
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
@@ -2977,8 +2980,8 @@
 
         <activity android:name=".nfc.HowItWorks"
                   android:label="@string/nfc_payment_settings_title"
-                  android:parentActivityName="Settings$PaymentSettingsActivity"
-                  android:excludeFromRecents="true">
+                  android:excludeFromRecents="true"
+                  android:parentActivityName="Settings$PaymentSettingsActivity">
         </activity>
 
         <activity android:name=".SmsDefaultDialog"
@@ -3084,7 +3087,7 @@
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
-            <intent-filter android:priority="7">
+            <intent-filter android:priority="8">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
@@ -3128,7 +3131,7 @@
                 android:icon="@drawable/ic_settings_notifications"
                 android:exported="true"
                 android:taskAffinity="">
-            <intent-filter android:priority="8">
+            <intent-filter android:priority="9">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
