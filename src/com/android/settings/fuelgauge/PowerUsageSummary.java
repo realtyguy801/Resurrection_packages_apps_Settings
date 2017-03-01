@@ -69,9 +69,9 @@ public class PowerUsageSummary extends PowerUsageBase {
     private static final String KEY_BATTERY_HISTORY = "battery_history";
 
     private static final int MENU_STATS_TYPE = Menu.FIRST;
-    private static final int MENU_STATS_RESET = Menu.FIRST + 2;
     private static final int MENU_HIGH_POWER_APPS = Menu.FIRST + 3;
     private static final int MENU_HELP = Menu.FIRST + 4;
+    private static final int MENU_STATS_RESET = Menu.FIRST + 5;
 
     private BatteryHistoryPreference mHistPref;
     private PreferenceGroup mAppListGroup;
@@ -138,7 +138,6 @@ public class PowerUsageSummary extends PowerUsageBase {
                     .setIcon(com.android.internal.R.drawable.ic_menu_info_details)
                     .setAlphabeticShortcut('t');
         }
-
 
         MenuItem reset = menu.add(0, MENU_STATS_RESET, 0, R.string.battery_stats_reset)
                 .setIcon(R.drawable.ic_delete)

@@ -197,21 +197,6 @@
     <string name="dnd_when_call_summaryOn">Do not disturb is on when call is active</string>
     <string name="dnd_when_call_summaryOff">Do not disturb is off when call is active</string>
 
-    <!-- OmniJaws -->
-    <string name="weather_title">Weather</string>
-    <string name="weather_config_title">Service settings</string>
-    <string name="weather_config_summary"></string>
-    <string name="weather_icon_pack_title">Condition icon pack</string>
-
-
-    <!-- Notification guts kill app button -->
-    <string name="notification_guts_kill_app_button_title">Kill app button</string>
-    <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
-
-    <!-- Battery stats reset -->
-    <string name="battery_stats_reset">Reset stats</string>
-    <string name="battery_stats_message">Battery history stats are going to be reset</string>
-    <string name="ok_string">Ok</string>
 
     <!-- App Ops Settings -->
     <string name="app_ops_settings">App ops</string>

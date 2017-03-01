@@ -308,5 +308,9 @@
   <!-- Slim Recent panel -->
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <!-- Fingerprint unlock keystore -->
-  <!-- Emergency button -->
+  <!-- Wired headset ringtone audio focus -->
+  <!-- Slim Recent App Sidebar  -->
+  <!-- Battery stats reset -->
+  <!-- Hide Statusbar on Lockscreen -->
+  <!-- Notification guts kill app button -->
 </resources>
