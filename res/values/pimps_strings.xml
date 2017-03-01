@@ -202,4 +202,8 @@
     <string name="app_ops_settings">App ops</string>
     <string name="app_ops_settings_summary">View or change app permissions</string>
 
+    <!-- App Ops Settings -->
+    <string name="app_ops_settings">App ops</string>
+    <string name="app_ops_settings_summary">View or change app permissions</string>
+
 </resources>
