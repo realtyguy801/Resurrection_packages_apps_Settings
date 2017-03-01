@@ -30,8 +30,10 @@ import android.view.MenuInflater;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-public class RecentAppSidebar extends PreferenceFragment
+public class RecentAppSidebar extends SettingsPreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "RecentAppSidebarSettings";
@@ -111,9 +113,6 @@ public class RecentAppSidebar extends PreferenceFragment
         mAppSidebarBgColor.setNewPreviewColor(DEFAULT_COLOR);
      }
 
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-    }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mAppSidebarScale) {
@@ -150,6 +149,11 @@ public class RecentAppSidebar extends PreferenceFragment
         return false;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
     private void initializeAllPreferences() {
         mAppSidebarScale = (SeekBarPreference) findPreference(APP_SIDEBAR_SCALE);
         mAppSidebarScale.setOnPreferenceChangeListener(this);
@@ -181,5 +185,10 @@ public class RecentAppSidebar extends PreferenceFragment
             mAppSidebarBgColor.setSummary(hexColorSidebarBg);
         }
         mAppSidebarBgColor.setNewPreviewColor(intColorSidebarBg);
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsEvent.RESURRECTED;
     }
 }
