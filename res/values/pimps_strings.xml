@@ -206,4 +206,7 @@
     <string name="app_ops_settings">App ops</string>
     <string name="app_ops_settings_summary">View or change app permissions</string>
 
+    <string name="recent_reset_title">Reset to stock color</string>
+    <string name="recent_reset_confirm">Are you sure you want to reset Slim Recent to stock color?</string>
+
 </resources>
