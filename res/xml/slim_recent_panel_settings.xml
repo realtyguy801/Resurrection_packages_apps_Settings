@@ -61,8 +61,7 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="recent_panel_bg_color"
             android:title="@string/recent_panel_bg_color_title"
-            defaultColor="#00ffffff"
-            alphaSlider="true" />
+            android:defaultValue="#00ffffff" />
 
         <!--<net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="recent_card_bg_color"
@@ -91,7 +90,7 @@
                     android:summary="@string/recent_app_sidebar_content_summary"
                     android:dependency="use_recent_app_sidebar" />
                 <!-- TODO
-                    android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
+                    android:fragment="com.android.settings.rr.dslv.ActionListViewSettings"
                 <extra android:name="actionMode" android:value="7" />
                 <extra android:name="maxAllowedActions" android:value="-1" />
                 <extra android:name="useAppPickerOnly" android:value="true" />

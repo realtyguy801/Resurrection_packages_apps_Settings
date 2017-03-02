@@ -40,7 +40,8 @@
    <SwitchPreference
         android:key="show_batterybar_ambient"
         android:title="@string/battery_bar_ambient_title"
-        android:summary="@string/battery_bar_ambient_summary" />
+        android:summaryOn="@string/battery_bar_ambient_summary_on"
+        android:summaryOff="@string/battery_bar_ambient_summary_off" />
 
    <com.android.settings.rr.SeekBarPreference
         android:key="battery_bar_thickness"
