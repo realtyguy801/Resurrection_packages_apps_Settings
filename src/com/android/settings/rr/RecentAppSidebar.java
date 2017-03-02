@@ -48,7 +48,7 @@ public class RecentAppSidebar extends SettingsPreferenceFragment
     private ColorPickerPreference mAppSidebarLabelColor;
     private ColorPickerPreference mAppSidebarBgColor;
 
-    private static final int DEFAULT_COLOR = 0x00ffffff;
+    private static final int DEFAULT_TEXT = 0x00ffffff;
     private static final int DEFAULT_BG = 0x763367d6;
 
     private static final int MENU_RESET = Menu.FIRST;
