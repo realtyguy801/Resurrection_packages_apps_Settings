@@ -64,6 +64,10 @@ public class RecentAppSidebar extends SettingsPreferenceFragment
     }
 
     @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+    }
+
+    @Override
     public Dialog onCreateDialog(int dialogId) {
         Dialog dialog = null;
         switch (dialogId) {
@@ -113,7 +117,6 @@ public class RecentAppSidebar extends SettingsPreferenceFragment
         mAppSidebarBgColor.setSummary(R.string.default_string);
         mAppSidebarBgColor.setNewPreviewColor(DEFAULT_BG);
      }
-
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mAppSidebarScale) {

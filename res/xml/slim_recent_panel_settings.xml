@@ -91,18 +91,18 @@
                 android:summary="@string/use_recent_app_sidebar_summary"
                 android:defaultValue="true" />
 
-            <Preference
+            <PreferenceScreen
                     android:key="recent_app_sidebar_content"
+                    android:fragment="com.android.settings.rr.dslv.ActionListViewSettings"
                     android:title="@string/recent_app_sidebar_content_title"
                     android:summary="@string/recent_app_sidebar_content_summary"
-                    android:dependency="use_recent_app_sidebar" />
-                <!-- TODO
-                    android:fragment="com.android.settings.rr.dslv.ActionListViewSettings"
+                    android:dependency="use_recent_app_sidebar">
                 <extra android:name="actionMode" android:value="7" />
                 <extra android:name="maxAllowedActions" android:value="-1" />
                 <extra android:name="useAppPickerOnly" android:value="true" />
                 <extra android:name="fragment" android:value="com.android.settings.rr.RecentAppSidebarFragment" />
-                -->
+
+        </PreferenceScreen>
 
         </PreferenceCategory>
 
