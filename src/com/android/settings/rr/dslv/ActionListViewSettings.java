@@ -62,10 +62,11 @@ import com.android.internal.util.rr.ImageHelper;
 import com.android.internal.util.rr.DeviceUtils;
 import com.android.internal.util.rr.DeviceUtils.FilteredDeviceFeaturesArray;
 
+import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.rr.dslv.DragSortListView;
 import com.android.settings.rr.dslv.DragSortController;
-import com.android.settings.rr.utils.SlimShortcutPickerHelper;
+import com.android.settings.rr.util.ShortcutPickerHelper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -74,7 +75,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class ActionListViewSettings extends ListFragment implements
-            SlimShortcutPickerHelper.OnPickListener {
+            ShortcutPickerHelper.OnPickListener {
 
     private static final int DLG_SHOW_ACTION_DIALOG   = 0;
     private static final int DLG_SHOW_ICON_PICKER     = 1;
@@ -131,7 +132,7 @@ public class ActionListViewSettings extends ListFragment implements
     private String mActionEntriesKey;
 
     private Activity mActivity;
-    private SlimShortcutPickerHelper mPicker;
+    private ShortcutPickerHelper mPicker;
 
     private File mImageTmp;
 
@@ -171,7 +172,7 @@ public class ActionListViewSettings extends ListFragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.action_list_view_main_recents, container, false);
+        return inflater.inflate(R.layout.action_list_view_main, container, false);
     }
 
     @Override
@@ -208,14 +209,12 @@ public class ActionListViewSettings extends ListFragment implements
         mActionDialogValues = finalActionDialogArray.values;
         mActionDialogEntries = finalActionDialogArray.entries;
 
-        mPicker = new SlimShortcutPickerHelper(mActivity, this);
+        mPicker = new ShortcutPickerHelper(mActivity, this);
 
         File folder = new File(Environment.getExternalStorageDirectory() + File.separator +
-                ".rr" + File.separator + "icons");
+                ".bliss" + File.separator + "icons");
 
-        if (!folder.exists()) {
-            folder.mkdirs();
-        }
+        folder.mkdirs();
 
         mImageTmp = new File(folder.toString()
                 + File.separator + "shortcut.tmp");
@@ -243,7 +242,7 @@ public class ActionListViewSettings extends ListFragment implements
                         mPendingIndex = arg2;
                         mPendingLongpress = false;
                         mPendingNewAction = false;
-                        mPicker.pickShortcut(getId());
+                        mPicker.pickShortcut(getId(), false, false, true);
                     }
                 }
             }
@@ -305,7 +304,7 @@ public class ActionListViewSettings extends ListFragment implements
                         mPendingIndex = 0;
                         mPendingLongpress = false;
                         mPendingNewAction = true;
-                        mPicker.pickShortcut(getId());
+                        mPicker.pickShortcut(getId(), false, true, false);
                     }
                 }
             }
@@ -364,7 +363,7 @@ public class ActionListViewSettings extends ListFragment implements
             // Icon is present, save it for future use and add the file path to the action.
             if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                 File folder = new File(Environment.getExternalStorageDirectory() + File.separator +
-                        ".rr" + File.separator + "icons");
+                        ".bliss" + File.separator + "icons");
                 folder.mkdirs();
                 String fileName = folder.toString()
                         + File.separator + "shortcut_" + System.currentTimeMillis() + ".png";
@@ -393,9 +392,9 @@ public class ActionListViewSettings extends ListFragment implements
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == SlimShortcutPickerHelper.REQUEST_PICK_SHORTCUT
-                    || requestCode == SlimShortcutPickerHelper.REQUEST_PICK_APPLICATION
-                    || requestCode == SlimShortcutPickerHelper.REQUEST_CREATE_SHORTCUT) {
+            if (requestCode == ShortcutPickerHelper.REQUEST_PICK_SHORTCUT
+                    || requestCode == ShortcutPickerHelper.REQUEST_PICK_APPLICATION
+                    || requestCode == ShortcutPickerHelper.REQUEST_CREATE_SHORTCUT) {
                 mPicker.onActivityResult(requestCode, resultCode, data);
 
             } else if (requestCode == REQUEST_PICK_CUSTOM_ICON && mPendingIndex != -1) {
@@ -407,7 +406,7 @@ public class ActionListViewSettings extends ListFragment implements
                 }
                 if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                     File folder = new File(Environment.getExternalStorageDirectory() +
-                            File.separator + ".rr" + File.separator + "icons");
+                            File.separator + ".bliss" + File.separator + "icons");
                     folder.mkdirs();
                     File image = new File(folder.toString() + File.separator
                             + "shortcut_" + System.currentTimeMillis() + ".png");
@@ -593,7 +592,7 @@ public class ActionListViewSettings extends ListFragment implements
 */
             case RECENT_APP_SIDEBAR:
                 ActionHelper.setRecentAppSidebarConfig(mActivity, actionConfigs, reset);
-				updateFabVisibility(reset ? mDefaultNumberOfActions : actionConfigs.size());
+                updateFabVisibility(reset ? mDefaultNumberOfActions : actionConfigs.size());
                 break;
         }
     }
@@ -614,7 +613,7 @@ public class ActionListViewSettings extends ListFragment implements
     private class ActionConfigsAdapter extends ArrayAdapter<ActionConfig> {
 
         public ActionConfigsAdapter(Context context, List<ActionConfig> clickActionDescriptions) {
-            super(context, R.layout.action_list_view_item_recents,
+            super(context, R.layout.action_list_view_item,
                     R.id.click_action_description, clickActionDescriptions);
         }
 
@@ -662,9 +661,6 @@ public class ActionListViewSettings extends ListFragment implements
                         iconUri), 48);
             }
 
-            if (iconUri != null && iconUri.startsWith(ActionConstants.SYSTEM_ICON_IDENTIFIER)) {
-                d.setTint(getResources().getColor(R.color.dslv_icon_dark));
-            }
             holder.iconView.setImageDrawable(d);
 
             if (!mDisableIconPicker && holder.iconView.getDrawable() != null) {
@@ -718,7 +714,7 @@ public class ActionListViewSettings extends ListFragment implements
                     .setTitle(R.string.shortcut_action_reset)
                     .setMessage(R.string.reset_message)
                     .setNegativeButton(R.string.cancel, null)
-                    .setPositiveButton(R.string.ok,
+                    .setPositiveButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             // first delete custom icons in case they exist
@@ -785,9 +781,9 @@ public class ActionListViewSettings extends ListFragment implements
                                 : R.string.shortcut_action_help_delete_last_entry, actionMode);
                     }
                     return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.help)
+                    .setTitle(R.string.help_label)
                     .setMessage(finalHelpMessage)
-                    .setNegativeButton(R.string.ok,
+                    .setNegativeButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
@@ -798,7 +794,7 @@ public class ActionListViewSettings extends ListFragment implements
                     return new AlertDialog.Builder(getActivity())
                     .setTitle(R.string.shortcut_action_warning)
                     .setMessage(R.string.shortcut_action_warning_message)
-                    .setNegativeButton(R.string.ok,
+                    .setNegativeButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
@@ -882,7 +878,6 @@ public class ActionListViewSettings extends ListFragment implements
                                     getOwner().mPendingIndex = -1;
                                     break;
                                 case 1: // System defaults
-                                /*
                                     ListView list = new ListView(getActivity());
                                     list.setAdapter(new IconAdapter());
                                     final Dialog holoDialog = new Dialog(getActivity());
@@ -904,7 +899,6 @@ public class ActionListViewSettings extends ListFragment implements
                                     holoDialog.show();
                                     break;
                                 case 2: // Custom user icon
-                                    */
                                     Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
                                     intent.setType("image/*");
                                     intent.putExtra("crop", "true");
@@ -951,7 +945,6 @@ public class ActionListViewSettings extends ListFragment implements
             public IconAdapter() {
                 labels = getResources().getStringArray(R.array.shortcut_icon_picker_labels);
                 icons = getResources().obtainTypedArray(R.array.shortcut_icon_picker_icons);
-                color = getResources().getColor(R.color.dslv_icon_dark);
             }
 
             @Override
@@ -986,7 +979,6 @@ public class ActionListViewSettings extends ListFragment implements
                 TextView tt = (TextView) iView.findViewById(android.R.id.text1);
                 tt.setText(labels[position]);
                 Drawable ic = ((Drawable) getItem(position)).mutate();
-                ic.setTint(color);
                 tt.setCompoundDrawablePadding(15);
                 tt.setCompoundDrawablesWithIntrinsicBounds(ic, null, null, null);
                 return iView;
