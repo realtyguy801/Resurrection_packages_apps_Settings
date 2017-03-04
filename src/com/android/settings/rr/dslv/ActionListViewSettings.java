@@ -212,7 +212,7 @@ public class ActionListViewSettings extends ListFragment implements
         mPicker = new ShortcutPickerHelper(mActivity, this);
 
         File folder = new File(Environment.getExternalStorageDirectory() + File.separator +
-                ".bliss" + File.separator + "icons");
+                ".rr" + File.separator + "icons");
 
         folder.mkdirs();
 
@@ -363,7 +363,7 @@ public class ActionListViewSettings extends ListFragment implements
             // Icon is present, save it for future use and add the file path to the action.
             if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                 File folder = new File(Environment.getExternalStorageDirectory() + File.separator +
-                        ".bliss" + File.separator + "icons");
+                        ".rr" + File.separator + "icons");
                 folder.mkdirs();
                 String fileName = folder.toString()
                         + File.separator + "shortcut_" + System.currentTimeMillis() + ".png";
@@ -406,7 +406,7 @@ public class ActionListViewSettings extends ListFragment implements
                 }
                 if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                     File folder = new File(Environment.getExternalStorageDirectory() +
-                            File.separator + ".bliss" + File.separator + "icons");
+                            File.separator + ".rr" + File.separator + "icons");
                     folder.mkdirs();
                     File image = new File(folder.toString() + File.separator
                             + "shortcut_" + System.currentTimeMillis() + ".png");
