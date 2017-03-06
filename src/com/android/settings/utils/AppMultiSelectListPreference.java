@@ -15,19 +15,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.android.settings.preference;
+package com.android.settings.utils;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,24 +36,26 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.settings.R;
-import com.android.settings.CustomDialogPreference;
 
 import java.text.Collator;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class AppMultiSelectListPreference extends CustomDialogPreference {
+/**
+ * A preference that lists installed applications, with icons, as a multi choice list.
+ *
+ * @author Clark Scheff
+ */
+public class AppMultiSelectListPreference extends DialogPreference {
     private final List<MyApplicationInfo> mPackageInfoList = new ArrayList<MyApplicationInfo>();
-    private AppListAdapter mAdapter;
     private CharSequence[] mEntries;
-	private CharSequence[] mEntryValues;
+    private CharSequence[] mEntryValues;
     private Set<String> mValues = new HashSet<String>();
-	private Set<String> mNewValues = new HashSet<String>();
+    private Set<String> mNewValues = new HashSet<String>();
     private boolean mPreferenceChanged;
 
     public AppMultiSelectListPreference(Context context) {
@@ -66,27 +64,21 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
 
     public AppMultiSelectListPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-
-        setDialogLayoutResource(R.layout.preference_app_list);
-
-        final Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
         List<ApplicationInfo> pkgs = context.getPackageManager()
                 .getInstalledApplications(PackageManager.PERMISSION_GRANTED);
-		for (int i=0; i<pkgs.size(); i++) {
-		ApplicationInfo ai = pkgs.get(i);
+        for (int i=0; i<pkgs.size(); i++) {
+            ApplicationInfo ai = pkgs.get(i);
             if(context.getPackageManager().getLaunchIntentForPackage(ai.packageName) == null) {
                 continue;
-		}
-
+            }
             MyApplicationInfo info = new MyApplicationInfo();
             info.info = ai;
             info.label = info.info.loadLabel(getContext().getPackageManager()).toString();
-			mPackageInfoList.add(info);
+            mPackageInfoList.add(info);
+        }
 
-		}
         List<CharSequence> entries = new ArrayList<CharSequence>();
-		List<CharSequence> entryValues = new ArrayList<CharSequence>();
+        List<CharSequence> entryValues = new ArrayList<CharSequence>();
         Collections.sort(mPackageInfoList, sDisplayNameComparator);
         for (MyApplicationInfo info : mPackageInfoList) {
             entries.add(info.label);
@@ -96,23 +88,32 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
         mEntries = new CharSequence[entries.size()];
         mEntryValues = new CharSequence[entries.size()];
         entries.toArray(mEntries);
-		entryValues.toArray(mEntryValues);
+        entryValues.toArray(mEntryValues);
     }
 
-    public void setValues(Collection<String> values) {
+    /**
+     * Sets the value of the key. This should contain entries in
+     * {@link #getEntryValues()}.
+     *
+     * @param values The values to set for the key.
+     */
+    public void setValues(Set<String> values) {
         mValues.clear();
         mValues.addAll(values);
-    }
 
+        persistStringSet(values);
+    }
 
     public void setClearValues() {
         mValues.clear();
-	}
+    }
 
+    /**
+     * Retrieves the current value of the key.
+     */
     public Set<String> getValues() {
         return mValues;
     }
-
 
     /**
      * Returns the index of the given value (in the entry values array).
@@ -129,15 +130,23 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
             }
         }
         return -1;
-	}
+    }
 
     @Override
-    protected void onBindDialogView(View view) {
-        super.onBindDialogView(view);
+    protected void onPrepareDialogBuilder(AlertDialog.Builder builder) {
+        super.onPrepareDialogBuilder(builder);
+        builder.setAdapter(new AppListAdapter(getContext()), null);
+        mNewValues.clear();
+        mNewValues.addAll(mValues);
+    }
 
-        mAdapter = new AppListAdapter(getContext());
-        final ListView listView = (ListView) view.findViewById(R.id.app_list);
-        listView.setAdapter(mAdapter);
+    @Override
+    protected void showDialog(Bundle state) {
+        super.showDialog(state);
+        final AlertDialog dialog = (AlertDialog) getDialog();
+        final ListView listView = dialog.getListView();
+        listView.setItemsCanFocus(false);
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -156,15 +165,15 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
     @Override
     protected void onDialogClosed(boolean positiveResult) {
         super.onDialogClosed(positiveResult);
+
         if (positiveResult && mPreferenceChanged) {
             final Set<String> values = mNewValues;
             if (callChangeListener(values)) {
                 setValues(values);
             }
         }
-		mPreferenceChanged = false;
+        mPreferenceChanged = false;
     }
-
 
     @Override
     protected Object onGetDefaultValue(TypedArray a, int index) {
@@ -179,19 +188,10 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
         return result;
     }
 
-
-    /*private String getResolveInfoTitle(ResolveInfo info) {
-        CharSequence label = info.loadLabel(getContext().getPackageManager());
-        if (label == null) label = info.activityInfo.name;
-        return label != null ? label.toString() : null;
+    @Override
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        setValues(restoreValue ? getPersistedStringSet(mValues) : (Set<String>) defaultValue);
     }
-
-    private Intent getIntentForResolveInfo(ResolveInfo info, String action) {
-        Intent intent = new Intent(action);
-        ActivityInfo ai = info.activityInfo;
-        intent.setClassName(ai.packageName, ai.name);
-        return intent;
-    }*/
 
     class MyApplicationInfo {
         ApplicationInfo info;
@@ -238,7 +238,7 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
 
         public static AppViewHolder createOrRecycle(LayoutInflater inflater, View convertView) {
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.app_select_item, null);
+                convertView = inflater.inflate(R.layout.ad_excluded_app_item, null);
 
                 // Creates a ViewHolder and store references to the two children views
                 // we want to bind data to.
@@ -259,13 +259,11 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
 
     private final static Comparator<MyApplicationInfo> sDisplayNameComparator
             = new Comparator<MyApplicationInfo>() {
-
-        private final Collator collator = Collator.getInstance();
-
-        public final int compare(MyApplicationInfo a, MyApplicationInfo b) {
+        public final int
+        compare(MyApplicationInfo a, MyApplicationInfo b) {
             return collator.compare(a.label, b.label);
         }
+
+        private final Collator collator = Collator.getInstance();
     };
 }
-
-
