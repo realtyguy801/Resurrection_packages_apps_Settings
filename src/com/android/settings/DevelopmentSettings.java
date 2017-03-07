@@ -1893,7 +1893,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private void updateAnimationScaleValue(int which, AnimationScalePreference pref) {
         try {
             float scale = mWindowManager.getAnimationScale(which);
-            if (scale != 0.6f) {
+            if (scale != 0.75) {
                 mHaveDebugSettings = true;
             }
             pref.setScale(scale);
@@ -2086,6 +2086,11 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 preference == mAnimatorDurationScale) {
             ((AnimationScalePreference) preference).click();
             return true;
+        }
+        if (preference == mWindowAnimationScale ||
+                preference == mTransitionAnimationScale ||
+                preference == mAnimatorDurationScale) {
+            ((AnimationScalePreference) preference).click();
         }
         return false;
     }

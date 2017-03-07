@@ -22,7 +22,6 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
-import android.support.v14.preference.PreferenceFragment;
 import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -64,7 +63,8 @@ public class RecentAppSidebar extends SettingsPreferenceFragment
     }
 
     @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+    protected int getMetricsCategory() {
+        return MetricsEvent.RESURRECTED;
     }
 
     @Override
