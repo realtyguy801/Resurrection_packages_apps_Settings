@@ -191,8 +191,4 @@ public class RecentAppSidebar extends SettingsPreferenceFragment
         mAppSidebarBgColor.setNewPreviewColor(intColorSidebarBg);
     }
 
-    @Override
-    protected int getMetricsCategory() {
-        return MetricsEvent.RESURRECTED;
-    }
 }
