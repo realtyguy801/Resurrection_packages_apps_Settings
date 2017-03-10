@@ -178,9 +178,6 @@
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
 
-    <string name="magisk_title">Magisk Manager</string>
-    <string name="magisk_summary">Control modules and settings</string>
-
     <!-- Sms security limit -->
     <string name="apps_security_options_title">Apps security</string>
     <string name="sms_outgoing_check_max_count_title">SMS apps message limit</string>
@@ -209,10 +206,6 @@
 
     <string name="recent_reset_title">Reset to stock color</string>
     <string name="recent_reset_confirm">Are you sure you want to reset Slim Recent to stock color?</string>
-
-   <!-- Force authorize substratum packages -->
-   <string name="force_authorize_substratum_packages_title">Force authorize every theme app</string>
-   <string name="force_authorize_substratum_packages_summary">Allow theme apps from unknown sources</string>
 
     <string name="slim_recents_mem_display_long_click_clear_title">Memory bar longpress</string>
     <string name="slim_recents_mem_display_long_click_clear_summary">Clear recents by long-pressing the memory bar</string>

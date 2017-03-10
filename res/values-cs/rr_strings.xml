@@ -1367,13 +1367,16 @@
   <string name="status_bar_double_tap_to_sleep_title">Dvojím klepnutím uspat</string>
   <string name="status_bar_double_tap_to_sleep_summary">Dvakrát klepnout na stavovou lištu pro vypntí displeje</string>
   <string name="qs_wifi_easy_toggle_title">Snadné přepnutí WiFi</string>
-  <string name="qs_wifi_easy_toggle_summary">Jedním klepnutím zapnout WiFi namísto zapnutí v nastavení</string>
+  <string name="qs_wifi_easy_toggle_summary">Jedním klepnutím zapnout/vypnout WiFi namísto zapnutí v nastavení</string>
   <!-- BT easy toggle -->
   <string name="qs_bt_easy_toggle_title">Snadné přepnutí Bluetooth</string>
-  <string name="qs_bt_easy_toggle_summary">Jedním klepnutím zapnout Bluetooth namísto zapnutí v nastavení</string>
+  <string name="qs_bt_easy_toggle_summary">Jedním klepnutím zapnout/vypnout Bluetooth namísto zapnutí v nastavení</string>
   <!-- Battery Saver easy toggle -->
   <string name="qs_battery_easy_toggle_title">Snadné přepnutí dlaždice baterie</string>
-  <string name="qs_battery_easy_toggle_summary">Jedním klepnutím zapnout spořič baterie namísto zapnutí v nastavení</string>
+  <string name="qs_battery_easy_toggle_summary">Jedním klepnutím zapnout/vypnout spořič baterie namísto zapnutí v nastavení</string>
+  <!-- Location easy toggle -->
+  <string name="qs_location_easy_toggle_title">Umístění rychlých přepínačů</string>
+  <string name="qs_location_easy_toggle_summary">Jedním klepnutím zapnout/vypnout určování polohy namísto zapnutí v nastavení</string>
   <string name="qs_music_tile_track_optional_title">Dlaždice hudby</string>
   <string name="qs_music_tile_track_optional_summary">Zobrazit hudbu jako QS dlaždici</string>
   <string name="quick_settings_vibrate_title">Vibrovat při dotyku</string>
@@ -1789,6 +1792,7 @@
   <string name="custom_summary_randomize_title">Náhodné shrnutí</string>
   <string name="custom_summary_randomize_explain">Předvytvořené souhrny budou vybrány náhodně a změní se pokaždé, když spustíte \nTo přepíše vlastní nastavení souhrnů aplikací.</string>
   <string name="sum1">Chcete zkontrolovat všechny vychytávky?</string>
+  <string name="sum2">Breaking News: Donald Trump změní svůj účes!</string>
   <string name="sum3">Klepnuli jste 100krát.</string>
   <string name="sum4">Mnoho možností!</string>
   <string name="sum5">Klepni na mě!</string>
@@ -1804,7 +1808,11 @@
   <string name="sum15">Pouze pro prémiové uživatele.</string>
   <string name="sum16">Nudíte se? OK, klepněte na mě!</string>
   <string name="sum17">Skvělá práce! Získali jste bonusové funkce</string>
+  <string name="sum18">Zastavit spam v komunitě G+</string>
+  <string name="sum19">Postupujte podle pravidel přidávání příspěvků G+</string>
   <string name="sum20">Zákaz vstupu začátečníkům (blbečkům)</string>
+  <string name="sum21">#gotresurrected</string>
+  <string name="sum22">Breaking News: Apple odstraní svítilnu z příštích iPhone.</string>
   <string name="sum23">Jste teď šťastni?</string>
   <string name="sum24">Už dost, klepnutím mě zastavte!</string>
   <string name="sum25">#Swagger</string>
@@ -2094,4 +2102,9 @@
   <string name="weather_title">Počasí</string>
   <string name="weather_config_title">Nastavení služby</string>
   <string name="weather_icon_pack_title">Stav balíčku ikon</string>
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Povolit instalaci motivů z neznámých zdrojů</string>
+  <string name="force_authorize_substratum_packages_summary">Vyžadovat povolení pro každý motiv</string>
+  <string name="magisk_title">Magisk Manager</string>
+  <string name="magisk_summary">Správa přístupu root</string>
 </resources>
