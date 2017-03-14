@@ -1486,6 +1486,18 @@
     <string name="status_bar_logo_position_left">Left</string>
     <string name="status_bar_logo_position_center">Center</string>
 
+    <string name="statusbar_weather_title">Status bar weather</string>
+    <string name="statusbar_weather_summary">Configure from QS settings/Weather.</string>
+    <string name="statusbar_weather_dialog_title">Status bar weather style</string>
+    <string name="status_bar_weather_hidden">Hidde weather</string>
+    <string name="status_bar_temperature_image_show_scale">Show temp with scale and image</string>
+    <string name="status_bar_temperature_image_hide_scale">Show temp with image without scale</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Show temp with scale</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Show temp without scale</string>
+    <string name="status_bar_show_image">Show image</string>
+    <string name="status_bar_weather_image_color_title">Image color</string>
+    <string name="sb_weather_ic_title">Icon pack</string>
+
     <string name="rr_config_style_title">Configurations style</string>
     <string name="rr_config_n">Nougat</string>
     <string name="rr_config_mm">Classic</string>
@@ -2337,5 +2349,14 @@
 
     <string name="magisk_title">Magisk Manager</string>
     <string name="magisk_summary">Control modules and settings</string>
+
+    <string name="notif_text_color">Text color</string>
+    <string name="status_bar_expanded_empty_shade_view_settings_title">No notifications view</string>
+    <string name="status_bar_expanded_empty_shade_view_settings_summary">Customize the no notifications view</string>
+    <!-- Statusbar expanded empty shade view settings -->
+    <string name="empty_shade_view_show_carrier_name_title">Show carrier name</string>
+    <string name="empty_shade_view_show_carrier_name_summary">Enable to show the carrier name</string>
+    <string name="empty_shade_view_show_wifi_name_title">Show wifi network name</string>
+    <string name="empty_shade_view_show_wifi_name_summary">Enable to show the wifi network name</string>
 
 </resources>
