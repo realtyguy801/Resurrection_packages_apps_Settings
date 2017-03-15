@@ -21,7 +21,7 @@
 
     <!-- Instant reboot -->
     <string name="advanced_reboot_oneclick">One click reboot</string>
-    <string name="advanced_reboot_oneclick_summary">Instantly trigger reboot action</string>
+    <string name="advanced_reboot_oneclick_summary">Instantly trigger reboot action. This does cause the option to confirm shutdown to not work!</string>
 
     <!-- Advanced night mode brightness -->
     <string name="night_brightness_category">Brightness</string>
