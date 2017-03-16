@@ -157,7 +157,7 @@
 	<string name="device_m9_summary">M9 \nMaintainer - </string>
 
 	<string name="device_htc_10">HTC 10</string>
-	<string name="device_htc_10_summary">10 \nMaintainer -</string>
+	<string name="device_htc_10_summary">10 \nMaintainer - tabp0le</string>
 
 	<string name="device_google_marlin">GOOGLE</string>
 	<string name="device_google_marlin_summary">PIXEL XL \nMaintainer - BDogg718</string>
@@ -405,7 +405,10 @@
 	<string name="device_kenzo">Xiaomi Redmi Note 3</string>
 	<string name="device_kenzo_summary">Kenzo\nMaintainer - Akhil, Abhishek</string>
 
-	<string name="device_hydrogen">Xiaomi Mi Max</string>
+	<string name="device_mido">Xiaomi Redmi Note 4</string>
+        <string name="device_mido_summary">mido\nMaintainer - Sarthak Narang</string>
+
+        <string name="device_hydrogen">Xiaomi Mi Max</string>
 	<string name="device_hydrogen_summary">Hydrogen\nMaintainer - sawdoctor</string>
 	
 	<string name="device_sprout4">Android One - 4GB variants (1st Gen)</string>
