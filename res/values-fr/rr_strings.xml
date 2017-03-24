@@ -1000,7 +1000,7 @@
   <string name="status_bar_quick_qs_pulldown_left">Gauche</string>
   <string name="status_bar_quick_qs_pulldown_right">Droite</string>
   <!-- Status bar - Clock -->
-  <string name="status_bar_clock_style_title">Style d\'horloge</string>
+  <string name="status_bar_clock_style_title">Position de l\'horloge</string>
   <string name="status_bar_clock_style_right">Droite</string>
   <string name="status_bar_clock_style_left">Gauche</string>
   <string name="status_bar_clock_style_center">Centre</string>
@@ -1012,8 +1012,8 @@
   <string name="status_bar_am_pm_hidden">Cachée</string>
   <!-- Status bar - Battery -->
   <string name="status_bar_battery_style_title">Style de la batterie</string>
-  <string name="status_bar_battery_style_icon_portrait">Portrait de l\'icône</string>
-  <string name="status_bar_battery_style_icon_landscape">Icône au format paysage</string>
+  <string name="status_bar_battery_style_icon_portrait">Portrait</string>
+  <string name="status_bar_battery_style_icon_landscape">Paysage</string>
   <string name="status_bar_battery_style_circle">Cercle</string>
   <string name="status_bar_battery_style_text">Texte</string>
   <string name="status_bar_battery_style_hidden">Cachée</string>
@@ -1053,12 +1053,12 @@
   <string name="clock_settings_title">Paramètres de l\'horloge</string>
   <string name="status_bar_clock_category">Horloge</string>
   <string name="status_bar_date_title">Date</string>
-  <string name="status_bar_clock_style_title">Style d\'horloge</string>
+  <string name="status_bar_clock_style_title">Position de l\'horloge</string>
   <string name="status_bar_clock_style_right">Droite</string>
   <string name="status_bar_clock_style_left">Gauche</string>
   <string name="status_bar_clock_style_center">Milieu</string>
   <string name="status_bar_clock_style_hidden">Caché</string>
-  <string name="status_bar_clock_style_title">Style d\'horloge</string>
+  <string name="status_bar_clock_style_title">Position de l\'horloge</string>
   <string name="status_bar_clock_style_right">Droite</string>
   <string name="status_bar_clock_style_left">Gauche</string>
   <string name="status_bar_clock_style_center">Milieu</string>
@@ -1360,6 +1360,16 @@
   <string name="status_bar_logo_position_right">Droite</string>
   <string name="status_bar_logo_position_left">Gauche</string>
   <string name="status_bar_logo_position_center">Centrée</string>
+  <string name="statusbar_weather_title">Barre d\'état Météo</string>
+  <string name="statusbar_weather_dialog_title">Style de la barre d\'état Météo</string>
+  <string name="status_bar_weather_hidden">Masquer la Météo</string>
+  <string name="status_bar_temperature_image_show_scale">Afficher la température avec les unités et image</string>
+  <string name="status_bar_temperature_image_hide_scale">Afficher la température avec l\'image et sans unité</string>
+  <string name="status_bar_temperature_show_scale_hide_image">Afficher la température avec les unités</string>
+  <string name="status_bar_temperature_hide_scale_hide_image">Afficher la température sans les unités</string>
+  <string name="status_bar_show_image">Afficher l\'image</string>
+  <string name="status_bar_weather_image_color_title">Couleur de l\'image</string>
+  <string name="sb_weather_ic_title">Pack d\'icônes</string>
   <string name="rr_config_style_title">Style de configurations</string>
   <string name="rr_config_n">Nougat</string>
   <string name="rr_config_mm">Classique</string>
@@ -2111,5 +2121,10 @@
   <string name="force_authorize_substratum_packages_summary">Forcer l’autorisation de chaque thème d\'application</string>
   <string name="magisk_title">Manager Magisk</string>
   <string name="magisk_summary">Gestion du Root</string>
+  <string name="notif_text_color">Couleur du texte</string>
   <!-- Statusbar expanded empty shade view settings -->
+  <string name="empty_shade_view_show_carrier_name_title">Afficher le nom de l\'opérateur</string>
+  <string name="empty_shade_view_show_carrier_name_summary">Activer pour afficher le nom de l\'opérateur</string>
+  <string name="empty_shade_view_show_wifi_name_title">Afficher le nom du réseau WIFI</string>
+  <string name="empty_shade_view_show_wifi_name_summary">Activer pour afficher le nom du réseau WIFI</string>
 </resources>

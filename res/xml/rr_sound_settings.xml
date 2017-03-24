@@ -27,12 +27,5 @@
             android:entries="@array/wired_ringtone_focus_mode_entries"
             android:entryValues="@array/wired_ringtone_focus_mode_values" />
 
-    <com.android.settings.rr.Preferences.SystemSettingSwitchPreference
-            android:key="dnd_when_call"
-            android:title="@string/dnd_when_call_title"
-            android:summaryOn="@string/dnd_when_call_summaryOn"
-            android:summaryOff="@string/dnd_when_call_summaryOff"
-            android:defaultValue="true" />
-
 
 </PreferenceScreen>

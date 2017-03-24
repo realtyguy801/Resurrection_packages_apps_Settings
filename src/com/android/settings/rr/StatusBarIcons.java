@@ -32,6 +32,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
+import android.telephony.TelephonyManager;
+import android.telephony.SubscriptionManager;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -42,6 +44,9 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 public class StatusBarIcons extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "StatusBarIcons";
+    private static final String SIM_EMPTY_SWITCH = "no_sim_cluster_switch";
+    private SubscriptionManager mSm;
+    private SwitchPreference mNoSims;
 
     private static final String PREF_TEXT_COLOR = "status_bar_notif_count_text_color";
     private static final String PREF_ICON_COLOR = "status_bar_notif_count_icon_color";
@@ -84,6 +89,15 @@ public class StatusBarIcons extends SettingsPreferenceFragment implements
         String iconHexColor = String.format("#%08x", (0xffb0b0b0 & iconColor));
         mIconColor.setSummary(iconHexColor);
         mIconColor.setNewPreviewColor(iconColor);
+
+        mNoSims = (SwitchPreference) findPreference(SIM_EMPTY_SWITCH);
+        mSm = (SubscriptionManager) getSystemService(getContext().TELEPHONY_SUBSCRIPTION_SERVICE);
+
+        if (mNoSims != null) { 
+            if (!TelephonyManager.getDefault().isMultiSimEnabled() || mSm.getActiveSubscriptionInfoCount() <= 0){
+                getPreferenceScreen().removePreference(mNoSims);
+            }
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {

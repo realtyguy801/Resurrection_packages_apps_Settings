@@ -61,19 +61,12 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="recent_panel_bg_color"
             android:title="@string/recent_panel_bg_color_title"
-            android:defaultValue="#00ffffff" />
-
-        <!--<net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="recent_card_bg_color"
-            android:title="@string/recent_card_bg_color_title"
-            defaultColor="#00ffffff"
-            alphaSliderEnabled="true" />
+            defaultColor="#00ffffff" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="recent_card_text_color"
-            android:title="@string/recent_card_text_color_title"
-            defaultColor="#00ffffff"
-            alphaSliderEnabled="true" /> -->
+            android:key="recent_card_bg_color"
+            android:title="@string/recent_card_bg_color_title"
+            defaultColor="#00ffffff" />
 
     	<com.android.settings.rr.Preferences.SystemSettingSwitchPreference
     	    android:key="slim_recents_mem_display"
@@ -88,6 +81,22 @@
             android:defaultValue="false"
             android:dependency="slim_recents_mem_display" />
 
+    	<net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="slim_mem_bar_color"
+            android:title="@string/mem_bar_color"
+            android:defaultValue="0xffffffff" 
+            android:dependency="slim_recents_mem_display"/>
+
+    	<net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="slim_mem_text_color"
+            android:title="@string/mem_text_color"
+            android:defaultValue="0xffffffff" 
+            android:dependency="slim_recents_mem_display"/>
+
+        <Preference
+            android:key="slim_icon_pack"
+            android:title="@string/slim_icon_pack_title"
+            android:summary="@string/slim_icon_pack_summary" />
 
         <PreferenceCategory
             android:title="@string/recent_app_sidebar_title">

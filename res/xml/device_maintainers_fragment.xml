@@ -267,6 +267,13 @@
 	    android:summary="@string/device_A7010a48_summary"
 	    android:selectable="false"
 	    android:title="@string/device_A7010a48" />  
+ 
+    <Preference
+	    android:id="@+id/device_p2a42"
+        android:icon="@drawable/phone_tint"
+	    android:summary="@string/device_p2a42_summary"
+	    android:selectable="false"
+	    android:title="@string/device_p2a42" />  
 
   </PreferenceCategory> 
         
@@ -750,6 +757,12 @@
        android:summary="@string/device_gemini_summary"
        android:selectable="false" 
        android:title="@string/device_gemini" />  
+	<Preference
+       android:id="@+id/device_natrium"
+       android:icon="@drawable/phone_tint"
+       android:summary="@string/device_natrium_summary"
+       android:selectable="false" 
+       android:title="@string/device_natrium" />  
    <Preference
        android:id="@+id/device_dior"
        android:icon="@drawable/phone_tint"
@@ -1002,4 +1015,17 @@
         android:selectable="false"
         android:title="@string/device_ham" />
 	</PreferenceCategory>
+ 
+<PreferenceCategory
+       android:id="@+id/device_category_nubia"
+       android:title="@string/device_category_nubia_title" >
+       
+     <Preference
+        android:id="@+id/device_nubia_nx531j"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_nubia_nx531j_summary"
+        android:selectable="false"
+        android:title="@string/device_nubia_nx531j" />
+     </PreferenceCategory>
+
 </PreferenceScreen> 
