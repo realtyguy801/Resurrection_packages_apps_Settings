@@ -144,6 +144,9 @@
 
 	<string name="device_i9100">Galaxy S II</string>
 	<string name="device_i9100_summary">GT-I9100 \nMaintainer - GreekDragon </string>
+
+	<string name="device_herolte">Galaxy S7</string>
+	<string name="device_herolte_summary">SM-G930F/FD/W8/S/K/L \nMaintainer - Gwolf2u (gwolfu@xda) </string>
 	
 	<string name="device_i9001">Galaxy S Plus</string>
 	<string name="device_i9001_summary">GT-I9001 \nMaintainer - </string>
@@ -432,6 +435,9 @@
 
         <string name="device_s2">LeEco Le 2</string>
         <string name="device_s2_summary">s2\nMaintainer - Rishabh Rao (rishabhrao)</string>
+        
+            <string name="device_X3">LeEco Le 1s</string>
+        <string name="device_X3_summary">X3\nMaintainer - Łukasz Wiśniewski (WisniaPL)</string>
 
 	<string name="device_alpha">Samsung Galaxy Alpha</string>
 	<string name="device_alpha_summary">G850F\nMaintainer - </string>

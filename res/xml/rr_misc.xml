@@ -54,7 +54,8 @@
             android:title="@string/dnd_when_call_title"
             android:icon="@drawable/rr_dnd_icon"
             android:summaryOn="@string/dnd_when_call_summaryOn"
-            android:summaryOff="@string/dnd_when_call_summaryOff" />
+            android:summaryOff="@string/dnd_when_call_summaryOff"
+            android:defaultValue="true" />
 
         <!-- Weather Settings -->
         <Preference
