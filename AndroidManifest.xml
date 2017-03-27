@@ -2661,7 +2661,7 @@
 
         <activity android:name="Settings$ThemesActivity"
                 android:label="@string/themes_title"
-                android:icon="@drawable/rr_themes"
+                android:icon="@drawable/ic_settings_substratum"
                 android:taskAffinity="" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
