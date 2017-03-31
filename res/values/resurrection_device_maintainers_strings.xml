@@ -39,6 +39,7 @@
 	<string name="device_category_leeco_title">LeEco</string>
 	<string name="device_category_zuk_title">ZUK</string>
     <string name="device_category_nubia_title">Nubia</string>
+    <string name="device_category_vega_title">Vega</string>
 	
 	<string name="device_A7010a48">Lenovo Vibe K4 Note</string>
 	<string name="device_A7010a48_summary">A7010a48\nMaintainer - Mohan Cm (mohancm100)</string>
@@ -147,6 +148,9 @@
 
 	<string name="device_herolte">Galaxy S7</string>
 	<string name="device_herolte_summary">SM-G930F/FD/W8/S/K/L \nMaintainer - Gwolf2u (gwolfu@xda) </string>
+	
+	<string name="device_j5ltexx">Galaxy J5</string>
+	<string name="device_j5ltexx_summary">SM-J500F/FN \nMaintainer - SoUnd001 </string>
 	
 	<string name="device_i9001">Galaxy S Plus</string>
 	<string name="device_i9001_summary">GT-I9001 \nMaintainer - </string>
@@ -536,4 +540,8 @@
         
         <string name="device_nubia_nx531j">Nubia Z11</string>
 	<string name="device_nubia_nx531j_summary">nx531j \nMaintainer - ZhangXueZe</string>
+	
+	<string name="device_vega_A910">Vega Sky A910</string>
+	<string name="device_vega_A910_summary">A910 \nMaintainer - XDAVN</string>
+	
 </resources>

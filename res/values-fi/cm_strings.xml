@@ -313,6 +313,18 @@
   <string name="zen_mode_vibration_never">Värinä pois</string>
   <string name="zen_mode_vibration_calls_only">Värinä vain puheluista</string>
   <string name="zen_mode_vibration_calls_and_notifications">Värinä puheluille ja ilmoituksille</string>
+  <!-- Zen mode allowed event setting summary items -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <string name="zen_mode_summary_reminders">muistutukset</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_events">tapahtumat</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_callers">valitut soittajat</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_messages">valitut viestit</string>
   <!-- Notification sound timeout -->
   <string name="app_notification_sound_timeout_title">Vähimmäisväli ilmoitusäänissä</string>
   <string name="app_notification_sound_timeout_summary_template">Sallii äänen tai värinän vain seuraavin välein: <xliff:g id="duration">%1$s</xliff:g></string>
@@ -394,4 +406,20 @@
   <!-- Status bar - double tap to sleep -->
   <string name="status_bar_double_tap_to_sleep_title">Lepotila kaksoisnapautuksella</string>
   <string name="status_bar_double_tap_to_sleep_summary">Sulje laitteen näyttö tuplanapauttamalla tilapalkkia</string>
+  <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> on <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+  <string name="sim_enabled">käytössä</string>
+  <string name="sim_disabled">pois käytöstä</string>
+  <string name="sim_missing">poissa tai virheellinen</string>
+  <string name="sim_enabler_need_disable_sim">SIM-kortti deaktivoidaan. Haluatko jatkaa?</string>
+  <string name="sim_enabler_will_disable_sim_title">Huomio</string>
+  <string name="sim_enabler_need_switch_data_service">Tämä SIM-kortti poistetaan käytöstä ja SIM <xliff:g id="slotid">%1$s</xliff:g>:n datapalvelut otetaan käyttöön. Haluatko varmasti jatkaa?</string>
+  <string name="sim_enabler_airplane_on">Toimintoja ei voida suorittaa, kun lentotila on päällä.</string>
+  <string name="sim_enabler_in_call">Toimintoja ei voida suorittaa puhelun aikana.</string>
+  <string name="sim_enabler_both_inactive">Kaikkia SIM-kortteja ei voitu poistaa käytöstä</string>
+  <string name="sim_enabler_enabling">Aktivoidaan\u2026</string>
+  <string name="sim_enabler_disabling">Deaktivoidaan\u2026</string>
+  <string name="sub_activate_success">SIM aktivoitu.</string>
+  <string name="sub_activate_failed">Aktivointi epäonnistui.</string>
+  <string name="sub_deactivate_success">SIM deaktivoitu.</string>
+  <string name="sub_deactivate_failed">Deaktivointi epäonnistui.</string>
 </resources>

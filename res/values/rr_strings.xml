@@ -109,8 +109,8 @@
     <string name="fab_reset">Reset</string>
     <string name="fab_about">About RR-OS</string>
     <string name="fab_layout">Update layout</string>
-    <string name="fab_layout_update">Toggle marshmallow layout</string>
-    <string name="fab_layout_toggle">Toggle nougat layout</string>
+    <string name="fab_layout_update">Toggle classic layout</string>
+    <string name="fab_layout_toggle">Toggle tab layout</string>
     <string name="rr_reset_message">Reset all configurations to default values?</string>
     <string name="rr_reset_settings">Reset settings</string>
     <string name="rr_reset_yes">Yes</string>
@@ -685,6 +685,7 @@
     <string name="shortcuts_icon_presets">System icons</string>
     <string name="shortcuts_icon_custom">Gallery</string>
     <string name="shortcuts_icon_picker_choose_icon_title">Choose icon</string>
+    <string name="image_exceeds_max_allowed_size">Image must not exceed 512x512</string>
 
     <string name="lockscreen_shortcuts_category">Shortcuts</string>
     <string name="keyguard_torch_title">Lockscreen torch</string>
@@ -1099,7 +1100,7 @@
     <string name="status_bar_am_pm_hidden">Hidden</string>
 
     <!-- Status bar - Battery -->
-    <string name="status_bar_battery_style_title">Battery status style</string>
+    <string name="status_bar_battery_style_title">Statusbar battery style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
     <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
     <string name="status_bar_battery_style_circle">Circle</string>
@@ -2056,7 +2057,7 @@
     <string name="lock_screen_weather_wind_color">Weather Wind</string>
     <string name="yes">YES</string>
 
-    <string name="status_bar_battery_style_tile_title">Custom battery tile style</string>
+    <string name="battery_tile_style_title">Battery tile style</string>
     <string name="status_bar_battery_style_tile_summary">Allow to set the same icon style chosen for the statusbar battery</string>
 
     <!-- Scrolling Animation Controls -->

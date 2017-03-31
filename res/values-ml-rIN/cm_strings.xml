@@ -292,6 +292,18 @@
   <string name="increasing_ring_min_volume_title">വോളിയം ആരംഭിക്കുക</string>
   <string name="increasing_ring_ramp_up_time_title">റാംപ്-അപ്പ് സമയം</string>
   <!-- Allow vibration in zen mode -->
+  <!-- Zen mode allowed event setting summary items -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <string name="zen_mode_summary_reminders">ഓർമ്മപ്പെടുത്തലുകൾ</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_events">ഇവന്റുകൾ</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_callers">തിരഞ്ഞെടുത്ത കോളർമാർ</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_messages">തിരഞ്ഞെടുത്ത സന്ദേശങ്ങൾ</string>
   <!-- Notification sound timeout -->
   <!-- MSIM SIM status -->
   <string name="sim_card_status_title">SIM %d സ്റ്റാറ്റസ്</string>
@@ -341,4 +353,18 @@
   <!-- Status bar - double tap to sleep -->
   <string name="status_bar_double_tap_to_sleep_title">നിഷ്ക്രിയമാക്കുന്നതിന് ഇരട്ട-അമര്‍ത്തല്‍ ചെയ്യുക</string>
   <string name="status_bar_double_tap_to_sleep_summary">ഡിസ്പ്ലേ ഓഫ് ചെയ്യുന്നതിന് സ്റ്റാറ്റസ് ബാറിൽ ഇരട്ട-അമര്‍ത്തല്‍ ചെയ്യുക</string>
+  <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> is <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+  <string name="sim_disabled">അപ്രാപ്തമാക്കി</string>
+  <string name="sim_enabler_need_disable_sim">SIM കാർഡ് നിര്‍ജീവമാക്കുന്നതാണ്. നിങ്ങൾക്ക് തുടരണോ?</string>
+  <string name="sim_enabler_will_disable_sim_title">ശ്രദ്ധിക്കുക</string>
+  <string name="sim_enabler_need_switch_data_service">ഈ SIM അപ്രാപ്തമാക്കുകയും ഡാറ്റ സേവനങ്ങൾക്കായി SIM <xliff:g id="slotid">%1$s</xliff:g> ഉപയോഗിക്കുന്നതുമാണ്. നിങ്ങൾ തുടരണമെന്ന് ഉറപ്പാണോ?</string>
+  <string name="sim_enabler_airplane_on">എയര്‍പ്ലെയിന്‍ മോഡ് ഓണ്‍ ആയിരിക്കുന്ന സമയത്ത് പ്രവർത്തനം നടത്താൻ കഴിയുന്നില്ല.</string>
+  <string name="sim_enabler_in_call">കോളില്‍ ആയിരിക്കുന്ന സമയത്ത് പ്രവർത്തനം നടത്താൻ കഴിയുന്നില്ല.</string>
+  <string name="sim_enabler_both_inactive">എല്ലാ SIM കാർഡുകളും അപ്രാപ്തമാക്കുവാന്‍ കഴിയില്ല</string>
+  <string name="sim_enabler_enabling">സജീവമാക്കുന്നു\u2026</string>
+  <string name="sim_enabler_disabling">നിർജീവമാക്കുന്നു\u2026</string>
+  <string name="sub_activate_success">SIM സജീവമാക്കി</string>
+  <string name="sub_activate_failed">സജീവമാക്കൽ പരാജയപ്പെട്ടു.</string>
+  <string name="sub_deactivate_success">SIM നിർജീവമാക്കി.</string>
+  <string name="sub_deactivate_failed">നിർജീവമാക്കല്‍ പരാജയപ്പെട്ടു.</string>
 </resources>

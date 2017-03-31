@@ -228,6 +228,14 @@
   <string name="increasing_ring_min_volume_title">Start volume</string>
   <string name="increasing_ring_ramp_up_time_title">Ramp-up time</string>
   <!-- Allow vibration in zen mode -->
+  <!-- Zen mode allowed event setting summary items -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
   <!-- Notification sound timeout -->
   <!-- MSIM SIM status -->
   <!-- NFC PreferenceCategory title -->
@@ -263,4 +271,9 @@
   <!-- Status bar - double tap to sleep -->
   <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
   <string name="status_bar_double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
+  <string name="sim_disabled">disabled</string>
+  <string name="sim_missing">missing or faulty</string>
+  <string name="sim_enabler_airplane_on">Unable to perform the operation while aeroplane mode is on.</string>
+  <string name="sim_enabler_in_call">Unable to perform the operation while in call.</string>
+  <string name="sim_enabler_both_inactive">Can\'t disable all SIM cards</string>
 </resources>

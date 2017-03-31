@@ -69,6 +69,8 @@
   <string name="app_ops_summaries_vibrate">trillen</string>
   <string name="app_ops_summaries_read_contacts">contacten lezen</string>
   <string name="app_ops_summaries_modify_contacts">contacten aanpassen</string>
+  <string name="app_ops_summaries_read_call_log">oproepgeschiedenis lezen</string>
+  <string name="app_ops_summaries_modify_call_log">oproepgeschiedenis aanpassen</string>
   <string name="app_ops_summaries_read_calendar">agenda lezen</string>
   <string name="app_ops_summaries_modify_calendar">agenda aanpassen</string>
   <string name="app_ops_summaries_wifi_scan">wifi-scan</string>
@@ -118,7 +120,7 @@
   <string name="app_ops_summaries_make_call">gesprek starten</string>
   <string name="app_ops_summaries_use_fingerprint">vingerafdruk gebruiken</string>
   <string name="app_ops_summaries_use_body_sensors">lichaamssensoren gebruiken</string>
-  <string name="app_ops_summaries_read_cell_broadcasts">nooduitzendingen lezen</string>
+  <string name="app_ops_summaries_read_cell_broadcasts">noodwaarschuwingen lezen</string>
   <string name="app_ops_summaries_mock_location">neplocatie gebruiken</string>
   <string name="app_ops_summaries_read_external_storage">externe opslag lezen</string>
   <string name="app_ops_summaries_write_external_storage">naar externe opslag schrijven</string>
@@ -138,6 +140,8 @@
   <string name="app_ops_labels_vibrate">Trillen</string>
   <string name="app_ops_labels_read_contacts">Contacten lezen</string>
   <string name="app_ops_labels_modify_contacts">Contacten aanpassen</string>
+  <string name="app_ops_labels_read_call_log">Oproepgeschiedenis lezen</string>
+  <string name="app_ops_labels_modify_call_log">Oproepgeschiedenis aanpassen</string>
   <string name="app_ops_labels_read_calendar">Agenda lezen</string>
   <string name="app_ops_labels_modify_calendar">Agenda aanpassen</string>
   <string name="app_ops_labels_wifi_scan">Wifi-scan</string>
@@ -187,7 +191,7 @@
   <string name="app_ops_labels_make_call">Gesprek starten</string>
   <string name="app_ops_labels_use_fingerprint">Vingerafdruk gebruiken</string>
   <string name="app_ops_labels_use_body_sensors">Lichaamssensoren gebruiken</string>
-  <string name="app_ops_labels_read_cell_broadcasts">Nooduitzendingen lezen</string>
+  <string name="app_ops_labels_read_cell_broadcasts">Noodwaarschuwingen lezen</string>
   <string name="app_ops_labels_mock_location">Neplocatie gebruiken</string>
   <string name="app_ops_labels_read_external_storage">Externe opslag lezen</string>
   <string name="app_ops_labels_write_external_storage">Naar externe opslag schrijven</string>
@@ -310,6 +314,18 @@
   <string name="zen_mode_vibration_never">Niet trillen</string>
   <string name="zen_mode_vibration_calls_only">Alleen trillen bij oproepen</string>
   <string name="zen_mode_vibration_calls_and_notifications">Trillen bij oproepen en meldingen</string>
+  <!-- Zen mode allowed event setting summary items -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <string name="zen_mode_summary_reminders">herinneringen</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_events">gebeurtenissen</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_callers">geselecteerde bellers</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_messages">geselecteerde berichten</string>
   <!-- Notification sound timeout -->
   <string name="app_notification_sound_timeout_title">Minimale tijd tussen meldingsgeluiden</string>
   <string name="app_notification_sound_timeout_summary_template">Geluid of trillen niet meer dan één keer per <xliff:g id="duration">%1$s</xliff:g> toestaan</string>
@@ -391,4 +407,20 @@
   <!-- Status bar - double tap to sleep -->
   <string name="status_bar_double_tap_to_sleep_title">Dubbeltikken voor slaapstand</string>
   <string name="status_bar_double_tap_to_sleep_summary">Dubbeltikken op de statusbalk voor slaapstand</string>
+  <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> is <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+  <string name="sim_enabled">ingeschakeld</string>
+  <string name="sim_disabled">uitgeschakeld</string>
+  <string name="sim_missing">afwezig of defect</string>
+  <string name="sim_enabler_need_disable_sim">Simkaart wordt uitgeschakeld? Wilt u doorgaan?</string>
+  <string name="sim_enabler_will_disable_sim_title">Let op</string>
+  <string name="sim_enabler_need_switch_data_service">Deze simkaart wordt uitgeschakeld en simkaart <xliff:g id="slotid">%1$s</xliff:g> zal worden gebruikt voor gegevensverbinding. Weet u zeker dat u wilt doorgaan?</string>
+  <string name="sim_enabler_airplane_on">Kan de bewerking niet uitvoeren in vliegtuigmodus.</string>
+  <string name="sim_enabler_in_call">Kan de bewerking niet uitvoeren tijdens gesprek.</string>
+  <string name="sim_enabler_both_inactive">Kan niet alle simkaarten uitschakelen</string>
+  <string name="sim_enabler_enabling">Inschakelen\u2026</string>
+  <string name="sim_enabler_disabling">Uitschakelen\u2026</string>
+  <string name="sub_activate_success">Simkaart ingeschakeld.</string>
+  <string name="sub_activate_failed">Inschakelen mislukt.</string>
+  <string name="sub_deactivate_success">Simkaart uitgeschakeld.</string>
+  <string name="sub_deactivate_failed">Uitschakelen mislukt.</string>
 </resources>

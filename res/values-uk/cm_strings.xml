@@ -61,8 +61,8 @@
   <string name="app_ops_categories_bootup">Завантаження</string>
   <string name="app_ops_categories_su">Root-доступ</string>
   <!-- User display names for app ops codes - extension of AOSP -->
-  <string name="app_ops_summaries_coarse_location">приблизне місце розташування</string>
-  <string name="app_ops_summaries_fine_location">точне місце розташування</string>
+  <string name="app_ops_summaries_coarse_location">приблизне місцезнаходження</string>
+  <string name="app_ops_summaries_fine_location">точне місцезнаходження</string>
   <string name="app_ops_summaries_gps">GPS</string>
   <string name="app_ops_summaries_vibrate">вібросигнал</string>
   <string name="app_ops_summaries_read_contacts">читання даних контактів</string>
@@ -82,8 +82,8 @@
   <string name="app_ops_summaries_receive_mms">отримання MMS</string>
   <string name="app_ops_summaries_receive_wap_push">отримання повідомлень WAP-push</string>
   <string name="app_ops_summaries_send_sms">надсилання SMS</string>
-  <string name="app_ops_summaries_read_icc_sms">читання SMS з SIM-картки</string>
-  <string name="app_ops_summaries_write_icc_sms">написання SMS на SIM-картці</string>
+  <string name="app_ops_summaries_read_icc_sms">читання SMS з SIM-карти</string>
+  <string name="app_ops_summaries_write_icc_sms">написання SMS на SIM-карті</string>
   <string name="app_ops_summaries_modify_settings">зміна налаштувань</string>
   <string name="app_ops_summaries_draw_on_top">відображення поверх інших елементів</string>
   <string name="app_ops_summaries_access_notifications">доступ до повідомлень</string>
@@ -102,7 +102,7 @@
   <string name="app_ops_summaries_notification_volume">гучність сповіщень</string>
   <string name="app_ops_summaries_bluetooth_volume">гучність Bluetooth</string>
   <string name="app_ops_summaries_keep_awake">активний режим</string>
-  <string name="app_ops_summaries_monitor_location">відстеження місця розташування</string>
+  <string name="app_ops_summaries_monitor_location">відстеження місцезнаходження</string>
   <string name="app_ops_summaries_monitor_high_power_location">відстеження високоточного позиціонування</string>
   <string name="app_ops_summaries_get_usage_stats">отримувати статистику використання додатка</string>
   <string name="app_ops_summaries_mute_unmute_microphone">увімк./вимк. мікрофон</string>
@@ -119,7 +119,7 @@
   <string name="app_ops_summaries_use_fingerprint">використовувати відбитки пальців</string>
   <string name="app_ops_summaries_use_body_sensors">використання датчиків на тілі</string>
   <string name="app_ops_summaries_read_cell_broadcasts">читати широкомовні повідомлення</string>
-  <string name="app_ops_summaries_mock_location">підробляти розташування</string>
+  <string name="app_ops_summaries_mock_location">підробляти місцезнаходження</string>
   <string name="app_ops_summaries_read_external_storage">читати дані з карти пам\'яті</string>
   <string name="app_ops_summaries_write_external_storage">писати дані до карти пам\'яті</string>
   <string name="app_ops_summaries_turn_screen_on">вмикати екран</string>
@@ -132,8 +132,8 @@
   <string name="app_ops_summaries_toggle_mobile_data">перемикати стільникові дані</string>
   <string name="app_ops_summaries_superuser">root доступ</string>
   <!-- User display names for app ops codes - extension of AOSP -->
-  <string name="app_ops_labels_coarse_location">Приблизне розташування</string>
-  <string name="app_ops_labels_fine_location">Точне розташування</string>
+  <string name="app_ops_labels_coarse_location">Приблизне місцезнаходження</string>
+  <string name="app_ops_labels_fine_location">Точне місцезнаходження</string>
   <string name="app_ops_labels_gps">GPS</string>
   <string name="app_ops_labels_vibrate">Вібросигнал</string>
   <string name="app_ops_labels_read_contacts">Читання даних контактів</string>
@@ -173,8 +173,8 @@
   <string name="app_ops_labels_notification_volume">Гучність сповіщень</string>
   <string name="app_ops_labels_bluetooth_volume">Гучність bluetooth</string>
   <string name="app_ops_labels_keep_awake">Активний режим</string>
-  <string name="app_ops_labels_monitor_location">Відстеження розташування</string>
-  <string name="app_ops_labels_monitor_high_power_location">Відстеження розташування з високою точністю</string>
+  <string name="app_ops_labels_monitor_location">Відстеження місцезнаходження</string>
+  <string name="app_ops_labels_monitor_high_power_location">Відстеження місцезнаходження з високою точністю</string>
   <string name="app_ops_labels_get_usage_stats">Отримувати статистику використання</string>
   <string name="app_ops_labels_mute_unmute_microphone">Увімк./вимк. мікрофон</string>
   <string name="app_ops_labels_toast_window">Показувати спливаючі сповіщення</string>
@@ -248,7 +248,7 @@
   <string name="advanced_reboot_summary">Включити варіанти перезавантаження (Recovery, Bootloader або швидке перезавантаження) в меню кнопки живлення</string>
   <!-- PIN scramble -->
   <string name="unlock_scramble_pin_layout_title">Перемішана розкладка</string>
-  <string name="unlock_scramble_pin_layout_summary">Перемішувати розкладку PIN-коду підчас розблокування пристрою</string>
+  <string name="unlock_scramble_pin_layout_summary">Перемішувати розкладку PIN-коду під час розблокування пристрою</string>
   <!-- lock screen visualizer -->
   <string name="lockscreen_visualizer_title">Візуалізація під час програвання музики</string>
   <!-- Protected apps lockpattern reset button -->
@@ -286,8 +286,8 @@
   <!-- [CHAR LIMIT=100] Notification Importance slider: very low importance level description -->
   <string name="notification_importance_very_low">Не виводити на весь екран. Вимкнути короткі сповіщення, звук і вібросигнал. Показувати сповіщення внизу списку. Не показувати на заблокованому екрані.</string>
   <!-- Stylus Icon -->
-  <string name="stylus_icon_enabled_title">Відображувати значок під час використання стилусу</string>
-  <string name="stylus_icon_enabled_summary">Відображувати значок під час наведення або малювання стилусом</string>
+  <string name="stylus_icon_enabled_title">Показувати значок під час використання стилусу</string>
+  <string name="stylus_icon_enabled_summary">Показувати значок під час наведення або малювання стилусом</string>
   <!-- Kill app long-press back -->
   <string name="kill_app_longpress_back">Закрити програму</string>
   <string name="kill_app_longpress_back_summary">Довгий натиск на кнопку «Назад» закриє запущену програму</string>
@@ -312,6 +312,18 @@
   <string name="zen_mode_vibration_never">Не вібрувати</string>
   <string name="zen_mode_vibration_calls_only">Вібрувати лише для дзвінків</string>
   <string name="zen_mode_vibration_calls_and_notifications">Вібрація для дзвінків та повідомлень</string>
+  <!-- Zen mode allowed event setting summary items -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <string name="zen_mode_summary_reminders">нагадування</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_events">події</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_callers">вибрані абоненти</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_messages">вибрані повідомлення</string>
   <!-- Notification sound timeout -->
   <string name="app_notification_sound_timeout_title">Мінімальний час між звуками повідомлень</string>
   <string name="app_notification_sound_timeout_summary_template">Дозволити звуки або вібрації не більше ніж один раз кожні <xliff:g id="duration">%1$s </xliff:g></string>
@@ -393,4 +405,20 @@
   <!-- Status bar - double tap to sleep -->
   <string name="status_bar_double_tap_to_sleep_title">Вимикати екран при подвійному натисканні</string>
   <string name="status_bar_double_tap_to_sleep_summary">Двічі натисніть на рядок стану, аби вимкнути екран</string>
+  <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> — <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+  <string name="sim_enabled">увімкнено</string>
+  <string name="sim_disabled">вимкнено</string>
+  <string name="sim_missing">відсутній або несправний</string>
+  <string name="sim_enabler_need_disable_sim">SIM-карту буде деактивовано. Ви хочете продовжити?</string>
+  <string name="sim_enabler_will_disable_sim_title">Увага</string>
+  <string name="sim_enabler_need_switch_data_service">Цю SIM буде вимкнуто і SIM <xliff:g id="slotid">%1$s </xliff:g> буде використовуватися для передачі даних. Справді продовжити?</string>
+  <string name="sim_enabler_airplane_on">Не вдалося виконати операцію, коли увімкнено режим польоту.</string>
+  <string name="sim_enabler_in_call">Не вдалося виконати операцію під час виклику.</string>
+  <string name="sim_enabler_both_inactive">Не вдається вимкнути всі SIM-карти</string>
+  <string name="sim_enabler_enabling">Активація\u2026</string>
+  <string name="sim_enabler_disabling">Деактивація\u2026</string>
+  <string name="sub_activate_success">SIM активована.</string>
+  <string name="sub_activate_failed">Помилка активації.</string>
+  <string name="sub_deactivate_success">SIM деактивована.</string>
+  <string name="sub_deactivate_failed">Помилка деактивації.</string>
 </resources>

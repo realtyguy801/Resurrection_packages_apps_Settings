@@ -315,6 +315,21 @@
   <string name="zen_mode_vibration_never">אל תרטוט</string>
   <string name="zen_mode_vibration_calls_only">רטט רק עבור שיחות</string>
   <string name="zen_mode_vibration_calls_and_notifications">רטט עבור שיחות והתראות</string>
+  <!-- Zen mode allowed event setting summary items -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <string name="zen_mode_summary_reminders">תזכורות</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_events">אירועים</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_all_callers">כל המתקשרים</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_callers">מתקשרים נבחרים</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_repeat_callers">מתקשרים חוזרים</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_all_messages">כל ההודעות</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_messages">הודעות נבחרות</string>
   <!-- Notification sound timeout -->
   <string name="app_notification_sound_timeout_title">זמן מינימלי בין צלילי התראות</string>
   <string name="app_notification_sound_timeout_summary_template">אפשר צלילים או רטט לא יותר מפעם אחת בכל <xliff:g id="duration">%1$s</xliff:g></string>
@@ -396,4 +411,20 @@
   <!-- Status bar - double tap to sleep -->
   <string name="status_bar_double_tap_to_sleep_title">הקשה כפולה לכיבוי מסך</string>
   <string name="status_bar_double_tap_to_sleep_summary">הקש פעמיים בשורת המצב כדי לכבות את המסך</string>
+  <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+  <string name="sim_enabled">מאופשר</string>
+  <string name="sim_disabled">מושבת</string>
+  <string name="sim_missing">חסר או פגום</string>
+  <string name="sim_enabler_need_disable_sim">כרטיס ה-SIM יפסיק לפעול. האם ברצונך להמשיך?</string>
+  <string name="sim_enabler_will_disable_sim_title">שים לב</string>
+  <string name="sim_enabler_need_switch_data_service">SIM זה יהפוך ללא זמין ו-SIM <xliff:g id="slotid">%1$s</xliff:g> ישמש לשירותי נתונים. בטוח שברצונך להמשיך?</string>
+  <string name="sim_enabler_airplane_on">אין אפשרות לבצע את הפעולה במצב טיסה פעיל.</string>
+  <string name="sim_enabler_in_call">אין אפשרות לבצע את הפעולה בזמן השיחה.</string>
+  <string name="sim_enabler_both_inactive">אין אפשרות להשבית את כל כרטיסי ה-SIM</string>
+  <string name="sim_enabler_enabling">מפעיל\u2026</string>
+  <string name="sim_enabler_disabling">מכבה\u2026</string>
+  <string name="sub_activate_success">SIM הופעל.</string>
+  <string name="sub_activate_failed">הפעלה נכשלה.</string>
+  <string name="sub_deactivate_success">SIM בוטל.</string>
+  <string name="sub_deactivate_failed">ביטול הפעלה נכשלה.</string>
 </resources>

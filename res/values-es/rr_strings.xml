@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="rr_mod_version">Versión RR-OS</string>
+  <string name="rr_mod_version">Versión de RR-OS</string>
   <string name="build_date">Fecha de compilación</string>
   <string name="mod_version_default">Por defecto</string>
   <!-- General -->
@@ -45,7 +45,7 @@
   <string name="github_bdogg718k">https://github.com/bdogg718k</string>
   <string name="rr">Enlaces</string>
   <string name="rr_website_title">Sitio web</string>
-  <string name="rr_website_summary">Consigue más información sobre Resurrection Remix OS</string>
+  <string name="rr_website_summary">Conseguír más información sobre Resurrection Remix OS</string>
   <string name="rr_forum_title">Foro</string>
   <string name="rr_forum_summary">Únete al foro de Resurrection</string>
   <string name="rr_source_title">GitHub</string>
@@ -62,7 +62,7 @@
   <string name="rr_ls_ui">Interfaz bloqueada</string>
   <string name="rr_ls_security">Seguridad</string>
   <string name="updater_title">Actualizaciones</string>
-  <string name="altan_summary">● Fundador \n● Líder de proyecto \n● Desarrollador jefe \n● Diseñador UX \n● Encargado de mantener</string>
+  <string name="altan_summary">● Fundador \n● Líder del proyecto \n● Desarrollador jefe \n● Diseñador UX \n● Encargado de mantener</string>
   <string name="varun_summary">● Desarrollador principal \n● Diseñador de UX \n● Mantenedor</string>
   <string name="akhil_summary">Desarrollador ● Encargado de mantener \n● Maestro de Javascript\n●</string>
   <string name="brian_summary">● Desarrollador \n● Encargado de mantener</string>
@@ -1153,12 +1153,12 @@ https://plus.google.com/communities/109352646351468373340</string>
   <string name="status_bar_weather_font_notoserif_italic">NotoSerif Cursiva</string>
   <string name="status_bar_weather_font_notoserif_bold">NotoSerif Negrita</string>
   <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Cursiva Negrita</string>
-  <string name="weather_settings_title">Tiempo meteorológico</string>
+  <string name="weather_settings_title">Clima</string>
   <!-- Lockscreen weather -->
-  <string name="lockscreen_weather_title">Tiempo meteorológico</string>
-  <string name="lock_screen_weather_settings_title">Opciones de tiempo meteorológico</string>
+  <string name="lockscreen_weather_title">Clima</string>
+  <string name="lock_screen_weather_settings_title">Opciones del clima</string>
   <string name="weather_show_weather_title">Mostrar clima</string>
-  <string name="weather_show_weather_summary">Activar para mostrar información del tiempo</string>
+  <string name="weather_show_weather_summary">Activar para mostrar información del cliima</string>
   <string name="weather_show_location_title">Mostrar ubicación</string>
   <string name="weather_show_location_summary">Activar para mostrar tu localización</string>
   <string name="weather_show_timestamp_title">Mostrar fecha y hora</string>
@@ -1173,14 +1173,14 @@ https://plus.google.com/communities/109352646351468373340</string>
   <string name="position_centered_title">Centrado</string>
   <string name="hidden_title">Ocultar</string>
   <string name="weather_cat_notifications_title">Notificaciones</string>
-  <string name="weather_hide_panel_title">Ocultar panel de el tiempo</string>
-  <string name="weather_hide_panel_dlg_title">Elegir cuándo ocultar el panel de el tiempo</string>
+  <string name="weather_hide_panel_title">Ocultar panel del clima</string>
+  <string name="weather_hide_panel_dlg_title">Elegir cuándo ocultar el panel del clima</string>
   <string name="weather_hide_panel_auto_title">Automático</string>
   <string name="weather_hide_panel_custom_title">Personalizado</string>
   <string name="weather_hide_panel_never_title">Nunca</string>
-  <string name="weather_hide_panel_auto_summary">Ocultar panel del tiempo cuando las notificaciones alcancen el maximo permitido en la pantalla de bloqueo</string>
-  <string name="weather_hide_panel_custom_summary">Ocultar el panel del tiempo cuando las notificaciones alcancen el maximo elegido (%s)</string>
-  <string name="weather_hide_panel_never_summary">El panel del tiempo no se ocultará</string>
+  <string name="weather_hide_panel_auto_summary">Ocultar panel del clima cuando las notificaciones alcancen el máximo permitido en la pantalla de bloqueo</string>
+  <string name="weather_hide_panel_custom_summary">Ocultar el panel del clima cuando las notificaciones alcancen el máximo elegido</string>
+  <string name="weather_hide_panel_never_summary">El panel del clima no se ocultará</string>
   <string name="weather_number_of_notifications_title">Número de notificaciones</string>
   <!-- Quick Settings brightness slider -->
   <string name="qs_brightness_slider_title">Barra de brillo</string>
@@ -1361,10 +1361,10 @@ https://plus.google.com/communities/109352646351468373340</string>
   <string name="status_bar_logo_position_right">Derecha</string>
   <string name="status_bar_logo_position_left">Izquierda</string>
   <string name="status_bar_logo_position_center">Centro</string>
-  <string name="statusbar_weather_title">Tiempo en la barra de estado</string>
+  <string name="statusbar_weather_title">Clima en la barra de estado</string>
   <string name="statusbar_weather_summary">Configurar desde Ajustes Rápidos/Tiempo.</string>
-  <string name="statusbar_weather_dialog_title">Estilo del tiempo en la barra de estado</string>
-  <string name="status_bar_weather_hidden">Ocultar el tiempo</string>
+  <string name="statusbar_weather_dialog_title">Estilo del clima en la barra de estado</string>
+  <string name="status_bar_weather_hidden">Ocultar el clima</string>
   <string name="status_bar_temperature_image_show_scale">Mostrar temperatura con escala e imagen</string>
   <string name="status_bar_temperature_image_hide_scale">Mostrar temperatura con imagen sin escala</string>
   <string name="status_bar_temperature_show_scale_hide_image">Mostrar temperatura con escala</string>
@@ -1384,7 +1384,7 @@ https://plus.google.com/communities/109352646351468373340</string>
   <string name="qs_bt_easy_toggle_title">Interruptor rápido de Bluetooth</string>
   <string name="qs_bt_easy_toggle_summary">Una pulsación hace que se active o desactive el Bluetooth en lugar de ir a las opciones</string>
   <!-- Battery Saver easy toggle -->
-  <string name="qs_battery_easy_toggle_title">Fácil conmutación de batería</string>
+  <string name="qs_battery_easy_toggle_title">Interruptor rápido de Batería</string>
   <string name="qs_battery_easy_toggle_summary">Una pulsación hace que se active o desactive el Ahorro de batería en lugar de ir a las opciones</string>
   <!-- Location easy toggle -->
   <string name="qs_location_easy_toggle_title">Cambio rápido de ubicación</string>
@@ -1434,6 +1434,7 @@ https://plus.google.com/communities/109352646351468373340</string>
   <string name="smartbar_interface">SmartBar</string>
   <string name="navbar_tint_switch">Tinte de botón de navegación</string>
   <string name="navbar_button_color">Botones de la barra de navegación</string>
+  <string name="navbar_button_custom_icon_switch_title">Añadir filtro de color a los botones de la aplicación</string>
   <string name="icon_pack_picker_dialog_title">Paquetes de iconos</string>
   <string name="invalid_icon_from_uri">No se puede cargar la imagen desde el proveedor de contenido</string>
   <string name="picker_activities">Actividades</string>
@@ -1537,7 +1538,7 @@ https://plus.google.com/communities/109352646351468373340</string>
   <!-- SmartBar -->
   <string name="smartbar_category">SmartBar</string>
   <string name="smartbar_settings_title">Ajustes de SmartBar</string>
-  <string name="smartbar_editor_title">Conmutar editor de botones</string>
+  <string name="smartbar_editor_title">Activar/Desactivar editor de botones</string>
   <string name="smartbar_editor_summary">Presiona y arrastra para cambiar la posición. Presiona de forma prolongada para mostrar el menú de edición. La posición de los botones puede cambiarse mientras se muestra el menú.</string>
   <string name="smartbar_context_menu_position_title">Posición de botones contextuales</string>
   <string name="smartbar_context_menu_position_summary">Establecer la posición de los botones contextuales tales como el menú y el selector de teclado</string>
@@ -1735,7 +1736,7 @@ https://plus.google.com/communities/109352646351468373340</string>
   <string name="screenshot_crop_and_share_summary">Mostrar una ventana del editor después de tomar una captura de pantalla para recortar etc..., guardar o compartir</string>
   <string name="heads_up_settings">Notificacion flotante</string>
   <!-- Lockscreen battery info indicator  -->
-  <string name="lockscreen_battery_info_title">Información de batería en pantalla de bloqueo</string>
+  <string name="lockscreen_battery_info_title">Información de la batería en pantalla de bloqueo</string>
   <string name="lockscreen_battery_info_summary">Mostrar corriente y voltaje máximos negociados con el cargador y la temperatura de la batería en la pantalla de bloqueo cuando se esté cargando</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Tiempo de espera</string>
@@ -1869,7 +1870,7 @@ Esta configuración sobrescribirá cualquier resumen personalizado anterior.</st
   <string name="lockscreen_alarm_color">Alarma</string>
   <string name="icons_title">Iconos</string>
   <string name="text_title">Texto</string>
-  <string name="lock_screen_weather_temp_color">Temperatura del tiempo</string>
+  <string name="lock_screen_weather_temp_color">Temperatura del clima</string>
   <string name="lock_screen_weather_con_color">Condiciones meteorológicas</string>
   <string name="lock_screen_weather_stamp_color">Hora de ubicación </string>
   <string name="lock_screen_weather_hum_color">Humedad</string>
@@ -1961,8 +1962,8 @@ Esta configuración sobrescribirá cualquier resumen personalizado anterior.</st
   <string name="qs_header_items_title">Elementos de la cabecera</string>
   <string name="qs_settings_icon_title">Acceso directo a ajustes</string>
   <string name="qs_settings_icon_summary">Desactivar el icono de ajustes en la cabecera</string>
-  <string name="qs_edit_title">Editar icono</string>
-  <string name="qs_edit_summary">Desactivar el icono de edición de cuadros en la cabecera</string>
+  <string name="qs_edit_title">Icono de edición</string>
+  <string name="qs_edit_summary">Desactivar el icono de edición de las tiles en la cabecera</string>
   <string name="qs_multiuser_switch_title">Cambio de usuario</string>
   <string name="qs_multiuser_switch_summary">Desactivar el icono de cambio de usuario en la cabecera</string>
   <string name="qs_expand_indicator_title">Indicador de expansión</string>
@@ -2078,6 +2079,11 @@ Esta configuración sobrescribirá cualquier resumen personalizado anterior.</st
   <string name="recent_card_text_color_title">Color de texto de la tarjeta</string>
   <string name="slim_recents_mem_display_long_click_clear_title">Eliminar recientes con la barra de memoria</string>
   <string name="slim_recents_mem_display_long_click_clear_summary">Eliminar apps recientes al precionar prolongadamente la barra de memoria</string>
+  <string name="slim_icon_pack_title">Pack de iconos</string>
+  <string name="slim_icon_pack_summary">Aplicar un paquete de iconos personalizado para las aplicaciones en el panel</string>
+  <string name="no_iconpacks_summary">No hay packs de iconos instalados</string>
+  <string name="dialog_pick_iconpack_title">Elegir paquete de iconos</string>
+  <string name="default_iconpack_title">Iconos predeterminados</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Mostrar en el borde izquierdo</string>
   <string name="recent_panel_lefty_mode_summary">Mostrar aplicaciones recientes en el borde izquierdo</string>
@@ -2116,7 +2122,7 @@ Esta configuración sobrescribirá cualquier resumen personalizado anterior.</st
   <!-- Notification guts kill app button -->
   <string name="notification_guts_kill_app_button_title">Botón de matar tareas</string>
   <string name="notification_guts_kill_app_button_summary">Mostrar un botón de matar app en le menu de pulsación larga de notificaciones</string>
-  <string name="weather_title">El Tiempo</string>
+  <string name="weather_title">Clima</string>
   <string name="weather_config_title">Ajustes de servicio</string>
   <string name="weather_icon_pack_title">Pack de iconos de estado</string>
   <!-- Force authorize substratum packages -->
@@ -2132,4 +2138,29 @@ Esta configuración sobrescribirá cualquier resumen personalizado anterior.</st
   <string name="empty_shade_view_show_carrier_name_summary">Activar para mostrar el nombre del operador</string>
   <string name="empty_shade_view_show_wifi_name_title">Mostrar el nombre de red Wifi</string>
   <string name="empty_shade_view_show_wifi_name_summary">Permiten para mostrar el nombre de la red wifi</string>
+  <!-- Roaming indicator icon -->
+  <string name="roaming_indicator_icon_title">Mostrar indicador de roaming</string>
+  <string name="roaming_indicator_icon_summary">Mostrar indicador de roaming en el ícono de señal cuando se esté en modo roaming</string>
+  <!-- Screen state service -->
+  <string name="screen_state_toggles_summary">\@null</string>
+  <string name="screen_state_toggles_title">Suspender acciones</string>
+  <string name="screen_state_toggles_enable_title">Habilitar</string>
+  <string name="screen_state_toggles_enable_summary">Las acciones se ejecutarán al apagar la pantalla. Al encenderla, el estado anterior se restaurará.</string>
+  <string name="screen_state_toggles_mobile_title">Redes móviles</string>
+  <string name="screen_state_toggles_location_title">Ubicación</string>
+  <string name="screen_state_toggles_twog">Cambiar a 2G</string>
+  <string name="screen_state_toggles_twog_summary">Modo de red se cambiará a 2G al apagar la pantalla</string>
+  <string name="screen_state_toggles_gps">Desactivar GPS</string>
+  <string name="screen_state_toggles_gps_summary">Servicio de localización basado en GPS se desactivará al apagar la pantalla</string>
+  <string name="screen_state_toggles_mobile_data">Desactivar los datos móviles</string>
+  <string name="screen_state_toggles_mobile_data_summary">Los datos móviles se deshabilatarán al apagar la pantalla</string>
+  <string name="screen_state_off_delay_title">Retardo de las acciones con la pantalla apagada</string>
+  <string name="screen_state_off_delay_summary">Número de segundos a esperar antes de realizar acciones después de apagar la pantalla</string>
+  <string name="screen_state_on_delay_title">Retardo de las acciones con la pantalla encendida</string>
+  <string name="screen_state_on_delay_summary">Número de segundos a esperar antes de realizar acciones después de apagar la pantalla</string>
+  <!-- In-call DND -->
+  <string name="dnd_when_call_title">No molestar en la llamada</string>
+  <string name="dnd_when_call_summary">Auto habilitar DND durante las llamadas</string>
+  <string name="no_sim_cluster_switch_title">No ocultar red de sim</string>
+  <string name="no_sim_cluster_switch_summary">Ocultar la barra de red si la subscripción de la sim está inactiva y deshabilitada. Si no está desactivada la sim, este toggle no funcionará</string>
 </resources>

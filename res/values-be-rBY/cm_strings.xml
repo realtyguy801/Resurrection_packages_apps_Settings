@@ -300,6 +300,18 @@
   <string name="increasing_ring_min_volume_title">Пачатковая гучнасць</string>
   <string name="increasing_ring_ramp_up_time_title">Час павелічэння</string>
   <!-- Allow vibration in zen mode -->
+  <!-- Zen mode allowed event setting summary items -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <string name="zen_mode_summary_reminders">нагадванні</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_events">падзеі</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_callers">абраныя абанэнты</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_messages">абраныя паведамленні</string>
   <!-- Notification sound timeout -->
   <!-- MSIM SIM status -->
   <string name="sim_card_status_title">Статус SIM %d</string>
@@ -348,4 +360,19 @@
   <!-- Status bar - double tap to sleep -->
   <string name="status_bar_double_tap_to_sleep_title">Вымыкаць экран пры падвойным націсканні</string>
   <string name="status_bar_double_tap_to_sleep_summary">Двойчы дакраніцеся радка стану, каб перавесці прыладу ў спячы рэжым</string>
+  <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> — <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+  <string name="sim_disabled">адключана</string>
+  <string name="sim_missing">адсутнічае альбо няспраўная</string>
+  <string name="sim_enabler_need_disable_sim">SIM-картка будзе адключана. Жадаеш працягнуць?</string>
+  <string name="sim_enabler_will_disable_sim_title">Увага</string>
+  <string name="sim_enabler_need_switch_data_service">SIM картка будзе адключана і SIM <xliff:g id="slotid">%1$s</xliff:g> будзе выкарыстоўваць дадзеныя службаў. Упэўнены ў жаданні працягнуць?</string>
+  <string name="sim_enabler_airplane_on">Выкананне аперацыі немагчымае пры ўлучаным рэжыме лёту.</string>
+  <string name="sim_enabler_in_call">Выкананне аперацыі немагчымае падчас тэлефанавання.</string>
+  <string name="sim_enabler_both_inactive">Немагчыма адключыць усе SIM-карты</string>
+  <string name="sim_enabler_enabling">Улучэнне\u2026</string>
+  <string name="sim_enabler_disabling">Адлучэнне\u2026</string>
+  <string name="sub_activate_success">SIM актывована.</string>
+  <string name="sub_activate_failed">Памылка падчас актывацыі.</string>
+  <string name="sub_deactivate_success">SIM дэактывована.</string>
+  <string name="sub_deactivate_failed">Памылка падчас дэактывацыі.</string>
 </resources>

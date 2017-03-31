@@ -38,12 +38,16 @@
   <string name="device_category_bq_title">BQ</string>
   <string name="device_category_leeco_title">LeEco</string>
   <string name="device_category_zuk_title">ZUK</string>
+  <string name="device_category_nubia_title">Nubia</string>
+  <string name="device_category_vega_title">Vega</string>
   <string name="device_A7010a48">Lenovo Vibe K4 Note</string>
   <string name="device_A7010a48_summary">A7010a48 \nПоддержка модели - Mohan Cm (mohancm100)</string>
   <string name="device_A6020">Vibe K5</string>
   <string name="device_A6020_summary">A6020 \nПоддержка модели - Henrique Silva (jhenrique09)</string>
   <string name="device_a6000">Lenovo A6000</string>
   <string name="device_a6000_summary">a6000 \nПоддержка модели - Harshit Jain (dev_harsh1998)</string>
+  <string name="device_p2a42">Lenovo P2</string>
+  <string name="device_p2a42_summary">p2a42 \nПоддержка модели - Vedat Ak (Incredible)</string>
   <string name="device_ms013g">Grand 2 SM-G7102</string>
   <string name="device_ms013g_summary">ms013g \nПоддержка модели - </string>
   <string name="device_moto_x">Moto X 2013</string>
@@ -51,7 +55,7 @@
   <string name="device_moto_x14">Moto X 2014</string>
   <string name="device_moto_x14_summary">Victara \nПоддержка модели - Megatron007</string>
   <string name="device_moto_x_clark">Moto X 2015</string>
-  <string name="device_moto_x_clark_summary">Clark \nMaintainer - </string>
+  <string name="device_moto_x_clark_summary">Clark \nПоддержка модели -</string>
   <string name="device_lux_x">Moto X Play</string>
   <string name="device_lux_x_summary">Lux \nПоддержка модели - GtrCraft</string>
   <string name="device_peregrine">Moto G LTE</string>
@@ -106,6 +110,10 @@
   <string name="device_treltexx_summary">N910C/H \nMaintainer - </string>
   <string name="device_i9100">Galaxy S II</string>
   <string name="device_i9100_summary">GT-I9100 \nПоддержка модели - GreekDragon </string>
+  <string name="device_herolte">Galaxy S7</string>
+  <string name="device_herolte_summary">SM-G930F/FD/W8/S/K/L \nПоддержка модели - Gwolf2u (gwolfu@xda)</string>
+  <string name="device_j5ltexx">Galaxy J5</string>
+  <string name="device_j5ltexx_summary">SM-J500F/FN \nПоддержка модели - SoUnd001</string>
   <string name="device_i9001">Galaxy S Plus</string>
   <string name="device_i9001_summary">GT-I9001 \nMaintainer - </string>
   <string name="device_w">Samsung Galaxy W I8150</string>
@@ -278,6 +286,8 @@
   <string name="device_cancro_summary">Cancro \nПоддержка модели - Nihar Deshpande</string>
   <string name="device_gemini">Xiaomi MI 5</string>
   <string name="device_gemini_summary">Gemini \nПоддержка модели - Fabian Leutenegger</string>
+  <string name="device_natrium">Xiaomi MI 5s Plus</string>
+  <string name="device_natrium_summary">Natrium \nПоддержка модели - Ali İhsan Hatun (Asderdd)</string>
   <string name="device_dior">Xiaomi Redmi Note 4G</string>
   <string name="device_dior_summary">dior \nПоддержка модели - Ashish Kotnala</string>
   <string name="device_kenzo">Xiaomi Redmi Note 3</string>
@@ -296,6 +306,8 @@
   <string name="device_shamrock_summary">Shamrock \nПоддержка модели - Ali İhsan Hatun (Asderdd)</string>
   <string name="device_s2">LeEco Le 2</string>
   <string name="device_s2_summary">s2 \nПоддержка модели - Rishabh Rao (rishabhrao)</string>
+  <string name="device_X3">LeEco Le 1s</string>
+  <string name="device_X3_summary">X3 \nПоддержка модели - Łukasz Wiśniewski (WisniaPL)</string>
   <string name="device_alpha">Samsung Galaxy Alpha</string>
   <string name="device_alpha_summary">G850F \nПоддержка модели - </string>
   <string name="device_t0ltexx">Samsung Galaxy Note II LTE</string>
@@ -358,4 +370,8 @@
   <string name="device_flounder_summary">Flounder \nПоддержка модели - Jithu Mathew Joseph</string>
   <string name="device_ham">ZUK Z1</string>
   <string name="device_ham_summary">Ham \nПоддержка модели - OrdenKrieger</string>
+  <string name="device_nubia_nx531j">Nubia Z11</string>
+  <string name="device_nubia_nx531j_summary">nx531j \nПоддержка модели - ZhangXueZe</string>
+  <string name="device_vega_A910">Vega Sky A910</string>
+  <string name="device_vega_A910_summary">A910 \nПоддержка модели - XDAVN</string>
 </resources>
