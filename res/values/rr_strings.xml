@@ -1708,7 +1708,7 @@
     <string name="smartbar_button_animation_pixel_home_ripple">Pixel (Home button only) and Ripple</string>
     <string name="smartbar_factory_reset_title">Reset to stock</string>
     <string name="smartbar_factory_reset_confirm">Are you sure you want to reset Smartbar to stock settings?</string>
-    <string name="smartbar_ime_action_title">Input method actions</string>
+    <string name="smartbar_ime_action_title">Input method and media actions</string>
     <string name="smartbar_ime_action_summary">Set what buttons to show when a on-screen keyboard is showing or music is playing</string>
     <string name="smartbar_ime_action_none">None</string>
     <string name="smartbar_ime_action_arrows">Input arrows</string>
@@ -2231,6 +2231,20 @@
     <!-- DUI Double Tap to Sleep -->
     <string name="smartbar_doubletap_sleep_title">Double tap to sleep</string>
     <string name="smartbar_doubletap_sleep_summary">Double tap on navbar empty areas to switch off the screen</string>
+
+    <!-- Pixel Animation Duration -->
+    <string name="pixel_anim_title">Pixel navbar animation duration</string>
+    <string name="pixel_anim_summary">Customize various durations of pixel animation on navbar</string>
+    <string name="pixel_anim_warning">Customize various durations of pixel animation on navbar. WARNING! Changing default values can cause performance drop in animation.Proceed at your own risk</string>
+    <string name="pixel_anim_x_title">Horizontal duration</string>
+    <string name="pixel_anim_y_title">Vertical duration</string>
+    <string name="collapse_anim_duration_ry_title">Collapse duration</string>
+    <string name="collapse_anim_duration_bg_title">Collapse background</string>
+    <string name="retract_anim_duration_title">Retract duration</string>
+    <string name="diamond_anim_duration_title">Diamond duration</string>
+    <string name="dots_anim_duration_title">Dots duration</string>
+    <string name="home_resize_anim_duration_title">Home button resize duration</string>
+
 
     <!--One handed mode -->
     <string name="one_handed_mode_title">One handed mode</string>
