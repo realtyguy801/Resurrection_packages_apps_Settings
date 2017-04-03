@@ -113,7 +113,6 @@
   <string name="device_herolte">Galaxy S7</string>
   <string name="device_herolte_summary">SM-G930F/FD/W8/S/K/L \nOnderhouder - Gwolf2u (gwolfu@xda) </string>
   <string name="device_j5ltexx">Galaxy J5</string>
-  <string name="device_j5ltexx_summary">SM-J500F/FN \nOnderhouder - SoUnd001 </string>
   <string name="device_i9001">Galaxy S Plus</string>
   <string name="device_i9001_summary">GT-I9001 \nOnderhouder - </string>
   <string name="device_w">Samsung Galaxy W I8150</string>
@@ -147,7 +146,7 @@
   <string name="device_s3att">Galaxy S III AT&amp;T</string>
   <string name="device_s3att_summary">D2LTE \nMaintainer - </string>
   <string name="device_d2spr">Galaxy S III Sprint</string>
-  <string name="device_d2spr_summary">D2SPR \nOnderhouder - </string>
+  <string name="device_d2spr_summary">D2SPR \nMaintainer - </string>
   <string name="device_i9305">Galaxy S III LTE</string>
   <string name="device_i9305_summary">GT-I9305 \nOnderhouder - rodman01</string>
   <string name="device_sm_t217s">Galaxy Tab 3 7.0</string>
@@ -374,4 +373,6 @@
   <string name="device_nubia_nx531j_summary">nx531j \nOnderhouder - ZhangXueZe</string>
   <string name="device_vega_A910">Vega Sky A910</string>
   <string name="device_vega_A910_summary">A910 \nOnderhouder - XDAVN</string>
+  <string name="device_lenovo_P1a42">Lenovo Vibe P1 Turbo</string>
+  <string name="device_lenovo_P1a42_summary">P1a42 \nMaintainer - Subham (DerkLord)</string>
 </resources>

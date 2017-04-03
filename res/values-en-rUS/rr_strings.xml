@@ -99,8 +99,6 @@
   <string name="fab_reset">Reset</string>
   <string name="fab_about">About RR-OS</string>
   <string name="fab_layout">Update layout</string>
-  <string name="fab_layout_update">Toggle Marshmallow layout</string>
-  <string name="fab_layout_toggle">Toggle Nougat layout</string>
   <string name="rr_reset_message">Reset all settings to default values?</string>
   <string name="rr_reset_settings">Reset settings</string>
   <string name="rr_reset_yes">Yes</string>
@@ -289,9 +287,14 @@
   <string name="disable_immersive_message_title">Disable immersive mode messages</string>
   <!-- Hide Apps from Recents -->
   <!-- About device screen, CPU and RAM info. -->
+  <string name="cpu_info">CPU</string>
+  <string name="mem_info">RAM</string>
+  <string name="systemui_recents_mem_display_title">Show Memory Bar</string>
   <!-- Network traffic -->
   <!-- Statusbar RR logo -->
   <!-- Color picker -->
+  <string name="color_picker_fragment_title">Colour Picker</string>
+  <string name="edit_hex_title">HEX Value</string>
   <!-- Help screen -->
   <!-- Color picker end -->
   <!-- Power menu Animations  -->
@@ -419,6 +422,7 @@
   <!-- Wakelock blocker -->
   <!-- Alarm blocker -->
   <!-- DUI Double Tap to Sleep -->
+  <!-- Pixel Animation Duration -->
   <!--One handed mode -->
   <!-- SystemUI restart prompt -->
   <!-- Dashboard options -->
@@ -437,4 +441,5 @@
   <!-- Roaming indicator icon -->
   <!-- Screen state service -->
   <!-- In-call DND -->
+  <!-- Advanced night mode brightness -->
 </resources>

@@ -21,6 +21,8 @@
     <!-- General -->
     <string name="ok">Okay</string>
     <string name="reset">Reset</string>
+    <string name="dlg_reset_rr">RR</string>
+    <string name="dlg_reset_android">Default</string>
     <string name="default_string">Default</string>
     <string name="add">Add</string>
     <string name="enabled">Enabled</string>
@@ -1051,6 +1053,8 @@
     <string name="volume_keys_control_ring_stream_summary_off">Volume keys control media volume</string>
     <string name="volume_answer_call_title">Answer call</string>
     <string name="volume_answer_call_summary">Answer incoming calls by pressing the volume buttons</string>
+    <string name="vol_up_disable_overlays_title">Disable theme overlays with volume up</string>
+    <string name="vol_up_disable_overlays_summary">During boot hold volume up button to disable all applied theme overlays</string>
 
     <string name="camera_double_tap_power_gesture_title">Press power button twice for camera</string>
 
@@ -1674,6 +1678,7 @@
     <string name="pulse_solid_units_count">Solid lines count</string>
     <string name="pulse_solid_units_opacity">Solid lines opacity</string>
     <string name="pulse_solid_dimen_category">Solid lines mode settings</string>
+    <string name="pulse_custom_buttons_opacity_title">Buttons opacity on Pulse</string>
     <string name="fling_lavalamp_color_from">Lava Lamp start color</string>
     <string name="fling_lavalamp_color_to">Lava Lamp end color</string>
 
@@ -2243,7 +2248,7 @@
     <string name="retract_anim_duration_title">Retract duration</string>
     <string name="diamond_anim_duration_title">Diamond duration</string>
     <string name="dots_anim_duration_title">Dots duration</string>
-    <string name="home_resize_anim_duration_title">Home button resize duration</string>
+    <string name="home_resize_anim_duration_title">Button resize duration</string>
 
 
     <!--One handed mode -->
