@@ -21,6 +21,7 @@
   <!-- General -->
   <string name="ok">Ok</string>
   <string name="reset">Resetuj</string>
+  <string name="dlg_reset_rr">RR</string>
   <string name="default_string">Domyślne</string>
   <string name="add">Dodaj</string>
   <string name="enabled">Włączono</string>
@@ -877,7 +878,7 @@
   <string name="navbar_settings_title">Pasek nawigacji</string>
   <!-- kill app long press back -->
   <string name="kill_app_longpress_back">Zamykanie aplikacji przyciskiem wstecz</string>
-  <string name="kill_app_longpress_back_summary">Zamknij aktywną aplikację przytrzymując klawisz cofania</string>
+  <string name="kill_app_longpress_back_summary">Zamknij aktywną aplikację przytrzymując klawisz wstecz</string>
   <string name="long_press_kill_delay">Opóźnienie zabicia aplikacji</string>
   <!-- Advanced data tile -->
   <string name="qs_advanced_data_title">Zaawansowany przełącznik danych</string>
@@ -2122,6 +2123,7 @@
   <!-- Force authorize substratum packages -->
   <string name="force_authorize_substratum_packages_title">Zezwalaj na instalowanie motywów z nieznanych źródeł</string>
   <string name="force_authorize_substratum_packages_summary">Wymuś autoryzację każdego motywu</string>
+  <string name="magisk_title">Menedżer Magisk</string>
   <string name="magisk_summary">Zarządzanie rootem</string>
   <string name="notif_text_color">Kolor tekstu</string>
   <string name="status_bar_expanded_empty_shade_view_settings_title">Widok bez powiadomień</string>
