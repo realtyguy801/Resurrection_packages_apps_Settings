@@ -125,15 +125,6 @@
     <string name="battery_bar_ambient_summary_on">Battery bar will not be shown on ambient display</string>
     <string name="battery_bar_ambient_summary_off">Battery bar will be shown on ambient display</string>
 
-	<!-- Advanced storage settings -->
-   <string name="storage_advanced_titlebar">USB Connection</string>
-   <string name="storage_menu_advanced">Connection</string>
-
-   <!-- USB data automatic unlock -->
-   <string name="usb_data_auto_unlock_title">Manual connection</string>
-   <string name="usb_data_auto_unlock_summary">Allow transfer protocol connection\'s to your phone\'s storage through USB (MTP, PTP)</string>
-   <string name="usb_data_auto_unlock_warning_summary">Your device will establish unprotected connections, everytime you connect it to a PC. Secured lockscreens disable this option automatically.\n\nThis is still an experimental feature, use with caution.</string>
-
     <string name="ambient_display_show_weather_title">Show while dozing</string>
     <string name="ambient_display_show_weather_summary">Show weather information when ambient display is on</string>
 
