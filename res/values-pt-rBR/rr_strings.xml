@@ -1664,7 +1664,7 @@
   <string name="reset_android">Android</string>
   <string name="pa_piecontrol_settings_summary">Personalizar PA Pie 2.0 alvos, estilo, tamanho e cor</string>
   <string name="pa_pie_control_title">Controle Pie</string>
-  <string name="pa_pie_control_enable_title">Aivar Controle Pie</string>
+  <string name="pa_pie_control_enable_title">Ativar Controle Pie</string>
   <string name="pa_pie_targets_title">Alvos Pie</string>
   <string name="pa_pie_style_title">Estilo do Pie</string>
   <string name="pa_pie_menu_title">Sempre mostrar o botão de menu</string>
@@ -1728,23 +1728,7 @@
   <!-- Heads up switch -->
   <string name="heads_up_switch_title">Notificações pop-up</string>
   <string name="heads_up_switch_summary">Alterar as configurações das notificações pop-up globalmente, não por aplicativo.</string>
-  <string name="lockscreen_pin_ripple_title">Efeito ao digitar pin</string>
-  <string name="lockscreen_pin_ripple_summary">Desabilitar para remover o efeito de ondulação ao inserir números pin</string>
-  <!-- Optional screenshot type -->
-  <string name="screenshot_type_title">Tipo de captura de tela</string>
-  <string name="screenshot_type_fullscreen">Captura em tela cheia</string>
-  <string name="screenshot_type_partial">Arraste a seleção na área que você deseja tirar uma captura de tela</string>
-  <!-- Screenshot delay -->
-  <string name="screenshot_options_category">Opções de captura de tela</string>
-  <string name="screenshot_delay_title">Atraso da captura de tela</string>
-  <string name="screenshot_delay_summary">Ajustar o tempo para quando uma imagem é capturada</string>
-  <!--Screenshot crop and share -->
-  <string name="screenshot_crop_and_share_title">Corte e compartilhamento da captura de tela</string>
-  <string name="screenshot_crop_and_share_summary">Mostrar um editor depois de capturar uma tela para fazer algumas operações como corte, salvar ou compartilhar</string>
   <string name="heads_up_settings">Notificações pop-up</string>
-  <!-- Lockscreen battery info indicator  -->
-  <string name="lockscreen_battery_info_title">Informação de carregamento na tela de bloqueio</string>
-  <string name="lockscreen_battery_info_summary">Exibir corrente/tensão máxima e temperatura da bateria na tela de bloqueio durante o carregamento</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Tempo limite</string>
   <string name="heads_up_time_out_summary">Mostrar notificação por <xliff:g id="number">%d</xliff:g> segundos</string>
@@ -1765,6 +1749,22 @@
   <string name="heads_up_snooze_10min">10 minutos</string>
   <string name="heads_up_snooze_15min">15 minutos</string>
   <string name="heads_up_snooze_20min">20 minutos</string>
+  <string name="lockscreen_pin_ripple_title">Efeito ao digitar pin</string>
+  <string name="lockscreen_pin_ripple_summary">Desabilitar para remover o efeito de ondulação ao inserir números pin</string>
+  <!-- Optional screenshot type -->
+  <string name="screenshot_type_title">Tipo de captura de tela</string>
+  <string name="screenshot_type_fullscreen">Captura em tela cheia</string>
+  <string name="screenshot_type_partial">Arraste a seleção na área que você deseja tirar uma captura de tela</string>
+  <!-- Screenshot delay -->
+  <string name="screenshot_options_category">Opções de captura de tela</string>
+  <string name="screenshot_delay_title">Atraso da captura de tela</string>
+  <string name="screenshot_delay_summary">Ajustar o tempo para quando uma imagem é capturada</string>
+  <!--Screenshot crop and share -->
+  <string name="screenshot_crop_and_share_title">Corte e compartilhamento da captura de tela</string>
+  <string name="screenshot_crop_and_share_summary">Mostrar um editor depois de capturar uma tela para fazer algumas operações como corte, salvar ou compartilhar</string>
+  <!-- Lockscreen battery info indicator  -->
+  <string name="lockscreen_battery_info_title">Informação de carregamento na tela de bloqueio</string>
+  <string name="lockscreen_battery_info_summary">Exibir corrente/tensão máxima e temperatura da bateria na tela de bloqueio durante o carregamento</string>
   <!-- Camera shutter sound -->
   <string name="camera_sounds_title">Som do obturador da Câmera</string>
   <string name="camera_sounds_summary">Ativar o som do obturador da Câmera</string>
@@ -2030,7 +2030,7 @@ Densidade atual: <xliff:g name="count" example="520">%d</xliff:g> dpi</string>
   <string name="smartbar_doubletap_sleep_title">Toque duplo para desligar a tela</string>
   <string name="smartbar_doubletap_sleep_summary">Toque duas vezes em alguma área vazia da barra de navegação para desligar a tela</string>
   <!-- Pixel Animation Duration -->
-  <string name="pixel_anim_title">Animação Pixel da barra de navegação </string>
+  <string name="pixel_anim_title">Animação da barra de navegação Pixel </string>
   <string name="pixel_anim_summary">Personalizar vários elementos da animação Pixel da barra de navegação</string>
   <string name="pixel_anim_warning">Personalizar vários elementos da animação Pixel da barra de navegação. ATENÇÃO! Alterar os valores predefinidos pode causar perda de performance durante a animação. Prossiga por sua conta e risco</string>
   <string name="pixel_anim_x_title">Duração horizontal</string>
@@ -2169,6 +2169,9 @@ Densidade atual: <xliff:g name="count" example="520">%d</xliff:g> dpi</string>
   <!-- Roaming indicator icon -->
   <string name="roaming_indicator_icon_title">Mostrar indicador de roaming</string>
   <string name="roaming_indicator_icon_summary">Mostrar o indicador de roaming no ícone de sinal quando no modo de roaming</string>
+  <!-- Data disabled icon -->
+  <string name="data_disabled_icon_title">Mostrar símbolo de dados desligados</string>
+  <string name="data_disabled_icon_summary">Mostrar um X junto do ícone de rede quando os dados estiverem desligados</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_summary">\@null</string>
   <string name="screen_state_toggles_title">Suspender as ações</string>

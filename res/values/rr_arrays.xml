@@ -1205,36 +1205,6 @@
         <item>24</item>
     </string-array>
 
-
-    <!-- LS Weather -->
-    <string-array name="weather_condition_icon_entries">
-        <item>@string/weather_condition_icon_monochrome_title</item>
-        <item>@string/weather_condition_icon_colored_title</item>
-        <item>@string/weather_condition_icon_marshmallow_title</item>
-        <item>@string/weather_condition_icon_weezle_title</item>
-        <item>@string/weather_condition_icon_gs6_title</item>
-        <item>@string/weather_condition_icon_gnw_title</item>
-        <item>@string/weather_condition_icon_miui_title</item>
-        <item>@string/weather_condition_icon_sthul_title</item>
-        <item>@string/weather_condition_icon_tapas_title</item>
-        <item>@string/weather_condition_icon_magical_title</item>
-        <item>@string/weather_condition_icon_vclouds_title</item>
-    </string-array>
-
-    <string-array name="weather_condition_icon_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
-
     <string-array name="weather_hide_panel_entries">
         <item>@string/weather_hide_panel_auto_title</item>
         <item>@string/weather_hide_panel_custom_title</item>
@@ -1983,6 +1953,19 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+    </string-array>
+
+     <!-- Ticker mode -->
+    <string-array name="ticker_mode_entries">
+        <item>@string/ticker_disabled</item>
+        <item>@string/ticker_enabled</item>
+        <item>@string/ticker_media_enabled</item>
+    </string-array>
+
+    <string-array name="ticker_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
 
 </resources>

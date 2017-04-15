@@ -22,21 +22,44 @@ import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v7.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.provider.Settings;
+import android.view.View;
+import android.widget.LinearLayout;
 
-import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.logging.MetricsProto.MetricsEvent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import android.util.Log;
+
+import java.util.List;
+import java.util.ArrayList;
+
+import com.android.internal.util.rr.PackageUtils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -51,8 +74,6 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             "lock_screen_show_weather_location";
     private static final String PREF_SHOW_CON =
             "lock_screen_show_weather_condition";
-    private static final String PREF_CONDITION_ICON =
-            "weather_condition_icon";
     private static final String PREF_HIDE_WEATHER =
             "weather_hide_panel";
     private static final String PREF_NUMBER_OF_NOTIFICATIONS =
@@ -68,7 +89,6 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
     private static final String PREF_SHOW_AMBIENT = 
 	        "ambient_display_show_weather";
 
-    private static final int MONOCHROME_ICON = 0;
 	private static final int DEFAULT_COLOR = 0xffffffff;
 
     private static final int MENU_RESET = Menu.FIRST;
@@ -78,13 +98,21 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
     private SwitchPreference mShowAmbient;
     private SwitchPreference mShowLocation;
     private SwitchPreference mShowCon;
-    private ListPreference mConditionIcon;
     private ColorPickerPreference mConColor;
     private ColorPickerPreference mIconColor;
     private ColorPickerPreference mTempColor;
     private ColorPickerPreference mCityColor;
     private ListPreference mHideWeather;
     private ListPreference mNumberOfNotifications;
+
+	private static final String CATEGORY_WEATHER = "weather_category";
+	private static final String WEATHER_ICON_PACK = "weather_icon_pack";
+	private static final String DEFAULT_WEATHER_ICON_PACKAGE = "org.omnirom.omnijaws";
+	private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
+	private static final String CHRONUS_ICON_PACK_INTENT = "com.dvtonder.chronus.ICON_PACK";
+
+    private PreferenceCategory mWeatherCategory;
+    private ListPreference mWeatherIconPack;
 
     private ContentResolver mResolver;
 
@@ -116,6 +144,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
 
         PreferenceCategory catNotifications =
                 (PreferenceCategory) findPreference(PREF_CAT_NOTIFICATIONS);
+
         mHideWeather =
                 (ListPreference) findPreference(PREF_HIDE_WEATHER);
         mNumberOfNotifications =
@@ -125,6 +154,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
         mIconColor = (ColorPickerPreference) findPreference(PREF_ICON_COLOR);
         mTempColor = (ColorPickerPreference) findPreference(PREF_TEMP_COLOR);
         mCityColor = (ColorPickerPreference) findPreference(PREF_CITY_COLOR);
+        initweathercat();
 
         if (showWeather) {
             mShowLocation =
@@ -144,14 +174,6 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             mShowAmbient.setChecked(Settings.System.getInt(mResolver,
                     Settings.System.AMBIENT_DISPLAY_SHOW_WEATHER, 0) == 1);
             mShowAmbient.setOnPreferenceChangeListener(this);
-
-            mConditionIcon =
-                    (ListPreference) findPreference(PREF_CONDITION_ICON);
-            int conditionIcon = Settings.System.getInt(mResolver,
-                   Settings.System.LOCK_SCREEN_WEATHER_CONDITION_ICON, MONOCHROME_ICON);
-            mConditionIcon.setValue(String.valueOf(conditionIcon));
-            mConditionIcon.setSummary(mConditionIcon.getEntry());
-            mConditionIcon.setOnPreferenceChangeListener(this);
 
             intColor = Settings.System.getInt(mResolver,
                 Settings.System.LOCK_SCREEN_WEATHER_CON_COLOR, -2);
@@ -227,7 +249,6 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             removePreference(PREF_SHOW_LOCATION);
             removePreference(PREF_SHOW_CON);
             removePreference(PREF_SHOW_AMBIENT);
-            removePreference(PREF_CONDITION_ICON);
             catNotifications.removePreference(mHideWeather);
             catNotifications.removePreference(mNumberOfNotifications);
             removePreference(PREF_CAT_NOTIFICATIONS);
@@ -273,14 +294,6 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
                     Settings.System.AMBIENT_DISPLAY_SHOW_WEATHER,
                     value ? 1 : 0);
             return true;
-        } else if (preference == mConditionIcon) {
-            intValue = Integer.valueOf((String) newValue);
-            index = mConditionIcon.findIndexOfValue((String) newValue);
-            Settings.System.putInt(mResolver,
-                    Settings.System.LOCK_SCREEN_WEATHER_CONDITION_ICON, intValue);
-            mConditionIcon.setSummary(mConditionIcon.getEntries()[index]);
-            refreshSettings();
-            return true;
         } else if (preference == mHideWeather) {
             intValue = Integer.valueOf((String) newValue);
             Settings.System.putInt(mResolver,
@@ -325,6 +338,14 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LOCK_SCREEN_WEATHER_CITY_COLOR, intHex);
             return true;
+        } else if (preference == mWeatherIconPack) {
+            intValue = Integer.valueOf((String) newValue);
+            index = mWeatherIconPack.findIndexOfValue((String) newValue);
+            Settings.System.putInt(mResolver,
+                 Settings.System.OMNIJAWS_WEATHER_ICON_PACK, intValue);
+            mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[index]);
+			refreshSettings();
+            return true;
         }
         return false;
     }
@@ -362,9 +383,9 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
 
     private void resetValues() {
 	ContentResolver resolver = getActivity().getContentResolver();
-	Settings.System.putInt(resolver,
+	      Settings.System.putInt(resolver,
                  Settings.System.LOCK_SCREEN_WEATHER_ICON_COLOR, -2);
-        mIconColor.setNewPreviewColor(-2);
+          mIconColor.setNewPreviewColor(-2);
           mIconColor.setSummary(R.string.default_string); 
           Settings.System.putInt(resolver,
                    Settings.System.LOCK_SCREEN_WEATHER_TEMP_COLOR, -2);
@@ -385,4 +406,96 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
     protected int getMetricsCategory() {
         return MetricsEvent.RESURRECTED;
     }
+
+   public void initweathercat() {
+        mWeatherCategory = (PreferenceCategory) getPreferenceScreen().findPreference(CATEGORY_WEATHER);
+             if (mWeatherCategory != null && !isOmniJawsServiceInstalled()) {
+             getPreferenceScreen().removePreference(mWeatherCategory);
+             } else {
+             String settingsJaws = Settings.System.getString(getContentResolver(),
+                     Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
+             if (settingsJaws == null) {
+                 settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE;
+             }
+             mWeatherIconPack = (ListPreference) findPreference(WEATHER_ICON_PACK);
+ 
+             List<String> entriesJaws = new ArrayList<String>();
+             List<String> valuesJaws = new ArrayList<String>();
+             getAvailableWeatherIconPacks(entriesJaws, valuesJaws);
+             mWeatherIconPack.setEntries(entriesJaws.toArray(new String[entriesJaws.size()]));
+             mWeatherIconPack.setEntryValues(valuesJaws.toArray(new String[valuesJaws.size()]));
+ 
+             int valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
+             if (valueJawsIndex == -1) {
+                 // no longer found
+                 settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE;
+                 Settings.System.putString(getContentResolver(),
+                         Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
+                 valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
+             }
+             mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
+             mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
+             mWeatherIconPack.setOnPreferenceChangeListener(this);
+          }
+   }
+
+    private boolean isOmniJawsServiceInstalled() {
+         return PackageUtils.isAvailableApp(WEATHER_SERVICE_PACKAGE, getActivity());
+     }
+ 
+     private void getAvailableWeatherIconPacks(List<String> entries, List<String> values) {
+         Intent i = new Intent();
+         PackageManager packageManager = getPackageManager();
+         i.setAction("org.omnirom.WeatherIconPack");
+         for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+             String packageName = r.activityInfo.packageName;
+             Log.d("maxwen", packageName);
+             if (packageName.equals(DEFAULT_WEATHER_ICON_PACKAGE)) {
+                 values.add(0, r.activityInfo.name);
+             } else {
+                 values.add(r.activityInfo.name);
+             }
+             String label = r.activityInfo.loadLabel(getPackageManager()).toString();
+             if (label == null) {
+                 label = r.activityInfo.packageName;
+             }
+             if (packageName.equals(DEFAULT_WEATHER_ICON_PACKAGE)) {
+                 entries.add(0, label);
+             } else {
+                 entries.add(label);
+             }
+         }
+         i = new Intent(Intent.ACTION_MAIN);
+         i.addCategory(CHRONUS_ICON_PACK_INTENT);
+         for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+             String packageName = r.activityInfo.packageName;
+             values.add(packageName + ".weather");
+             String label = r.activityInfo.loadLabel(getPackageManager()).toString();
+             if (label == null) {
+                 label = r.activityInfo.packageName;
+             }
+             entries.add(label);
+         }
+     }
+ 
+     private boolean isOmniJawsEnabled() {
+         final Uri SETTINGS_URI
+             = Uri.parse("content://org.omnirom.omnijaws.provider/settings");
+ 
+         final String[] SETTINGS_PROJECTION = new String[] {
+             "enabled"
+         };
+ 
+         final Cursor c = getContentResolver().query(SETTINGS_URI, SETTINGS_PROJECTION,
+                 null, null, null);
+         if (c != null) {
+             int count = c.getCount();
+             if (count == 1) {
+                 c.moveToPosition(0);
+                 boolean enabled = c.getInt(0) == 1;
+                 return enabled;
+             }
+         }
+         return true;
+     }
 }

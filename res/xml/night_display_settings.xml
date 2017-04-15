@@ -61,10 +61,11 @@
                 android:entryValues="@array/night_brightness_value_values"
                 android:defaultValue="0" />
 
-        <com.android.settings.fuelgauge.WallOfTextPreference
-                android:summary="@string/night_brightness_text"
-                android:selectable="false" />
-
     </PreferenceCategory>
+
+    <com.android.settings.fuelgauge.WallOfTextPreference
+            android:summary="@string/night_brightness_text"
+            android:selectable="false"
+            settings:allowDividerAbove="true" />
 
 </PreferenceScreen>
