@@ -149,7 +149,6 @@ import com.android.settings.rr.navbar.PulseSettings;
 import com.android.settings.rr.AppCircleBar;
 import com.android.settings.rr.AppSidebar;
 import com.android.settings.rr.ExpandedDesktop;
-import com.android.settings.rr.Headsup;
 import com.android.settings.rr.OmniJawsSettings;
 import com.android.settings.rr.pie.PieControl;
 import com.android.settings.rr.gestureanywhere.GestureAnywhereSettings;
@@ -412,7 +411,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
-            Headsup.class.getName(),
             DataSaverSummary.class.getName(),
             ExpandedDesktop.class.getName(),
             RunningServices.class.getName()
