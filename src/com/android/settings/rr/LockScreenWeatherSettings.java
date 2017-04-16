@@ -263,33 +263,31 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
 
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        boolean value;
         int intValue;
         int index;
-        String hex;
         int intHex;
 
         if (preference == mShowWeather) {
-            value = (Boolean) newValue;
+            boolean value = (Boolean) newValue;
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_WEATHER,
                     value ? 1 : 0);
             refreshSettings();
             return true;
         } else if (preference == mShowLocation) {
-            value = (Boolean) newValue;
+            boolean value = (Boolean) newValue;
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_WEATHER_LOCATION,
                     value ? 1 : 0);
             return true;
         } else if (preference == mShowCon) {
-            value = (Boolean) newValue;
+            boolean value = (Boolean) newValue;
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_WEATHER_CONDITION,
                     value ? 1 : 0);
             return true;
         } else if (preference == mShowAmbient) {
-            value = (Boolean) newValue;
+            boolean value = (Boolean) newValue;
             Settings.System.putInt(mResolver,
                     Settings.System.AMBIENT_DISPLAY_SHOW_WEATHER,
                     value ? 1 : 0);
@@ -307,7 +305,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             refreshSettings();
             return true;
         } else if (preference == mConColor) {
-            hex = ColorPickerPreference.convertToARGB(
+            String hex = ColorPickerPreference.convertToARGB(
                 Integer.valueOf(String.valueOf(newValue)));
             intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(mResolver,
@@ -315,7 +313,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             preference.setSummary(hex);
             return true;
         } else if (preference == mIconColor) {
-            hex = ColorPickerPreference.convertToARGB(
+            String hex = ColorPickerPreference.convertToARGB(
                 Integer.valueOf(String.valueOf(newValue)));
             intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(mResolver,
@@ -323,7 +321,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             preference.setSummary(hex);
             return true;
 	} else if (preference == mTempColor) {
-            hex = ColorPickerPreference.convertToARGB(
+            String hex = ColorPickerPreference.convertToARGB(
                 Integer.valueOf(String.valueOf(newValue)));
             preference.setSummary(hex);
             intHex = ColorPickerPreference.convertToColorInt(hex);
@@ -331,7 +329,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
                     Settings.System.LOCK_SCREEN_WEATHER_TEMP_COLOR, intHex);
             return true;
 	} else if (preference == mCityColor) {
-            hex = ColorPickerPreference.convertToARGB(
+            String hex = ColorPickerPreference.convertToARGB(
                 Integer.valueOf(String.valueOf(newValue)));
             preference.setSummary(hex);
             intHex = ColorPickerPreference.convertToColorInt(hex);
@@ -339,11 +337,11 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
                     Settings.System.LOCK_SCREEN_WEATHER_CITY_COLOR, intHex);
             return true;
         } else if (preference == mWeatherIconPack) {
-            intValue = Integer.valueOf((String) newValue);
-            index = mWeatherIconPack.findIndexOfValue((String) newValue);
-            Settings.System.putInt(mResolver,
-                 Settings.System.OMNIJAWS_WEATHER_ICON_PACK, intValue);
-            mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[index]);
+                String value = (String) newValue;
+                Settings.System.putString(getContentResolver(),
+                    Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
+                int valueIndex = mWeatherIconPack.findIndexOfValue(value);
+                mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
 			refreshSettings();
             return true;
         }
