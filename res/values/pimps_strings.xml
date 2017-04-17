@@ -93,10 +93,6 @@
     <string name="doze_vibrate_on_pickup_title">Vibrate on pickup</string>
     <string name="doze_check_proximity_before_pulse_title">Check proximity before pulse</string>
 
-    <string name="data_activity_icons_title">Wifi and data activity icons</string>
-    <string name="data_activity_icons_summaryOn">Activity icons are enabled</string>
-    <string name="data_activity_icons_summaryOff">Activity icons are disabled</string>
-
     <!-- low battery notification toggle -->
     <string name="battery_low_notif_title">Low battery notification</string>
     <string name="battery_low_notif_summaryOn">Low battery notification is enabled</string>
