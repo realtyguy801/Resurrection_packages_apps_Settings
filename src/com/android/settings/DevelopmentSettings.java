@@ -844,17 +844,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateForceAuthorizeSubstratumPackagesOptions();
     }
 
-    private void writeForceAuthorizeSubstratumPackagesOptions() {
-        Settings.Secure.putInt(getActivity().getContentResolver(),
-                Settings.Secure.FORCE_AUTHORIZE_SUBSTRATUM_PACKAGES,
-                mForceAuthorizeSubstratumPackages.isChecked() ? 1 : 0);
-    }
-
-    private void updateForceAuthorizeSubstratumPackagesOptions() {
-        mForceAuthorizeSubstratumPackages.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
-                Settings.Secure.FORCE_AUTHORIZE_SUBSTRATUM_PACKAGES, 0) != 0);
-    }
-
     private void updateAdbOverNetwork() {
         int port = CMSettings.Secure.getInt(getActivity().getContentResolver(),
                 CMSettings.Secure.ADB_PORT, 0);
@@ -881,6 +870,17 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         } else {
             mAdbOverNetwork.setSummary(R.string.adb_over_network_summary);
         }
+    }
+
+    private void writeForceAuthorizeSubstratumPackagesOptions() {
+        Settings.Secure.putInt(getActivity().getContentResolver(),
+                Settings.Secure.FORCE_AUTHORIZE_SUBSTRATUM_PACKAGES,
+                mForceAuthorizeSubstratumPackages.isChecked() ? 1 : 0);
+    }
+
+    private void updateForceAuthorizeSubstratumPackagesOptions() {
+        mForceAuthorizeSubstratumPackages.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.FORCE_AUTHORIZE_SUBSTRATUM_PACKAGES, 0) != 0);
     }
 
     private void resetDangerousOptions() {
@@ -1924,7 +1924,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         }
     }
 
-
     private void updateCpuInfoOptions() {
         updateSwitchPreference(mShowCpuInfo, Settings.Global.getInt(getActivity().getContentResolver(),
                 Settings.Global.SHOW_CPU, 0) != 0);
@@ -1976,7 +1975,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private void writeAnimationScaleOption(int which, AnimationScalePreference pref,
             Object newValue) {
         try {
-            float scale = newValue != null ? Float.parseFloat(newValue.toString()) : 0.6f;
+            float scale = newValue != null ? Float.parseFloat(newValue.toString()) : 1;
             mWindowManager.setAnimationScale(which, scale);
             updateAnimationScaleValue(which, pref);
         } catch (RemoteException e) {
@@ -2146,11 +2145,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             intent.putExtra("appops_tab", getString(R.string.app_ops_categories_su));
             intent.setClass(mActivity, AppOpsSummaryActivity.class);
             mActivity.startActivity(intent);
-            return true;
-        } else if (preference == mWindowAnimationScale ||
-                preference == mTransitionAnimationScale ||
-                preference == mAnimatorDurationScale) {
-            ((AnimationScalePreference) preference).click();
             return true;
         }
         if (preference == mWindowAnimationScale ||
@@ -2643,8 +2637,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             int oemUnlockSummary = R.string.oem_unlock_enable_summary;
             if (isBootloaderUnlocked()) {
                 oemUnlockSummary = R.string.oem_unlock_enable_disabled_summary_bootloader_unlocked;
-            /*} else if (isSimLockedDevice()) {
-                oemUnlockSummary = R.string.oem_unlock_enable_disabled_summary_sim_locked_device;*/
+            } else if (isSimLockedDevice()) {
+                oemUnlockSummary = R.string.oem_unlock_enable_disabled_summary_sim_locked_device;
             } else if (!isOemUnlockAllowed()) {
                 // If the device isn't SIM-locked but OEM unlock is disabled by the system via the
                 // user restriction, this means either some other carrier restriction is in place or
