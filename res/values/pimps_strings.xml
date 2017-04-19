@@ -23,21 +23,6 @@
     <string name="advanced_reboot_oneclick">One click reboot</string>
     <string name="advanced_reboot_oneclick_summary">Instantly trigger reboot action. This does cause the option to confirm shutdown to not work!</string>
 
-    <!-- Advanced night mode brightness -->
-    <string name="night_brightness_category">Brightness</string>
-    <string name="night_brightness_value_title">Night Light brightness</string>
-    <string name="night_brightness_text">When Night Light is enabled automatically set the desired brightness. The default brightness is set to low brightness</string>
-    <string name="night_bright_disabled">Disabled</string>
-    <string name="night_bright_low">low brightness</string>
-    <string name="night_bright_medium">medium brightness</string>
-    <string name="night_bright_min">minimum brightness</string>
-
-    <!-- MediaScanner behavior on boot -->
-    <string name="media_scanner_on_boot_title">MediaScanner behavior on boot</string>
-    <string name="media_scanner_on_boot_enabled">Scan media</string>
-    <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
-    <string name="media_scanner_on_boot_disabled">Do not scan media</string>
-
     <!-- Volume dialog headers -->
     <string name="volume_dialog_headers_title">Volume dialog headers</string>
     <string name="volume_dialog_headers_summary_enabled">Stream name headers are enabled</string>
@@ -124,10 +109,6 @@
     <string name="ambient_display_show_weather_title">Show while dozing</string>
     <string name="ambient_display_show_weather_summary">Show weather information when ambient display is on</string>
 
-    <!-- Allow fake signature -->
-    <string name="allow_signature_fake">Allow signature spoofing</string>
-    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string> 
-
     <!-- Bluetooth accept all files -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
 
@@ -146,14 +127,6 @@
     <!-- Extra Info -->
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
-
-    <!-- Sms security limit -->
-    <string name="apps_security_options_title">Apps security</string>
-    <string name="sms_outgoing_check_max_count_title">SMS apps message limit</string>
-    <string name="sms_outgoing_check_max_count_dialog">How many messages per minute an app can send before showing an alert</string>
-    <string name="sms_outgoing_check_max_count_default">30 per minute (default)</string>
-    <string name="sms_outgoing_check_max_count_hundred">100 per minute</string>
-    <string name="sms_outgoing_check_max_count_sixhundred">600 per minute</string>
 
     <!-- Dynamic notification tint -->
     <string name="notification_tint_title">Dynamic notification title color</string>

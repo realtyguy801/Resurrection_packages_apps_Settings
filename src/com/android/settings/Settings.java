@@ -179,7 +179,6 @@ public class Settings extends SettingsActivity {
     public static class GestrueAnywhereActivity extends SettingsActivity { /* empty */ }
     public static class AppSidebarActivity extends SettingsActivity { /* empty */ }
     public static class AppCircleBarActivity extends SettingsActivity { /* empty */ }
-    public static class OmniJawsSettingsActivity extends SettingsActivity { /* empty */ }
     public static class MagiskActivity extends SettingsActivity { /* empty */ }
     public static class DataSaverSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ExpandedDesktopSettingsActivity extends SettingsActivity { /* empty */ }

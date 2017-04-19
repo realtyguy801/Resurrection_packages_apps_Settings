@@ -436,7 +436,6 @@
                 android:launchMode="singleTask"
                 android:taskAffinity="com.android.settings"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                android:parentActivityName="Settings$WirelessSettingsActivity"
                 android:process="com.android.phone">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.APN_SETTINGS" />
@@ -3200,17 +3199,6 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
-        <!--OmniJaws -->
-        <activity android:name="Settings$OmniJawsSettingsActivity"
-                  android:label="@string/lockscreen_weather_title" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.rr.OmniJawsSettings" />
-            </activity>
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"

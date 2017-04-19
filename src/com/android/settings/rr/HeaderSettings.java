@@ -13,28 +13,30 @@
 */
 package com.android.settings.rr;
 
-import android.os.Bundle;
-
-import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.database.Cursor;
+import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.database.ContentObserver;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
 import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.provider.Settings;
-import java.util.Collections;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
@@ -48,6 +50,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.HashSet;
 import java.util.Set;
+
+import com.android.internal.util.rr.PackageUtils;
 
 public class HeaderSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -123,6 +127,7 @@ public class HeaderSettings extends SettingsPreferenceFragment implements
 
             mHeaderBrowse = (PreferenceScreen) findPreference(CUSTOM_HEADER_BROWSE);
             mHeaderBrowse.setEnabled(isBrowseHeaderAvailable());
+
  
     }
 
@@ -149,48 +154,43 @@ public class HeaderSettings extends SettingsPreferenceFragment implements
                 int valueIndex = mHeaderProvider.findIndexOfValue(value);
                 mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
                 mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
-            return true;
-             }
+             } 
         return false;
     }
 
-    private void getAvailableHeaderPacks(List<String> entries, List<String> values) {
-	String defaultLabel = null;
-        Map<String, String> headerMap = new HashMap<String, String>();
-        Intent i = new Intent();
-        PackageManager packageManager = getActivity().getPackageManager();
-        i.setAction("org.omnirom.DaylightHeaderPack");
-        for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
-            String packageName = r.activityInfo.packageName;
-            String label = r.activityInfo.loadLabel(getActivity().getPackageManager()).toString();
-            if (label == null) {
-                label = r.activityInfo.packageName;
-            }
-            if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
-                defaultLabel = label;
-            } else {
-                headerMap.put(label, packageName);
-            }
-        }
-            i.setAction("org.omnirom.DaylightHeaderPack1");
-        for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
-            String packageName = r.activityInfo.packageName;
-            String label = r.activityInfo.loadLabel(getActivity().getPackageManager()).toString();
-            if (label == null) {
-                label = packageName;
-            }
-	    headerMap.put(label, packageName  + "/" + r.activityInfo.name);
-        }
-        List<String> labelList = new ArrayList<String>();
-        labelList.addAll(headerMap.keySet());
-        Collections.sort(labelList);
-        for (String label : labelList) {
-            entries.add(label);
-	    values.add(headerMap.get(label));
-        }
-	entries.add(0, defaultLabel);
-        values.add(0, DEFAULT_HEADER_PACKAGE);
-    }
+          private void getAvailableHeaderPacks(List<String> entries, List<String> values) {
+              Intent i = new Intent();
+              PackageManager packageManager = getActivity().getPackageManager();
+              i.setAction("org.omnirom.DaylightHeaderPack");
+              for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+                  String packageName = r.activityInfo.packageName;
+                  if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
+                      values.add(0, packageName);
+                  } else {
+                      values.add(packageName);
+                  }
+                  String label = r.activityInfo.loadLabel(getActivity().getPackageManager()).toString();
+                  if (label == null) {
+                      label = r.activityInfo.packageName;
+                  }
+                  if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
+                      entries.add(0, label);
+                  } else {
+                      entries.add(label);
+                  }
+              }
+              i.setAction("org.omnirom.DaylightHeaderPack1");
+              for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+                  String packageName = r.activityInfo.packageName;
+                  values.add(packageName  + "/"  + r.activityInfo.name);
+  
+                  String label = r.activityInfo.loadLabel(getActivity().getPackageManager()).toString();
+                  if (label == null) {
+                      label = packageName;
+                  }
+                  entries.add(label);
+              }
+          }
 
         private boolean isBrowseHeaderAvailable() {
             PackageManager pm = getActivity().getPackageManager();
@@ -198,4 +198,5 @@ public class HeaderSettings extends SettingsPreferenceFragment implements
             browse.setClassName("org.omnirom.omnistyle", "org.omnirom.omnistyle.BrowseHeaderActivity");
             return pm.resolveActivity(browse, 0) != null;
         }
+ 
 }
