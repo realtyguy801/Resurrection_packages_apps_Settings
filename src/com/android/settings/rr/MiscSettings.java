@@ -68,8 +68,6 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
 
         PreferenceScreen prefScreen = getPreferenceScreen();
 
-        PreferenceCategory appsSecCategory = (PreferenceCategory) findPreference(APPS_SECURITY);
-
 	//SELinux
         mSelinux = (SwitchPreference) findPreference(SELINUX);
         mSelinux.setOnPreferenceChangeListener(this);
