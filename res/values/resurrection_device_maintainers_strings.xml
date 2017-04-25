@@ -152,8 +152,11 @@
 	<string name="device_i9100_summary">GT-I9100 \nMaintainer - GreekDragon </string>
 
 	<string name="device_herolte">Galaxy S7</string>
-	<string name="device_herolte_summary">SM-G930F/FD/W8/S/K/L \nMaintainer - Gwolf2u (gwolfu@xda) </string>
+	<string name="device_herolte_summary">SM-G930F/FD/W8/S/K/L \nMaintainer - Jesse Chan </string>
 	
+	<string name="device_hero2lte">Galaxy S7 edge</string>
+	<string name="device_hero2lte_summary">SM-G935F/FD/W8/S/K/L \nMaintainer - Jesse Chan </string>
+
 	<string name="device_j5ltexx">Galaxy J5</string>
 	<string name="device_j5ltexx_summary">SM-J500F/FN/M/G \nMaintainer - SoUnd001 </string>
 	
@@ -311,7 +314,7 @@
 	<string name="device_osprey_summary">Osprey\nMaintainer - Pavan Jadhaw (Arcade)</string>
 
 	<string name="device_athene">Moto G4 Plus</string>
-	<string name="device_athene_summary">athene \nMaintainer - Silesh.Nair</string>
+	<string name="device_athene_summary">athene \nMaintainer - Jleeblanch</string>
 	
 	<string name="device_harpia">Moto G4 Play</string>
 	<string name="device_harpia_summary">Harpia \nMaintainer - SubhrajyotiSen</string>
@@ -401,7 +404,7 @@
 	<string name="device_urushi_summary">Urushi\nMaintainer - </string>
 
 	<string name="device_sirius">Xperia Z2</string>
-	<string name="device_sirius_summary">sirius\nMaintainer - </string>
+	<string name="device_sirius_summary">sirius\nMaintainer - opendata</string>
 	
 	<string name="device_sirius">Xperia Z3</string>
 	<string name="device_sirius_summary">Leo\nMaintainer -</string>
@@ -430,6 +433,9 @@
 	<string name="device_gemini">Xiaomi MI 5</string>
 	<string name="device_gemini_summary">Gemini\nMaintainer - Fabian Leutenegger</string>
 
+	<string name="device_capricorn">Xiaomi MI 5s</string>
+	<string name="device_capricorn_summary">Capricorn\nMaintainer - Ali İhsan Hatun (Asderdd)</string>
+
 	<string name="device_natrium">Xiaomi MI 5s Plus</string>
 	<string name="device_natrium_summary">Natrium\nMaintainer - Ali İhsan Hatun (Asderdd)</string>
 
@@ -440,9 +446,9 @@
 	<string name="device_kenzo_summary">Kenzo\nMaintainer - Akhil, Abhishek</string>
 
 	<string name="device_mido">Xiaomi Redmi Note 4</string>
-        <string name="device_mido_summary">mido\nMaintainer - Sarthak Narang</string>
+    <string name="device_mido_summary">mido\nMaintainer - Sarthak Narang</string>
 
-        <string name="device_hydrogen">Xiaomi Mi Max</string>
+    <string name="device_hydrogen">Xiaomi Mi Max</string>
 	<string name="device_hydrogen_summary">Hydrogen\nMaintainer - sawdoctor</string>
 	
 	<string name="device_sprout4">Android One - 4GB variants (1st Gen)</string>
@@ -462,6 +468,9 @@
         
   <string name="device_X3">LeEco Le 1s</string>
   <string name="device_X3_summary">X3\nMaintainer - Łukasz Wiśniewski (WisniaPL)</string>
+
+	<string name="device_x2">LeEco LeMax 2</string>
+	<string name="device_x2_summary">x2\nMaintainer - Andrey Shidakov (andr68rus)</string>
 
 	<string name="device_alpha">Samsung Galaxy Alpha</string>
 	<string name="device_alpha_summary">G850F\nMaintainer - </string>

@@ -92,7 +92,7 @@
             settings:maximum="10000"
             settings:minimum="100"
             settings:interval="100"
-            settings:defaultVal="100"
+            settings:defaultVal="1000"
             settings:units="ms"
             android:persistent="false" />
 
