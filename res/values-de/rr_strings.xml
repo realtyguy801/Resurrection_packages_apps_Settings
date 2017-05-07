@@ -131,13 +131,12 @@
   <string name="rr_misc_title">Verschiedenes</string>
   <string name="rr_ui_title">Benutzeroberfläche</string>
   <string name="rr_dash_board_title">Dashboard</string>
-  <string name="system_animations">Systemanimationen</string>
+  <string name="rr_notif_settings_title">Benachrichtigungen</string>
   <string name="toast">Kurzzeit-Benachrichtigung</string>
   <string name="listview">ListView</string>
   <string name="icons">Symbole</string>
   <string name="general">Allgemeine Einstellungen</string>
   <string name="ka_title">Leistung</string>
-  <string name="rr_notif_settings_title">Benachrichtigungen</string>
   <!--RR Configurations Summaries-->
   <string name="clock_custom_summary">Uhr und Datum in der Statusleiste anpassen</string>
   <string name="status_bar_logo_summary">Aktivieren oder Deaktivieren des Resurrection-Logos in der Statusleiste. Anpassen der Farbe und Position</string>
@@ -1133,8 +1132,8 @@
   <string name="clock_font_condensed_bold_italic">Schmal fett kursiv</string>
   <string name="clock_font_medium">Medium</string>
   <string name="clock_font_medium_italic">Medium kursiv</string>
-  <string name="clock_font_black">Schwarz</string>
-  <string name="clock_font_black_italic">Schwarz kursiv</string>
+  <string name="clock_font_black">Black</string>
+  <string name="clock_font_black_italic">Black kursiv</string>
   <string name="clock_font_dancingscript">DancingScript</string>
   <string name="clock_font_dancingscript_bold">DancingScript fett</string>
   <string name="clock_font_comingsoon">Demnächst</string>
@@ -1175,8 +1174,8 @@
   <string name="status_bar_weather_font_condensed_bold_italic">Schmal fett kursiv</string>
   <string name="status_bar_weather_font_medium">Medium</string>
   <string name="status_bar_weather_font_medium_italic">Medium kursiv</string>
-  <string name="status_bar_weather_font_black">Schwarz</string>
-  <string name="status_bar_weather_font_black_italic">Schwarz kursiv</string>
+  <string name="status_bar_weather_font_black">Black</string>
+  <string name="status_bar_weather_font_black_italic">Black kursiv</string>
   <string name="status_bar_weather_font_dancingscript">DancingScript</string>
   <string name="status_bar_weather_font_dancingscript_bold">DancingScript fett</string>
   <string name="status_bar_weather_font_comingsoon">Demnächst</string>
@@ -1305,7 +1304,6 @@
   <string name="animation14">Gleiten nach unten </string>
   <string name="animation15">Schnelle Rotation</string>
   <!-- OmniSwitch -->
-  <string name="omniswitch_category">OmniSwitch</string>
   <string name="recents_use_omniswitch_title">Verwende für \"Letzte Apps\"</string>
   <string name="recents_use_omniswitch_summary">OmniSwitch anstelle der standardmäßigen Recents-Anzeige verwenden</string>
   <string name="omniswitch_start_settings_title">Einstellungen</string>
@@ -2181,7 +2179,7 @@
   <string name="ok_string">Ok</string>
   <!-- Hide Statusbar on Lockscreen -->
   <string name="lockscreen_hide_status_bar_title">Statusleiste ausblenden</string>
-  <string name="lockscreen_hide_status_bar_summary">Schalte Statusbar Sicht im Sperrbildschirm</string>
+  <string name="lockscreen_hide_status_bar_summary">Statusbar Sichtbarkeit auf dem Sperrbildschirm umschalten. Tippe oben um die Statusbar anzuzeigen.</string>
   <string name="confirm_shutdown_switch_title">Schließe den Bestätigungsdialog</string>
   <string name="confirm_shutdown_switch_desc">Wenn die Schließ-Taste im Powermenü gedrückt wird, füge ein Dialog zur Bestätigung des Schließens hinzu.</string>
   <!-- Notification guts kill app button -->

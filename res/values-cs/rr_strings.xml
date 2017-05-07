@@ -131,13 +131,12 @@
   <string name="rr_misc_title">Různé</string>
   <string name="rr_ui_title">Prostředí</string>
   <string name="rr_dash_board_title">Hlavní nabídka</string>
-  <string name="system_animations">Systémové animace</string>
+  <string name="rr_notif_settings_title">Oznámení</string>
   <string name="toast">Toast</string>
   <string name="listview">Zobrazení seznamu</string>
   <string name="icons">Ikony</string>
   <string name="general">Obecné</string>
   <string name="ka_title">Výkon</string>
-  <string name="rr_notif_settings_title">Oznámení</string>
   <!--RR Configurations Summaries-->
   <string name="clock_custom_summary">Přizpůsobit různé prvky stavové lišty, hodiny a datum</string>
   <string name="status_bar_logo_summary">Povolit nebo zakázat Resurrection logo ve stavové liště. Přizpůsobit barvu a pozici</string>
@@ -404,7 +403,7 @@
   <string name="power_menu_animation_aosp">AOSP (výchozí)</string>
   <string name="power_menu_animation_bottom">Dole</string>
   <string name="power_menu_animation_top">Vrchní</string>
-  <string name="power_menu_animation_rotate">Rotace</string>
+  <string name="power_menu_animation_rotate">Otáčení</string>
   <string name="power_menu_animation_rotate">Otáčení</string>
   <string name="power_menu_animation_xylon">Létající</string>
   <string name="power_menu_animation_slide">Sklouznutí</string>
@@ -1288,7 +1287,7 @@
   <string name="button28">Android Stock</string>
   <string name="button29">Resurrection Lollipop</string>
   <string name="button30">Android N</string>
-  <string name="animation0">Rotation </string>
+  <string name="animation0">Otáčení </string>
   <string name="animation1">Recents Exit</string>
   <string name="animation2">Transluscent Exit </string>
   <string name="animation3">Transluscent Exit Ribbon</string>
@@ -1303,9 +1302,8 @@
   <string name="animation12">Fade Out</string>
   <string name="animation13">Fast Fade Out </string>
   <string name="animation14">Side Out Up </string>
-  <string name="animation15">Fast Rotation</string>
+  <string name="animation15">Rychlé otáčení</string>
   <!-- OmniSwitch -->
-  <string name="omniswitch_category">OmniSwitch</string>
   <string name="recents_use_omniswitch_title">Použít pro Nedávné</string>
   <string name="recents_use_omniswitch_summary">Použít OmniSwitch namísto výchozího zobrazení nedávných aplikací</string>
   <string name="omniswitch_start_settings_title">Nastavení</string>
@@ -2181,7 +2179,7 @@
   <string name="ok_string">Ok</string>
   <!-- Hide Statusbar on Lockscreen -->
   <string name="lockscreen_hide_status_bar_title">Skrýt stavovou lištu</string>
-  <string name="lockscreen_hide_status_bar_summary">Přepnout viditelnost stavové lišty na zamykací obrazovce</string>
+  <string name="lockscreen_hide_status_bar_summary">Přepnout zobrazení stavové lišty na zamykací obrazovce. Klikněte nahoře pro zobrazení stavové lišty</string>
   <string name="confirm_shutdown_switch_title">Dialogové okno potvrzení tlačítka \"Vypnout\"</string>
   <string name="confirm_shutdown_switch_desc">Po stlačení tlačítka \"Vypnout\" se zobrazí dialogové okno pro potvrzení</string>
   <!-- Notification guts kill app button -->

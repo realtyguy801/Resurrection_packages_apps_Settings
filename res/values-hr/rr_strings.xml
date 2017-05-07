@@ -131,13 +131,12 @@
   <string name="rr_misc_title">Razno</string>
   <string name="rr_ui_title">Sučelje</string>
   <string name="rr_dash_board_title">Upravljačka ploča</string>
-  <string name="system_animations">Animacije sustava</string>
+  <string name="rr_notif_settings_title">Obavijesti</string>
   <string name="toast">Tost</string>
   <string name="listview">Pregled popisa</string>
   <string name="icons">Ikone</string>
   <string name="general">Općenito</string>
   <string name="ka_title">Izvedba</string>
-  <string name="rr_notif_settings_title">Obavijesti</string>
   <!--RR Configurations Summaries-->
   <string name="clock_custom_summary">Prilagođavajte razne elemente sata i datuma u statusnoj traci.</string>
   <string name="status_bar_logo_summary">Omogućite ili onemogućite Resurrectionov logotip u statusnoj traci. Prilagodite boju i položaj.</string>
@@ -209,6 +208,8 @@
   <string name="summary_animation_no_override">Sprječava aplikacije od nadjačavanja animacija.</string>
   <string name="animation_duration_default">Zadana</string>
   <string name="lv_dur_default">Zadano</string>
+  <string name="lv_dur_25">25ms</string>
+  <string name="lv_dur_50">50ms</string>
   <string name="lv_dur_100">100ms</string>
   <string name="lv_dur_200">200ms</string>
   <string name="lv_dur_300">300ms</string>
@@ -1303,7 +1304,6 @@
   <string name="animation14">Klizanje prema gore </string>
   <string name="animation15">Brzo okretanje</string>
   <!-- OmniSwitch -->
-  <string name="omniswitch_category">OmniSwitch</string>
   <string name="recents_use_omniswitch_title">Upotrebljavaj za nedavne apl.</string>
   <string name="recents_use_omniswitch_summary">Upotrebljavajte OmniSwitch umjesto zadanog pregleda nedavnih aplikacija</string>
   <string name="omniswitch_start_settings_title">Postavke</string>
@@ -2179,7 +2179,7 @@
   <string name="ok_string">U redu</string>
   <!-- Hide Statusbar on Lockscreen -->
   <string name="lockscreen_hide_status_bar_title">Sakrij statusnu traku</string>
-  <string name="lockscreen_hide_status_bar_summary">Odaberite hoće li statusna traka biti vidljiva na zaključanom zaslonu</string>
+  <string name="lockscreen_hide_status_bar_summary">Promijenite vidljivost statusne trake na zaključanom zaslonu. Dodirnite vrh za prikaz statusne trake.</string>
   <string name="confirm_shutdown_switch_title">Potvrdni okvir Isključivanja</string>
   <string name="confirm_shutdown_switch_desc">Dodajte okvir za potvrdu isključivanja pri dodiru gumba za isključivanje.</string>
   <!-- Notification guts kill app button -->
