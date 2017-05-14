@@ -24,6 +24,7 @@
   <string name="device_category_lg_title">LG</string>
   <string name="device_category_htc_title">HTC</string>
   <string name="device_category_lenovo_title">LENOVO</string>
+  <string name="device_category_coolpad_title">COOLPAD</string>
   <string name="device_category_motorola_title">MOTOROLA</string>
   <string name="device_category_google_title">GOOGLE</string>
   <string name="device_category_oneplus_title">ONEPLUS</string>
@@ -46,6 +47,10 @@
   <string name="device_aio_otfp_summary">aio_otfp\nOpiekun - Ninad Patil (PainKiller3)</string>
   <string name="device_A7010a48">Lenovo Vibe K4 Note</string>
   <string name="device_A7010a48_summary">A7010a48\nOpiekun - Mohan Cm (mohancm100)</string>
+  <string name="device_CP8676_I02">Coolpad Note 3</string>
+  <string name="device_CP8676_I02_summary">CP8676_I02\nOpiekun - Mohan Cm (mohancm100)</string>
+  <string name="device_CP8298_I00">Coolpad Note 3 Lite</string>
+  <string name="device_CP8298_I00_summary">CP8298_I00\nOpiekun - Sayan Biwas (SamGrande)</string>
   <string name="device_A6020">Vibe K5</string>
   <string name="device_A6020_summary">A6020\nOpiekun -</string>
   <string name="device_a6000">Lenovo A6000</string>
@@ -371,6 +376,7 @@
   <string name="device_redmi2">Xiaomi Redmi 2</string>
   <string name="device_redmi2_summary">wt88047 \nOpiekun - nicknitewolf </string>
   <string name="device_redmi3">Xiaomi Redmi 3</string>
+  <string name="device_redmi3_summary">ido\nOpiekun - </string>
   <string name="device_wfxs">WilleyFox Swift</string>
   <string name="device_wfxs_summary">crackling\nOpiekun - Semih ÇELİK (Wes)</string>
   <string name="device_wfxk">WilleyFox Storm</string>
@@ -404,7 +410,7 @@
   <string name="device_flounder">HTC Nexus 9</string>
   <string name="device_flounder_summary">Flounder \nOpiekun - Jithu Mathew Joseph</string>
   <string name="device_ham">ZUK Z1</string>
-  <string name="device_ham_summary">Ham \nOpiekun - Ankur Pandey(ankurpandeyvns)</string>
+  <string name="device_ham_summary">Ham \nOpiekun - Ankur Pandey (ankurpandeyvns)</string>
   <string name="device_nubia_nx531j">Nubia Z11</string>
   <string name="device_nubia_nx531j_summary">nx531j \nOpiekun - ZhangXueZe</string>
   <string name="device_vega_A910">Vega Sky A910</string>
