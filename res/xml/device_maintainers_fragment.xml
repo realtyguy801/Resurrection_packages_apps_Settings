@@ -617,6 +617,12 @@
         android:selectable="false" 
         android:title="@string/device_htc_10" />
     <Preference
+        android:id="@+id/device_ville"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_ville_summary"
+        android:selectable="false" 
+        android:title="@string/device_ville" />
+    <Preference
         android:id="@+id/device_google_marlin"
         android:icon="@drawable/phone_tint"
         android:summary="@string/device_google_marlin_summary"
@@ -1000,6 +1006,18 @@
         android:summary="@string/device_x2_summary"
         android:selectable="false"
         android:title="@string/device_x2" />
+    <Preference
+        android:id="@+id/device_x720"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_x720_summary"
+        android:selectable="false"
+        android:title="@string/device_x720" />
+    <Preference
+        android:id="@+id/device_x727"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_x727_summary"
+        android:selectable="false"
+        android:title="@string/device_x727" />
   </PreferenceCategory>
 	
   <PreferenceCategory
@@ -1206,5 +1224,17 @@
         android:selectable="false"
         android:title="@string/device_Zuk_Z2" />
        </PreferenceCategory>
-     
+
+<PreferenceCategory
+       android:id="@+id/device_category_jiayu"
+       android:title="@string/device_category_jiayu_title" >
+       
+      <Preference
+        android:id="@+id/device_s3_h560"
+        android:icon="@drawable/phone_tint" 
+        android:summary="@string/device_s3_h560_summary"
+        android:selectable="false"
+        android:title="@string/device_s3_h560" />
+       </PreferenceCategory>     
+
 </PreferenceScreen> 

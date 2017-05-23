@@ -43,6 +43,7 @@
   <string name="device_category_hp_title">HP</string>
   <string name="device_category_nubia_title">Nubia</string>
   <string name="device_category_vega_title">Vega</string>
+  <string name="device_category_jiayu_title">Jiayu</string>
   <string name="device_aio_otfp">Lenovo K3 Note</string>
   <string name="device_aio_otfp_summary">aio_otfp\nNgười duy trì - Ninad Patil (PainKiller3)</string>
   <string name="device_A7010a48">Lenovo Vibe K4 Note</string>
@@ -51,6 +52,8 @@
   <string name="device_CP8676_I02_summary">CP8676_I02\nNgười duy trì - Mohan Cm (mohancm100)</string>
   <string name="device_CP8298_I00">Coolpad Note 3 Lite</string>
   <string name="device_CP8298_I00_summary">CP8298_I00\nNgười duy trì - Sayan Biwas (SamGrande)</string>
+  <string name="device_s3_h560">Jiayu S3</string>
+  <string name="device_s3_h560_summary">s3_h560\nNgười duy trì - Evgeniy Mineev (sandstranger)</string>
   <string name="device_A6020">Vibe K5</string>
   <string name="device_A6020_summary">A6020\nNgười duy trì -</string>
   <string name="device_a6000">Lenovo A6000</string>
@@ -136,7 +139,7 @@
   <string name="device_grandprimeve3g">Galaxy Grand Prime VE</string>
   <string name="device_grandprimeve3g_summary">SM-G531H \nNgười duy trì - Hassan Sardar</string>
   <string name="device_j5ltexx">Galaxy J5</string>
-  <string name="device_j5ltexx_summary">SM-J500F/FN/M/G \nNgười duy trì - SoUnd001 </string>
+  <string name="device_j5ltexx_summary">SM-J500F/FN/M/G/Y \nNgười duy trì - SoUnd001 </string>
   <string name="device_i9001">Galaxy S Plus</string>
   <string name="device_i9001_summary">GT-I9001 \nNgười duy trì - </string>
   <string name="device_w">Samsung Galaxy W I8150</string>
@@ -317,14 +320,18 @@
   <string name="device_sambar_summary">Sambar\nNgười duy trì - Darshan M. (darshan1205)</string>
   <string name="device_armani">Xiaomi Redmi 1S </string>
   <string name="device_armani_summary">Armani\nNgười duy trì - </string>
-  <string name="device_cancro">Xiaomi MI 3</string>
+  <string name="device_cancro">Xiaomi Mi 3</string>
   <string name="device_cancro_summary">Cancro\nNgười duy trì - Nihar Deshpande</string>
-  <string name="device_gemini">Xiaomi MI 5</string>
+  <string name="device_gemini">Xiaomi Mi 5</string>
   <string name="device_gemini_summary">Gemini\nNgười duy trì - Fabian Leutenegger</string>
-  <string name="device_capricorn">Xiaomi MI 5s</string>
+  <string name="device_capricorn">Xiaomi Mi 5s</string>
   <string name="device_capricorn_summary">Capricorn\nNgười duy trì - Ali İhsan Hatun (Asderdd)</string>
-  <string name="device_natrium">Xiaomi MI 5s Plus</string>
+  <string name="device_natrium">Xiaomi Mi 5s Plus</string>
   <string name="device_natrium_summary">Natrium\nNgười duy trì - Ali İhsan Hatun (Asderdd)</string>
+  <string name="device_scorpio">Xiaomi Mi Note 2</string>
+  <string name="device_scorpio_summary">Scorpio\nNgười duy trì - Cenkay KESER</string>
+  <string name="device_lithium">Xiaomi Mi Mix</string>
+  <string name="device_lithium_summary">Lithium\nNgười duy trì - pappschlumpf</string>
   <string name="device_dior">Xiaomi Redmi Note 4G</string>
   <string name="device_dior_summary">dior\nNgười duy trì - Ashish Kotnala</string>
   <string name="device_kenzo">Xiaomi Redmi Note 3</string>
@@ -347,6 +354,10 @@
   <string name="device_X3_summary">X3\nNgười duy trì - Łukasz Wiśniewski (WisniaPL)</string>
   <string name="device_x2">LeEco LeMax 2</string>
   <string name="device_x2_summary">x2\nNgười duy trì - Andrey Shidakov (andr68rus)</string>
+  <string name="device_x720">LeEco LePro 3</string>
+  <string name="device_x720_summary">x720\nNgười duy trì - Santiago Villar (VillarLeg)</string>
+  <string name="device_x727">LeEco LePro 3</string>
+  <string name="device_x727_summary">x727\nNgười duy trì - Santiago Villar (VillarLeg)</string>
   <string name="device_alpha">Samsung Galaxy Alpha</string>
   <string name="device_alpha_summary">G850F\nNgười duy trì - </string>
   <string name="device_t0ltexx">Samsung Galaxy Note II LTE</string>
@@ -369,9 +380,9 @@
   <string name="device_T00F_summary">T00F\nNgười duy trì - Roman \"tank0412\" Buhtiarov</string>
   <string name="device_tenderloin">HP Touchpad</string>
   <string name="device_tenderloin_summary">Tenderloin\nNgười duy trì - sixohtew</string>
-  <string name="device_ferrari">Xiaomi MI 4i</string>
+  <string name="device_ferrari">Xiaomi Mi 4i</string>
   <string name="device_ferrari_summary">ferrari\nNgười duy trì - haikalizz</string>
-  <string name="device_libra">Xiaomi MI 4c</string>
+  <string name="device_libra">Xiaomi Mi 4c</string>
   <string name="device_libra_summary">libra\nNgười duy trì - AndropaX </string>
   <string name="device_redmi2">Xiaomi Redmi 2</string>
   <string name="device_redmi2_summary">wt88047\nNgười duy trì - nicknitewolf </string>
@@ -423,4 +434,6 @@
   <string name="device_lenovo_P1a42_summary">P1a42  \nNgười duy trì - Subham (DerkLord)</string>
   <string name="device_Zuk_Z2">Zuk_Z2</string>
   <string name="device_Zuk_Z2_summary"> Zuk_Z2\nNgười duy trì - MR.HACKER </string>
+  <string name="device_ville">HTC One S</string>
+  <string name="device_ville_summary">Ville \nNgười duy trì - Moozon</string>
 </resources>
