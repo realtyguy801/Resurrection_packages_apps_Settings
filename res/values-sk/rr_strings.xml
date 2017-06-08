@@ -2222,7 +2222,7 @@
   <string name="data_wifi_activity_arrows_summary">Zobrazit šípky pri aktivite Dát/Wi-Fi</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_summary">\@null</string>
-  <string name="screen_state_toggles_title">Pozastavené akcie</string>
+  <string name="screen_state_toggles_title">Akcie po zhasnutí obrazovky</string>
   <string name="screen_state_toggles_enable_title">Zapnúť</string>
   <string name="screen_state_toggles_enable_summary">Akcie budú vykonané pri vypnutí obrazovky. Pri zapnutí a uvedení do predchádzajúceho stavu budú obnovené.</string>
   <string name="screen_state_toggles_mobile_title">Mobilné siete</string>
@@ -2273,4 +2273,8 @@
   <string name="show_settings_header_title">Záhlavie vlastného zobrazenia</string>
   <string name="show_settings_header_summary">Zobrazenie vlastného záhlavia v ponuke nastavení</string>
   <!-- FP gesture -->
+  <string name="quick_pulldown_fp_title">Panel rýchlych nastavení pre snímač odtlačkov prstov</string>
+  <string name="quick_pulldown_fp_summary">Rozbalenie panela rýchlych nastavení iba jedným priložením prsta na snímač odtlačkov prstov</string>
+  <string name="recents_lock_icon_title">Ikona zámku</string>
+  <string name="recents_lock_icon_summary">Zobraziť ikonu zámku v záhlaví aplikácie v ponuke nedávnych aplikácií</string>
 </resources>

@@ -2245,8 +2245,8 @@
   <string name="night_bright_low">Lage helderheid</string>
   <string name="night_bright_medium">Gemiddelde helderheid</string>
   <!-- QS footer warnings -->
-  <string name="qs_footer_warnings_title">QS voettekst waarschuwingen</string>
-  <string name="qs_footer_warnings_summary">Laat een waarschuwing zien onderaan het QS paneel wanneer het netwerk word gemonitord door externe apps of VPN</string>
+  <string name="qs_footer_warnings_title">Snelle Instellingen voettekst waarschuwingen</string>
+  <string name="qs_footer_warnings_summary">Laat een waarschuwing zien onderaan het SI paneel wanneer het netwerk word gemonitord door externe apps of VPN</string>
   <!-- Incall vibrate options -->
   <string name="rr_incall">Bellen</string>
   <string name="rr_incall_summary">Pas verschillende tril opties aan tijdens telefoongesprekken</string>
@@ -2267,4 +2267,5 @@
   <string name="show_settings_header_title">Aangepaste lade kop</string>
   <string name="show_settings_header_summary">Laat aangepaste kop zien in instellingen lade</string>
   <!-- FP gesture -->
+  <string name="recents_lock_icon_title">Sluit pictogram</string>
 </resources>
