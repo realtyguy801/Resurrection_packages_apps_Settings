@@ -2155,6 +2155,7 @@
   <string name="no_iconpacks_summary">Nessun pacchetto icone installato</string>
   <string name="dialog_pick_iconpack_title">Scegli pacchetto icone</string>
   <string name="default_iconpack_title">Icone predefinite</string>
+  <string name="slim_recents_corner_radius_title">Utilizza gli angoli rotondi per i recenti a carte</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Mostra sul bordo sinistro</string>
   <string name="recent_panel_lefty_mode_summary">Mostra il pannello delle app recenti sul lato sinistro</string>
@@ -2240,6 +2241,8 @@
   <string name="dnd_when_call_summary">Attiva automaticamente \"non disturbare\" durante le chiamate</string>
   <string name="no_sim_cluster_switch_title">Nascondi nessuna sim rete</string>
   <string name="no_sim_cluster_switch_summary">Nascondi la barra di rete se la sottoscrizione della sim è inattiva e disabilitata. Se la sim non è disabilitata, questo interruttore non funziona</string>
+  <string name="disable_no_sim_title">Disabilita icona nessuna sim</string>
+  <string name="disable_no_sim_summary">Disabilita icona nessuna carta sim se non è presente alcuna sim</string>
   <!-- Advanced night mode brightness -->
   <string name="night_brightness_category">Luminosità</string>
   <string name="night_brightness_value_title">Luminosità luce notturna</string>

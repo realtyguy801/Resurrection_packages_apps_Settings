@@ -2155,6 +2155,7 @@
   <string name="no_iconpacks_summary">Nenhum pacote de ícones instalado</string>
   <string name="dialog_pick_iconpack_title">Escolher pacote de ícones</string>
   <string name="default_iconpack_title">Ícones predefinidos</string>
+  <string name="slim_recents_corner_radius_title">Usar cartões com cantos arredondados</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Mostrar na borda esquerda</string>
   <string name="recent_panel_lefty_mode_summary">Mostrar o painel de aplicações recentes na borda esquerda</string>
@@ -2240,6 +2241,8 @@
   <string name="dnd_when_call_summary">Ativar automaticamente o modo \"Não incomodar\" durante as chamadas</string>
   <string name="no_sim_cluster_switch_title">Esconder o indicador de \"sem cartão SIM\"</string>
   <string name="no_sim_cluster_switch_summary">Esconder o indicador da rede se o cartão SIM estiver inativo ou desativado. Se o cartão SIM não estiver desativado, esta função não irá funcionar</string>
+  <string name="disable_no_sim_title">Desativar o ícone de \"sem cartão SIM\"</string>
+  <string name="disable_no_sim_summary">Desativar o ícone do cartão SIM se não estiver um cartão SIM presente</string>
   <!-- Advanced night mode brightness -->
   <string name="night_brightness_category">Brilho</string>
   <string name="night_brightness_value_title">Brilho da Luz Noturna</string>

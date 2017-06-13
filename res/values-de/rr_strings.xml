@@ -2155,6 +2155,7 @@
   <string name="no_iconpacks_summary">Keine Symbolpakete installiert</string>
   <string name="dialog_pick_iconpack_title">Symbolpaket auswählen</string>
   <string name="default_iconpack_title">Standardsymbole</string>
+  <string name="slim_recents_corner_radius_title">Runde Ecken für Karten verwenden</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Am linken Bildschirmrand anzeigen</string>
   <string name="recent_panel_lefty_mode_summary">Zeige das Anwendungsverlaufs Panel an der linken Kante</string>
@@ -2240,6 +2241,8 @@
   <string name="dnd_when_call_summary">Aktiviert \"Nicht stören\" automatisch bei Anrufen</string>
   <string name="no_sim_cluster_switch_title">Deaktivierte SIM verstecken</string>
   <string name="no_sim_cluster_switch_summary">Versteckt die Netzwerk-Leiste, wenn das Abonnement der Sim inaktiv und deaktiviert ist. Wenn die SIM-Karte nicht deaktiviert ist, wird dieser Schalter nicht funktionieren.</string>
+  <string name="disable_no_sim_title">Kein SIM-Symbol deaktivieren</string>
+  <string name="disable_no_sim_summary">Keine SIM-Karte-Symbol deaktivieren, wenn keine SIM-Karte vorhanden ist</string>
   <!-- Advanced night mode brightness -->
   <string name="night_brightness_category">Helligkeit</string>
   <string name="night_brightness_value_title">Nachtlicht Helligkeit</string>
