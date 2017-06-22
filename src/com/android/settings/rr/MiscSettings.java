@@ -18,7 +18,6 @@ package com.android.settings.rr;
 
 import android.content.Context;
 import android.content.ContentResolver;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -36,7 +35,6 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.telephony.TelephonyManager;
 import com.android.settings.util.Helpers;
 import dalvik.system.VMRuntime;
 
@@ -55,12 +53,8 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 public class MiscSettings extends SettingsPreferenceFragment  implements OnPreferenceChangeListener{
 
     private static final String SELINUX = "selinux";
-    private static final String RR_OTA = "rr_ota_fab";
-    private static final String RR_INCALL = "rr_incall";
-
-    private SwitchPreference mConfig;
     private SwitchPreference mSelinux;
-    private PreferenceScreen mIncall;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,8 +62,6 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
 
         addPreferencesFromResource(R.xml.rr_misc);
   	    final ContentResolver resolver = getActivity().getContentResolver();
-
-        PreferenceScreen prefScreen = getPreferenceScreen();
 
 	    //SELinux
         mSelinux = (SwitchPreference) findPreference(SELINUX);
@@ -83,17 +75,6 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
             mSelinux.setSummary(R.string.selinux_permissive_title);
         }
 
-        mConfig = (SwitchPreference) findPreference(RR_OTA);
-        mConfig.setChecked((Settings.System.getInt(getContentResolver(),
-                            Settings.System.RR_OTA_FAB, 0) == 1));
-        mConfig.setOnPreferenceChangeListener(this);
-
-
-        PreferenceScreen mIncall = (PreferenceScreen) findPreference(RR_INCALL);
-        if (!isVoiceCapable(getActivity())) {
-            getPreferenceScreen().removePreference(mIncall);
-        }
-
     }
 
     @Override
@@ -104,15 +85,6 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
     @Override
     public void onResume() {
         super.onResume();
-    }
-
-    /**
-     * Returns whether the device is voice-capable (meaning, it is also a phone).
-     */
-    public static boolean isVoiceCapable(Context context) {
-        TelephonyManager telephony =
-                (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        return telephony != null && telephony.isVoiceCapable();
     }
 
     private void setSelinuxEnabled(String status) {
@@ -134,15 +106,6 @@ public class MiscSettings extends SettingsPreferenceFragment  implements OnPrefe
                 setSelinuxEnabled("false");
                 mSelinux.setSummary(R.string.selinux_permissive_title);
             }
-            return true;
-        } else if (preference == mConfig) {
-            boolean newvalue = (Boolean) value;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.RR_OTA_FAB, newvalue ? 1 : 0);
-            finish();
-            Intent fabIntent = new Intent();
-            fabIntent.setClassName("com.android.settings", "com.android.settings.Settings$MainSettingsLayoutActivity");
-            startActivity(fabIntent);
             return true;
         }
         return false;

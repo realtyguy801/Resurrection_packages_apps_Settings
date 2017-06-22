@@ -321,7 +321,6 @@
   <string name="force_expanded_notifications_summary">僅適用於支援擴展通知的應用程式</string>
   <!-- Disabling FC notifications -->
   <string name="disable_fc_notifications_title">禁用強制關閉通知</string>
-  <string name="disable_fc_notifications_summary">這將會隱藏所有強制關閉通知</string>
   <!-- Disabling immersive mode messages -->
   <string name="disable_immersive_message_title">停用全螢幕通知</string>
   <string name="disable_immersive_message_summary">關閉所有全螢幕通知</string>
@@ -1473,6 +1472,8 @@
   <string name="navbar_button_color">導覽列按鍵</string>
   <string name="navbar_button_custom_icon_switch_title">將顏色過濾器新增至應用程式按鍵</string>
   <string name="icon_pack_picker_dialog_title">圖示包</string>
+  <string name="navigation_bar_left_title">左慣用手模式</string>
+  <string name="navigation_bar_left_summary">在橫向模式下在左側顯示導航列</string>
   <string name="invalid_icon_from_uri">無法從內容提供者載入圖像</string>
   <string name="picker_activities">活動</string>
   <string name="select_custom_app_title">選擇自訂應用程式</string>
@@ -1793,10 +1794,11 @@
   <string name="screenshot_type_title">螢幕擷取畫面類型</string>
   <string name="screenshot_type_fullscreen">全螢幕擷取畫面</string>
   <string name="screenshot_type_partial">拖動以選定擷取螢幕畫面的區域</string>
-  <!-- Screenshot delay -->
+  <!-- Screenshot -->
   <string name="screenshot_options_category">螢幕擷取畫面選項</string>
   <string name="screenshot_delay_title">螢幕擷取畫面延遲</string>
   <string name="screenshot_delay_summary">調整擷取螢幕畫面的時間</string>
+  <!-- Interface -->
   <!--Screenshot crop and share -->
   <string name="screenshot_crop_and_share_title">螢幕擷取畫面裁剪&amp; 分享</string>
   <string name="screenshot_crop_and_share_summary">擷取螢幕畫面後顯示編輯視窗以裁剪、儲存或分享螢幕截圖</string>
@@ -2220,7 +2222,6 @@
   <string name="data_wifi_activity_arrows_title">數據/ WiFi 活動</string>
   <string name="data_wifi_activity_arrows_summary">顯示數據/ WiFi 活動箭頭</string>
   <!-- Screen state service -->
-  <string name="screen_state_toggles_summary">\@null</string>
   <string name="screen_state_toggles_title">暫停動作</string>
   <string name="screen_state_toggles_enable_title">啟用</string>
   <string name="screen_state_toggles_enable_summary">在螢幕關閉時才執行動作。螢幕開啟後會還原先前的狀態。</string>
@@ -2242,7 +2243,7 @@
   <string name="no_sim_cluster_switch_title">沒有 sim 卡時網路隱藏</string>
   <string name="no_sim_cluster_switch_summary">如果 Sim 卡的訂閱處於非活動狀態並被停用，則隱藏網路列。 如果 sim 未被停用，則此開關將不起作用</string>
   <string name="disable_no_sim_title">停用沒有 sim 卡圖示</string>
-  <string name="disable_no_sim_summary">如果沒有 SIM 卡，則不顯示無 SIM 卡圖示</string>
+  <string name="disable_no_sim_summary">如果沒有 Sim 卡，則不顯示無 Sim 卡圖示</string>
   <!-- Advanced night mode brightness -->
   <string name="night_brightness_category">螢幕亮度</string>
   <string name="night_brightness_value_title">夜間模式亮度</string>
@@ -2278,4 +2279,6 @@
   <string name="quick_pulldown_fp_summary">僅需一次滑動指紋感應器即可展開快速設定面板</string>
   <string name="recents_lock_icon_title">鎖定圖示</string>
   <string name="recents_lock_icon_summary">在標頭中顯示重新鎖定到工作圖示</string>
+  <string name="nav_button_sounds_title">觸控音效</string>
+  <string name="nav_button_sounds_summary">當輕觸智慧列時撥放點選音效。僅鈴聲/大聲模式</string>
 </resources>

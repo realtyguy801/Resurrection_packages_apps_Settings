@@ -118,7 +118,7 @@
   <string name="rr_sb_gestures_title">Gestes sur la barre d\'état</string>
   <string name="qs_advanced_title">Options avancées</string>
   <string name="rr_notification_panel_title">Panneaux</string>
-  <string name="rr_tuner">Personnalisation de l\'interface utilisateur système</string>
+  <string name="rr_tuner">Réglage de l\'UI du système</string>
   <string name="rr_tuner_summary">Partie de personnalisations d\'usine (stock)</string>
   <string name="rr_battery">Batterie</string>
   <string name="rr_sb_icons">Icônes système</string>
@@ -321,7 +321,6 @@
   <string name="force_expanded_notifications_summary">Disponible uniquement pour les applications qui prennent en charge les notifications étendues</string>
   <!-- Disabling FC notifications -->
   <string name="disable_fc_notifications_title">Désactiver les notifications FC</string>
-  <string name="disable_fc_notifications_summary">Si activé, masquera toutes les notifications de fermeture forcée</string>
   <!-- Disabling immersive mode messages -->
   <string name="disable_immersive_message_title">Désactiver les messages en mode immersif</string>
   <string name="disable_immersive_message_summary">Ceci masquera tous les messages du mode immersif</string>
@@ -1473,6 +1472,8 @@
   <string name="navbar_button_color">Couleur des boutons</string>
   <string name="navbar_button_custom_icon_switch_title">Ajouter un filtre de couleur aux boutons d\'application</string>
   <string name="icon_pack_picker_dialog_title">Pack d\'icônes</string>
+  <string name="navigation_bar_left_title">Mode gaucher</string>
+  <string name="navigation_bar_left_summary">Afficher la barre de navigation sur le côté gauche en mode paysage</string>
   <string name="invalid_icon_from_uri">Impossible de charger l\'image</string>
   <string name="picker_activities">Activités</string>
   <string name="select_custom_app_title">Choisir une appli personnalisée</string>
@@ -1793,10 +1794,11 @@
   <string name="screenshot_type_title">Type de capture d\'écran</string>
   <string name="screenshot_type_fullscreen">Prendre des captures d’écran en plein écran</string>
   <string name="screenshot_type_partial">Partiel : Sélectionner la zone à capturer</string>
-  <!-- Screenshot delay -->
+  <!-- Screenshot -->
   <string name="screenshot_options_category">Options de capture d’écran</string>
   <string name="screenshot_delay_title">Délai de capture d\'écran</string>
   <string name="screenshot_delay_summary">Régler le délai avant la prise de capture d\'écran</string>
+  <!-- Interface -->
   <!--Screenshot crop and share -->
   <string name="screenshot_crop_and_share_title">Rognage &amp; partage</string>
   <string name="screenshot_crop_and_share_summary">Afficher une fenêtre d\'édition après avoir pris une capture d\'écran permettant d\'effectuer certaines opérations comme le recadrage, la sauvegarde ou le partage de celle-ci</string>
@@ -2155,6 +2157,7 @@
   <string name="no_iconpacks_summary">Aucun pack d\'icônes installé</string>
   <string name="dialog_pick_iconpack_title">Choisir un pack d\'icônes</string>
   <string name="default_iconpack_title">Icônes par défaut</string>
+  <string name="slim_recents_corner_radius_title">Utiliser des coins arrondis pour les cartes</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Afficher sur le bord gauche</string>
   <string name="recent_panel_lefty_mode_summary">Afficher le panneau des Applications récentes sur le bord gauche</string>
@@ -2219,7 +2222,6 @@
   <string name="data_wifi_activity_arrows_title">Indicateur d\'activité de la data et du wifi</string>
   <string name="data_wifi_activity_arrows_summary">Afficher les flèches d\'activité des données mobiles et du wifi</string>
   <!-- Screen state service -->
-  <string name="screen_state_toggles_summary">\@null</string>
   <string name="screen_state_toggles_title">Suspendre les actions</string>
   <string name="screen_state_toggles_enable_title">Activer</string>
   <string name="screen_state_toggles_enable_summary">Les actions seront exécutées lorsque l\'écran sera éteint. Écran allumé, l\'état précédent sera restauré.</string>
@@ -2277,4 +2279,6 @@
   <string name="quick_pulldown_fp_summary">Dérouler le volet des réglages rapides en balayant d\'un seul geste le capteur d\'empreinte digitale</string>
   <string name="recents_lock_icon_title">Icône de verrouillage</string>
   <string name="recents_lock_icon_summary">Afficher les verrouillages récents de l\'icône des taches dans l\'en tête</string>
+  <string name="nav_button_sounds_title">Tonalité des touches</string>
+  <string name="nav_button_sounds_summary">Jouer un son de clic lorsque vous tapoterez la smartbar. Mode son/vibreur uniquement</string>
 </resources>

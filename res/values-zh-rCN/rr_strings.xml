@@ -132,6 +132,7 @@
   <string name="system_animations">系统动画</string>
   <string name="rr_ui_title">界面</string>
   <string name="rr_dash_board_title">面板</string>
+  <string name="rr_fp_title">指纹设置</string>
   <string name="recents_type_title">最近任务类型</string>
   <string name="recents_stock">原生</string>
   <string name="recents_omniswitch">Omniswitch</string>
@@ -187,6 +188,7 @@
   <string name="system_app_remover_summary">删除不必要的系统应用</string>
   <string name="rr_updater_summary">检查 OTA 更新和其他链接</string>
   <string name="rr_notif_settings_summary">自定义通知面板的外观</string>
+  <string name="rr_fp_summary">为指纹传感器自定义各种设置</string>
   <!-- Manage applications: show substratum overlays -->
   <string name="filter_substratum_apps">Substratum 叠加层</string>
   <string name="menu_show_substratum">显示叠加层</string>
@@ -321,7 +323,6 @@
   <string name="force_expanded_notifications_summary">仅适用于支持扩展通知的应用</string>
   <!-- Disabling FC notifications -->
   <string name="disable_fc_notifications_title">禁用 FC 通知</string>
-  <string name="disable_fc_notifications_summary">这将隐藏所有强制关闭通知</string>
   <!-- Disabling immersive mode messages -->
   <string name="disable_immersive_message_title">禁用沉浸模式消息</string>
   <string name="disable_immersive_message_summary">将会隐藏所有沉浸模式消息</string>
@@ -802,17 +803,17 @@
   <string name="evernote">印象笔记</string>
   <string name="explorer">文件管理器</string>
   <string name="falcon">Falcon</string>
-  <string name="fb">脸书（Facebook）</string>
+  <string name="fb">Facebook</string>
   <string name="flipboard">Flipboard</string>
   <string name="foursquare">Foursquare</string>
-  <string name="firefox">火狐浏览器</string>
+  <string name="firefox">Firefox</string>
   <string name="googlebuzz">Google buzz</string>
   <string name="googledocs">Google 文档</string>
   <string name="googlewallet">Google 钱包</string>
   <string name="line">LINE</string>
   <string name="mic">麦克风</string>
   <string name="newyorktimes">纽约时报</string>
-  <string name="rootexplorer">Re 浏览器</string>
+  <string name="rootexplorer">Root explorer</string>
   <string name="sim">SIM 卡</string>
   <string name="teamviewer">Teamviewer</string>
   <string name="totalcommander">总指挥官</string>
@@ -835,7 +836,7 @@
   <string name="docs">文档</string>
   <string name="googledrive">Google 云端硬盘</string>
   <string name="googleearth">Google 地球</string>
-  <string name="googlehangouts">Google 环聊</string>
+  <string name="googlehangouts">环聊</string>
   <string name="googlekeep">Keep</string>
   <string name="googleplay">Goolge Play</string>
   <string name="googletranslate">Google 翻译</string>
@@ -1473,6 +1474,8 @@
   <string name="navbar_button_color">导航栏按钮</string>
   <string name="navbar_button_custom_icon_switch_title">为应用按钮添加色彩过滤器</string>
   <string name="icon_pack_picker_dialog_title">图标包</string>
+  <string name="navigation_bar_left_title">左手模式</string>
+  <string name="navigation_bar_left_summary">在横向模式的左侧显示导航栏</string>
   <string name="invalid_icon_from_uri">无法从内容提供器中加载图像</string>
   <string name="picker_activities">活动</string>
   <string name="select_custom_app_title">选择自定义应用</string>
@@ -1793,10 +1796,11 @@
   <string name="screenshot_type_title">屏幕截图类型</string>
   <string name="screenshot_type_fullscreen">全屏截图</string>
   <string name="screenshot_type_partial">拖动选定屏幕截图的区域</string>
-  <!-- Screenshot delay -->
+  <!-- Screenshot -->
   <string name="screenshot_options_category">屏幕截图选项</string>
   <string name="screenshot_delay_title">屏幕截图延迟</string>
   <string name="screenshot_delay_summary">调整屏幕截图前的延迟时间</string>
+  <!-- Interface -->
   <!--Screenshot crop and share -->
   <string name="screenshot_crop_and_share_title">截图裁剪与分享</string>
   <string name="screenshot_crop_and_share_summary">在屏幕截图后显示编辑窗口，以便进行裁剪、保存或分享操作</string>
@@ -2220,7 +2224,6 @@
   <string name="data_wifi_activity_arrows_title">数据/Wi-Fi 活动</string>
   <string name="data_wifi_activity_arrows_summary">隐藏数据/Wi-Fi 活动箭头</string>
   <!-- Screen state service -->
-  <string name="screen_state_toggles_summary">\@null</string>
   <string name="screen_state_toggles_title">暂停动作</string>
   <string name="screen_state_toggles_enable_title">启用</string>
   <string name="screen_state_toggles_enable_summary">操作将在屏幕关闭时执行。屏幕上的当前状态将会被还原。</string>
@@ -2276,6 +2279,10 @@
   <!-- FP gesture -->
   <string name="quick_pulldown_fp_title">指纹快速下拉</string>
   <string name="quick_pulldown_fp_summary">展开唯一的滑动指纹传感器快速设置面板</string>
+  <string name="fp_swipe_call_actions_title">指纹手势</string>
+  <string name="fp_swipe_call_actions_disabled">禁用</string>
   <string name="recents_lock_icon_title">锁定图标</string>
   <string name="recents_lock_icon_summary">在最近任务的标题栏中显示锁定图标</string>
+  <string name="nav_button_sounds_title">触摸提示音</string>
+  <string name="nav_button_sounds_summary">点击智能状态栏时播放音效。铃声/仅大声模式</string>
 </resources>
