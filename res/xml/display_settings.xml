@@ -143,6 +143,8 @@
                 android:summary="%s"
                 android:title="@string/display_vr_pref_title" />
 
+    </PreferenceCategory>
+
         <PreferenceCategory
             android:title="@string/theme_title">
 

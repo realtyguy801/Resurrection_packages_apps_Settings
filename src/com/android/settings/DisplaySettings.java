@@ -293,7 +293,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
     }
-    }
 
     private static boolean allowAllRotations(Context context) {
         return Resources.getSystem().getBoolean(
