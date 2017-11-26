@@ -45,6 +45,7 @@
   <string name="github_varund7726">https://github.com/varund7726</string>
   <string name="github_akhilnarang">https://github.com/akhilnarang</string>
   <string name="github_bdogg718k">https://github.com/bdogg718k</string>
+  <string name="github_apascual89">https://github.com/apascual89</string>
   <string name="rr">Liens</string>
   <string name="rr_website_title">Site Web</string>
   <string name="rr_website_summary">Obtenir plus d’informations sur Resurrection Remix OS</string>
@@ -64,10 +65,15 @@
   <string name="rr_ls_ui">Interface de l\'écran de verrouillage</string>
   <string name="rr_ls_security">Sécurité</string>
   <string name="updater_title">Mises à jour</string>
-  <string name="altan_summary">● Fondateur \n● chef de projet \n● chef développeur \n● concepteur UX \n● mainteneur</string>
+  <string name="altankrk_summary">● Co-fondateur \n● Chef développeur \n● Concepteur UX \n● Mainteneur</string>
   <string name="varun_summary">● Développeur principal \n● Concepteur UX \n● Mainteneur</string>
+  <string name="andres_summary">● Développeur \n● Mainteneur</string>
   <string name="akhil_summary">● Développeur \n● mainteneur \n● Javascript master</string>
   <string name="brian_summary">● Développeur \n● mainteneur</string>
+  <string name="christopher_kardas_summary">● Modérateur \n● Éditeur\n● Contributeur</string>
+  <string name="matt_summary">● Modérateur \n● Éditeur\n● Contributeur</string>
+  <string name="justen_summary">● Modérateur \n● Éditeur\n● Contributeur</string>
+  <string name="support_team_title">Moderator Tag</string>
   <string name="device_maintainers_title">Appareils et mainteneurs</string>
   <string name="device_maintainers_title_summary">Liste des appareils et de leurs mainteneurs officiels RR-OS</string>
   <string name="maintainers_note_title">Note</string>
@@ -358,7 +364,7 @@
   <string name="status_bar_rr_logo_title">Activer le logo</string>
   <string name="status_bar_rr_logo_summary">Activer pour afficher le logo RR-OS dans la barre d\'état</string>
   <!-- Color picker -->
-  <string name="color_picker_fragment_title">Sélecteur de couleur</string>
+  <string name="color_picker_fragment_title">Pipette de couleur</string>
   <string name="apply_color_title">Appliquer la couleur</string>
   <string name="edit_hex_title">Valeur hexa</string>
   <string name="palette_title">Autres</string>
@@ -1705,72 +1711,29 @@
   <!-- Superuser indicator on status bar -->
   <string name="show_su_indicator_title">Témoin Super-Utilisateur</string>
   <string name="show_su_indicator_summary">Afficher l\'indicateur SU lorsqu\'une session est active</string>
-  <!-- PA Pie control -->
-  <string name="reset_paranoid">Resurrection</string>
-  <string name="reset_android">Android</string>
-  <string name="pa_piecontrol_settings_summary">Personnaliser les cibles, le style, la taille et la couleur de l\'arc</string>
-  <string name="pa_pie_control_title">Contrôles en arc</string>
-  <string name="pa_pie_control_enable_title">Activer les contrôles en arc</string>
-  <string name="pa_pie_targets_title">Cibles de l\'arc</string>
-  <string name="pa_pie_style_title">Style de l\'arc</string>
-  <string name="pa_pie_menu_title">Toujours afficher le bouton de menu</string>
-  <string name="pa_pie_menu_summary">Toujours afficher le bouton de menu, même si elle est pas nécessaire</string>
-  <string name="pa_pie_size_title">Taille de l\'arc</string>
-  <string name="pa_pie_size_summary">Définir la taille des contrôles en arc</string>
-  <string name="pa_pie_size_small">Petit</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_size_large">Grand</string>
-  <string name="pa_pie_size_gigantic">Gigantesque</string>
-  <string name="pa_pie_size_monster">Monstrueux</string>
-  <string name="pa_pie_size_enormous">Énorme</string>
-  <string name="pa_pie_mode_default">Par défaut</string>
+  <!-- Pie -->
+  <string name="pie_enable_title">Activer les contrôles en arc</string>
+  <string name="pie_settings">Paramètres de l\'arc</string>
+  <string name="pie_enable_title">Activer les contrôles en arc</string>
+  <string name="pie_settings_summary">Ajustez les raccourcis en arc selon vos goûts</string>
+  <string name="pie_theme_mode_title">Thème</string>
+  <string name="pie_auto">Automatique</string>
+  <string name="pie_white">Clair</string>
+  <string name="pie_dark">Sombre</string>
+  <string name="pie_battery_title">Indicateur de batterie</string>
+  <string name="pie_battery_text">Texte uniquement</string>
+  <string name="pie_battery_circle">Cercle uniquement</string>
+  <string name="pie_battery_both">Les deux</string>
+  <string name="pie_status_indicator">Indicateur de réseau</string>
+  <string name="pie_status_wifi">Wifi uniquement</string>
+  <string name="pie_status_mobile">Réseau mobile uniquement</string>
+  <string name="pie_status_none">Aucun</string>
+  <string name="pie_status_both">Les deux</string>
   <string name="pa_pie_gravity_title">Gravité de l\'arc</string>
   <string name="pa_pie_gravity_summary">Sélectionnez l’emplacement de l\'arc</string>
   <string name="pa_pie_gravity_bottom">Bas</string>
   <string name="pa_pie_gravity_right">Droite</string>
   <string name="pa_pie_gravity_left">Gauche</string>
-  <string name="pa_pie_gap_title">Espacement</string>
-  <string name="pa_pie_gap_summary">Ajuster l’écart entre les éléments de l\'arc</string>
-  <string name="pa_pie_angle_title">Angle de l\'arc</string>
-  <string name="pa_pie_angle_summary">Ajuster l\'angle entre les bords de l\'arc et le bord de l\'écran</string>
-  <string name="pa_pie_angle_none">Aucun (ancien)</string>
-  <string name="pa_pie_angle_small">Petit</string>
-  <string name="pa_pie_angle_big">Normal (par défaut)</string>
-  <string name="pa_pie_angle_huge">Gros</string>
-  <string name="pa_pie_angle_super">Énorme</string>
-  <string name="pa_pie_gap_none">Aucun(e)</string>
-  <string name="pa_pie_gap_small">Petit</string>
-  <string name="pa_pie_gap_big">Grand (par défaut)</string>
-  <string name="pa_pie_gap_huge">Énorme</string>
-  <string name="pa_pie_mode_title">Style de l\'arc</string>
-  <string name="pa_pie_mode_summary">Définir comment les animations et les ajouts de statut seront traités</string>
-  <string name="pa_pie_mode_bare">Vide</string>
-  <string name="pa_pie_mode_quick">Rapide</string>
-  <string name="pa_pie_mode_default">Par défaut</string>
-  <string name="pa_pie_mode_slow">Lent</string>
-  <string name="pa_pie_lastapp_title">Dernière application</string>
-  <string name="pa_pie_lastapp_summary">Activer le bouton d\'accès à la dernière application</string>
-  <string name="pa_pie_killtask_title">Tuer la tâche</string>
-  <string name="pa_pie_killtask_summary">Activer le bouton pour effacer toutes les applications récentes</string>
-  <string name="pa_pie_notifications_title">Notifications</string>
-  <string name="pa_pie_notifications_summary">Activer le bouton de notifications</string>
-  <string name="pa_pie_settings_panel_title">Panneau des Réglages Rapides</string>
-  <string name="pa_pie_settings_panel_summary">Activer le bouton du panneau des réglages rapides</string>
-  <string name="pa_pie_screenshot_title">Capture d\'écran</string>
-  <string name="pa_pie_screenshot_summary">Activer le bouton de capture d’écran</string>
-  <string name="pa_pie_color_title">Paramètres de couleur de l\'arc</string>
-  <string name="pa_pie_color_style_title">Style de couleur de l\'arc</string>
-  <string name="pa_pie_background_title">Couleur de l\'arrière-plan</string>
-  <string name="pa_pie_select_title">Couleur de sélection</string>
-  <string name="pa_pie_outlines_title">Couleur des contours</string>
-  <string name="pa_pie_status_clock_title">Couleur de l\'horloge</string>
-  <string name="pa_pie_status_title">Couleurs du statut</string>
-  <string name="pa_pie_chevron_title">Couleur du chevron</string>
-  <string name="pa_pie_juice_title">Couleur du courant de la batterie</string>
-  <string name="pa_pie_button_color">Couleur du bouton</string>
-  <string name="pa_pie_button_color_title">Couleur des boutons</string>
-  <string name="pa_pie_always_right_title">L\'arc est toujours à droite</string>
-  <string name="pa_pie_always_right_summary">L\'arc est toujours à droite en mode paysage</string>
   <!-- Heads up switch -->
   <string name="heads_up_switch_title">Notifications flottantes</string>
   <string name="heads_up_switch_summary">Activer les pop-ups partout et non séparément pour chaque application.</string>
@@ -2253,6 +2216,7 @@
   <!-- In-call DND -->
   <string name="dnd_when_call_title">En appel, ne pas déranger</string>
   <string name="dnd_when_call_summary">Activer automatiquement l\'option « Ne pas déranger » pendant les appels</string>
+  <string name="battery_light_allow_on_dnd_title">Led de batterie en mode Ne Pas Déranger</string>
   <string name="no_sim_cluster_switch_title">Masquer le réseau si aucune sim n\'est détectée</string>
   <string name="no_sim_cluster_switch_summary">Dissimule le signal du réseau si votre carte sim est inactif et désactivée. Si votre carte sim n\'est pas désactivée, ce commutateur ne fonctionnera pas</string>
   <string name="disable_no_sim_title">Désactiver l\'icône Carte SIM manquante</string>
@@ -2306,4 +2270,41 @@
   <string name="button_light_press_summary_on">Les boutons s\'allumeront seulement si les touches physiques sont pressées.</string>
   <string name="lockscreen_alpha">Transparence de l\'écran de verrouillage</string>
   <string name="lockscreen_security_alpha">Sécurité de l\'écran de verrouillage</string>
+  <!-- ANBI -->
+  <string name="anbi_title">Appui accidentel</string>
+  <string name="anbi_summary">Empêcher l\'appui sur les boutons de navigation lorsque l\'écran est utilisé</string>
+  <string name="rr_keys_title">Autres</string>
+  <!-- Pocket judge -->
+  <string name="pocket_judge_title">Détection de poches</string>
+  <string name="pocket_judge_summary">Empêche l\'activation accidentelle de votre appareil lorsque celui-ci est dans votre poche</string>
+  <!-- Sensor block per-package -->
+  <string name="sensor_block_title">Blocage du capteur par paquet</string>
+  <string name="sensor_block_summary">Bloquer l’accès aux capteurs pour certaines applications afin d\'économiser la batterie.</string>
+  <!-- Burn in protection -->
+  <string name="burnin_protection_title">Protection contre le Burn-in de l\'écran</string>
+  <string name="burnin_protection_summary">Déplacer périodiquement les éléments affichés en permanence à l\'écran pour éviter l\'usure de celui-ci</string>
+  <!-- Qs easy tile add -->
+  <string name="single_tap_tile_add_title">Ajouter des tuiles facile</string>
+  <string name="single_tap_tile_add_summary">Ajouter rapidement des tuiles au volet des réglages rapides par simple appui au lieu de les faire glisser</string>
+  <!-- Color engine -->
+  <string name="theme_switch_palette">Basculer entre la couleur primaire et les couleurs d\'accentuations</string>
+  <string name="theme_title">Moteur de couleur</string>
+  <string name="theme_summary">Selectionner différentes couleurs pour votre thème actuel</string>
+  <string name="theme_accent_color">Couleur d\'accentuation</string>
+  <string name="theme_primary_color">Couleur Primaire/arrière plan</string>
+  <string name="theme">Thème</string>
+  <string name="oms_enabled">Modes de thème indisponibles car une superposition de thème Substratum est actuellement installée. Veuillez désinstaller ce thème (pas désactiver).</string>
+  <string name="red">Rouge</string>
+  <string name="orange">Ambre</string>
+  <string name="blue">Turquoise</string>
+  <string name="green">Vert</string>
+  <string name="yellow">Jaune</string>
+  <string name="purple">Violet</string>
+  <string name="pink">Rose</string>
+  <string name="dark">Sombre</string>
+  <string name="pixel">Pixel</string>
+  <string name="teal">Par défaut</string>
+  <string name="cyan">Cyan</string>
+  <string name="grey">Gris</string>
+  <string name="default_string">Par défaut</string>
 </resources>

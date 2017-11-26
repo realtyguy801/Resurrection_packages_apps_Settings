@@ -45,6 +45,7 @@
   <string name="github_varund7726">https://github.com/varund7726</string>
   <string name="github_akhilnarang">https://github.com/akhilnarang</string>
   <string name="github_bdogg718k">https://github.com/bdogg718k</string>
+  <string name="github_apascual89">https://github.com/apascual89</string>
   <string name="rr">鏈結</string>
   <string name="rr_website_title">網站</string>
   <string name="rr_website_summary">取得更多關於 Resurrection Remix OS 的相關資訊</string>
@@ -64,10 +65,15 @@
   <string name="rr_ls_ui">鎖定使用者介面</string>
   <string name="rr_ls_security">安全性</string>
   <string name="updater_title">更新</string>
-  <string name="altan_summary">● 創始人 \n● 專案的領導者 \n● 主要開發者 \n● UX 設計師 \n● 維護者</string>
+  <string name="altankrk_summary">● 共同創始者 \n● 主要開發者 \n● 使用者體驗設計師 \n● 維護者</string>
   <string name="varun_summary">● 主要開發者 \n● 使用者體驗設計師 \n● 維護者</string>
+  <string name="andres_summary">● 開發者 \n● 維護者</string>
   <string name="akhil_summary">● 開發者 \n● 維護者 \n● 腳本主人</string>
   <string name="brian_summary">● 開發者 \n● 維護者</string>
+  <string name="christopher_kardas_summary">● 版主 \n● 編輯者 \n● 貢獻者</string>
+  <string name="matt_summary">● 版主 \n● 編輯者 \n● 貢獻者</string>
+  <string name="justen_summary">● 版主 \n● 編輯者 \n● 貢獻者</string>
+  <string name="support_team_title">版主標籤</string>
   <string name="device_maintainers_title">裝置和維護人員</string>
   <string name="device_maintainers_title_summary">列出裝置及該裝置的官方 RR-OS 的維護人員</string>
   <string name="maintainers_note_title">注意</string>
@@ -1616,7 +1622,7 @@
   <string name="smartbar_longpress_delay_summary">設定在觸發長按動作之前，系統將等待多少時間</string>
   <string name="smartbar_longpress_delay_default">預設延遲 (快)</string>
   <string name="smartbar_longpress_delay_normal">正常延遲</string>
-  <string name="smartbar_longpress_delay_long">長延遲</string>
+  <string name="smartbar_longpress_delay_long">較長的延遲</string>
   <string name="smartbar_custom_icon_size_title">自訂圖示大小</string>
   <string name="rr_navbar_settings">導覽列</string>
   <!--Custom logos-->
@@ -1705,72 +1711,29 @@
   <!-- Superuser indicator on status bar -->
   <string name="show_su_indicator_title">超級使用者指標</string>
   <string name="show_su_indicator_summary">當超級使用者使用時在狀態列上顯示超級使用者指標</string>
-  <!-- PA Pie control -->
-  <string name="reset_paranoid">Resurrection</string>
-  <string name="reset_android">Android</string>
-  <string name="pa_piecontrol_settings_summary">自訂pie 目標、 樣式、 大小和顏色</string>
-  <string name="pa_pie_control_title">Pie 按鈕</string>
-  <string name="pa_pie_control_enable_title">啟用pie 控制</string>
-  <string name="pa_pie_targets_title">Pie 目標</string>
-  <string name="pa_pie_style_title">Pie 樣式</string>
-  <string name="pa_pie_menu_title">總是顯示選單按鈕</string>
-  <string name="pa_pie_menu_summary">就算不需要也要顯示選單按鈕</string>
-  <string name="pa_pie_size_title">Pie 大小</string>
-  <string name="pa_pie_size_summary">制定Pie 按鈕大小</string>
-  <string name="pa_pie_size_small">小</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_size_large">大</string>
-  <string name="pa_pie_size_gigantic">巨大</string>
-  <string name="pa_pie_size_monster">怪獸级</string>
-  <string name="pa_pie_size_enormous">極大</string>
-  <string name="pa_pie_mode_default">預設</string>
+  <!-- Pie -->
+  <string name="pie_enable_title">啟用pie 控制</string>
+  <string name="pie_settings">Pie 設定</string>
+  <string name="pie_enable_title">啟用pie 控制</string>
+  <string name="pie_settings_summary">根據您的喜好調整Pie</string>
+  <string name="pie_theme_mode_title">主題</string>
+  <string name="pie_auto">自動</string>
+  <string name="pie_white">白色</string>
+  <string name="pie_dark">深色</string>
+  <string name="pie_battery_title">電池指示燈</string>
+  <string name="pie_battery_text">純文字</string>
+  <string name="pie_battery_circle">僅圓形</string>
+  <string name="pie_battery_both">全部</string>
+  <string name="pie_status_indicator">網路指示器</string>
+  <string name="pie_status_wifi">僅限 WiFi</string>
+  <string name="pie_status_mobile">僅限行動網路</string>
+  <string name="pie_status_none">無</string>
+  <string name="pie_status_both">全部</string>
   <string name="pa_pie_gravity_title">Pie重力</string>
   <string name="pa_pie_gravity_summary">選擇Pie顯示的位置</string>
   <string name="pa_pie_gravity_bottom">底部</string>
   <string name="pa_pie_gravity_right">右</string>
   <string name="pa_pie_gravity_left">左</string>
-  <string name="pa_pie_gap_title">物件間隔</string>
-  <string name="pa_pie_gap_summary">調整Pie按鈕間的分隔間隙</string>
-  <string name="pa_pie_angle_title">Pie角度</string>
-  <string name="pa_pie_angle_summary">調整Pie從依附螢幕到手勢邊緣的角度</string>
-  <string name="pa_pie_angle_none">無 (舊)</string>
-  <string name="pa_pie_angle_small">小</string>
-  <string name="pa_pie_angle_big">正常(預設)</string>
-  <string name="pa_pie_angle_huge">大</string>
-  <string name="pa_pie_angle_super">超大</string>
-  <string name="pa_pie_gap_none">無</string>
-  <string name="pa_pie_gap_small">小</string>
-  <string name="pa_pie_gap_big">大 (預設值)</string>
-  <string name="pa_pie_gap_huge">超大</string>
-  <string name="pa_pie_mode_title">Pie 風格</string>
-  <string name="pa_pie_mode_summary">管理將如何處理動畫和狀態補充</string>
-  <string name="pa_pie_mode_bare">空</string>
-  <string name="pa_pie_mode_quick">快速</string>
-  <string name="pa_pie_mode_default">預設</string>
-  <string name="pa_pie_mode_slow">緩慢</string>
-  <string name="pa_pie_lastapp_title">最後的應用程式</string>
-  <string name="pa_pie_lastapp_summary">啟用上次使用的應用 按鈕</string>
-  <string name="pa_pie_killtask_title">終止工作</string>
-  <string name="pa_pie_killtask_summary">啟用終止工作按鈕</string>
-  <string name="pa_pie_notifications_title">通知</string>
-  <string name="pa_pie_notifications_summary">啟用通知按鈕</string>
-  <string name="pa_pie_settings_panel_title">快速設定面板</string>
-  <string name="pa_pie_settings_panel_summary">啟用展開快速設定面板按鈕</string>
-  <string name="pa_pie_screenshot_title">擷取螢幕畫面</string>
-  <string name="pa_pie_screenshot_summary">啟用截圖按鈕</string>
-  <string name="pa_pie_color_title">Pie的顏色設置</string>
-  <string name="pa_pie_color_style_title">Pie的顏色風格</string>
-  <string name="pa_pie_background_title">背景顏色</string>
-  <string name="pa_pie_select_title">選擇顏色</string>
-  <string name="pa_pie_outlines_title">輪廓顏色</string>
-  <string name="pa_pie_status_clock_title">時鐘顏色</string>
-  <string name="pa_pie_status_title">狀態顏色</string>
-  <string name="pa_pie_chevron_title">Chevron 顏色</string>
-  <string name="pa_pie_juice_title">電池的顏色</string>
-  <string name="pa_pie_button_color">按鈕顏色</string>
-  <string name="pa_pie_button_color_title">按鈕顏色</string>
-  <string name="pa_pie_always_right_title">Pie總是在右邊</string>
-  <string name="pa_pie_always_right_summary">當螢幕橫向時Pie會總是顯示在右邊</string>
   <!-- Heads up switch -->
   <string name="heads_up_switch_title">浮動通知</string>
   <string name="heads_up_switch_summary">針對全域而不是每個應用程式的切換設定</string>
@@ -2253,6 +2216,7 @@
   <!-- In-call DND -->
   <string name="dnd_when_call_title">通話時請勿打擾</string>
   <string name="dnd_when_call_summary">通話時自動啟用 DND</string>
+  <string name="battery_light_allow_on_dnd_title">在勿擾模式下啟用指示燈</string>
   <string name="no_sim_cluster_switch_title">沒有 sim 卡時網路隱藏</string>
   <string name="no_sim_cluster_switch_summary">如果 Sim 卡的訂閱處於非活動狀態並被停用，則隱藏網路列。 如果 sim 未被停用，則此開關將不起作用</string>
   <string name="disable_no_sim_title">停用沒有 sim 卡圖示</string>
@@ -2305,5 +2269,42 @@
   <string name="button_light_press_summary_off">當檢測到螢幕輸入時，按鈕將隨時亮起。</string>
   <string name="button_light_press_summary_on">只有按下實體鍵，按鈕才會亮起。</string>
   <string name="lockscreen_alpha">鎖定畫面透明度</string>
-  <string name="lockscreen_security_alpha">安全性認證畫面透明度</string>
+  <string name="lockscreen_security_alpha">鎖屏解鎖介面透明度</string>
+  <!-- ANBI -->
+  <string name="anbi_title">誤觸</string>
+  <string name="anbi_summary">當觸控螢幕時，避免與導覽列互動</string>
+  <string name="rr_keys_title">雜項</string>
+  <!-- Pocket judge -->
+  <string name="pocket_judge_title">口袋檢測</string>
+  <string name="pocket_judge_summary">當裝置在口袋中時阻止螢幕和按鈕輸入</string>
+  <!-- Sensor block per-package -->
+  <string name="sensor_block_title">阻止個別套件存取傳感器</string>
+  <string name="sensor_block_summary">阻止應用程式存取某些感應器來省電</string>
+  <!-- Burn in protection -->
+  <string name="burnin_protection_title">螢幕烙印保護</string>
+  <string name="burnin_protection_summary">定時移動螢幕上的固定項目，以避免在螢幕上出現烙印</string>
+  <!-- Qs easy tile add -->
+  <string name="single_tap_tile_add_title">簡易圖塊新增</string>
+  <string name="single_tap_tile_add_summary">透過簡單地輕觸不用拖動，可以輕鬆地從快速設定自訂程式新增快速圖塊</string>
+  <!-- Color engine -->
+  <string name="theme_switch_palette">主要和強調顏色之間切換</string>
+  <string name="theme_title">顏色引擎</string>
+  <string name="theme_summary">為目前的主題選擇不同的顏色</string>
+  <string name="theme_accent_color">強調顏色</string>
+  <string name="theme_primary_color">主要/背景顏色</string>
+  <string name="theme">主題</string>
+  <string name="oms_enabled">主題模式不可用，因為目前已安裝底層主題重疊。請移除主題重疊 (無須停用)。</string>
+  <string name="red">紅色</string>
+  <string name="orange">琥珀色</string>
+  <string name="blue">藍綠</string>
+  <string name="green">綠色</string>
+  <string name="yellow">黃色</string>
+  <string name="purple">紫色</string>
+  <string name="pink">粉紅色</string>
+  <string name="dark">深色</string>
+  <string name="pixel">像素</string>
+  <string name="teal">預設</string>
+  <string name="cyan">青色</string>
+  <string name="grey">灰色</string>
+  <string name="default_string">預設</string>
 </resources>

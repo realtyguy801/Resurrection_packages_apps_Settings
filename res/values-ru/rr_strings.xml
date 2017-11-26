@@ -45,6 +45,7 @@
   <string name="github_varund7726">https://github.com/varund7726</string>
   <string name="github_akhilnarang">https://github.com/akhilnaranag</string>
   <string name="github_bdogg718k">https://github.com/bdogg718k</string>
+  <string name="github_apascual89">https://github.com/apascual89</string>
   <string name="rr">Ссылки</string>
   <string name="rr_website_title">Сайт</string>
   <string name="rr_website_summary">Узнать больше о Resurrection Remix OS</string>
@@ -64,10 +65,15 @@
   <string name="rr_ls_ui">Интерфейс экрана блокировки</string>
   <string name="rr_ls_security">Безопасность</string>
   <string name="updater_title">Обновления</string>
-  <string name="altan_summary">● Основатель \n● Лидер проекта \n● Главный разработчик \n● UX дизайнер \n● Поддерживающий</string>
+  <string name="altankrk_summary">● Сооснователь \n● Главный разработчик \n● UX дизайнер \n● Поддерживающий</string>
   <string name="varun_summary">● Главный разработчик \n● UX дизайнер \n● Поддерживающий</string>
+  <string name="andres_summary">● Разработчик \n● Поддерживающий</string>
   <string name="akhil_summary">● Разработчик \n● Поддерживающий \n● Script мастер</string>
   <string name="brian_summary">● Разработчик \n● Поддерживающий</string>
+  <string name="christopher_kardas_summary">● Модератор \n● Редактор\n● Соучастник</string>
+  <string name="matt_summary">● Модератор \n● Редактор\n● Соучастник</string>
+  <string name="justen_summary">● Модератор \n● Редактор\n● Соучастник</string>
+  <string name="support_team_title">Тег модератора</string>
   <string name="device_maintainers_title">Устройства и разработчики</string>
   <string name="device_maintainers_title_summary">Список устройств, работающих на RR-OS, и людей, поддерживающих эти устройства</string>
   <string name="maintainers_note_title">Примечание</string>
@@ -1617,7 +1623,7 @@
   <string name="smartbar_longpress_delay_default">Задержка по умолчанию (быстро)</string>
   <string name="smartbar_longpress_delay_normal">Нормальная задержка</string>
   <string name="smartbar_longpress_delay_long">Длинная задержка</string>
-  <string name="smartbar_custom_icon_size_title">Размер пользовательских иконок</string>
+  <string name="smartbar_custom_icon_size_title">Размер пользовательских значков</string>
   <string name="rr_navbar_settings">Панель навигации</string>
   <!--Custom logos-->
   <string name="rr_custom_logo_summary">Выбрать различные пользовательские логотипы/значки в строке состояния</string>
@@ -1705,72 +1711,29 @@
   <!-- Superuser indicator on status bar -->
   <string name="show_su_indicator_title">Индикатор суперпользователя</string>
   <string name="show_su_indicator_summary">Показывать индикатор суперпользователя, когда сессия активна</string>
-  <!-- PA Pie control -->
-  <string name="reset_paranoid">Resurrection</string>
-  <string name="reset_android">Android</string>
-  <string name="pa_piecontrol_settings_summary">Настроить стиль, размер и цвет ярлыков PIE</string>
-  <string name="pa_pie_control_title">Управление PIE</string>
-  <string name="pa_pie_control_enable_title">Включить управление PIE</string>
-  <string name="pa_pie_targets_title">Элементы PIE</string>
-  <string name="pa_pie_style_title">Стиль PIE</string>
-  <string name="pa_pie_menu_title">Всегда показывать кнопку меню</string>
-  <string name="pa_pie_menu_summary">Кнопка меню будет показана всегда, даже когда это не требуется</string>
-  <string name="pa_pie_size_title">Размер PIE</string>
-  <string name="pa_pie_size_summary">Установите размер элементов PIE</string>
-  <string name="pa_pie_size_small">Маленький</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_size_large">Большой</string>
-  <string name="pa_pie_size_gigantic">Гигантский</string>
-  <string name="pa_pie_size_monster">Монстр</string>
-  <string name="pa_pie_size_enormous">Чудовищный</string>
-  <string name="pa_pie_mode_default">По умолчанию</string>
+  <!-- Pie -->
+  <string name="pie_enable_title">Включить PIE-управление</string>
+  <string name="pie_settings">Настройки PIE</string>
+  <string name="pie_enable_title">Включить PIE-управление</string>
+  <string name="pie_settings_summary">Настройте PIE как вам нравится</string>
+  <string name="pie_theme_mode_title">Тема</string>
+  <string name="pie_auto">Автоматически</string>
+  <string name="pie_white">Белый</string>
+  <string name="pie_dark">Тёмный</string>
+  <string name="pie_battery_title">Значок батареи</string>
+  <string name="pie_battery_text">Только текст</string>
+  <string name="pie_battery_circle">Только круг</string>
+  <string name="pie_battery_both">Оба</string>
+  <string name="pie_status_indicator">Индикатор сети</string>
+  <string name="pie_status_wifi">Только Wi-Fi</string>
+  <string name="pie_status_mobile">Только мобильная сеть</string>
+  <string name="pie_status_none">Нет</string>
+  <string name="pie_status_both">Оба</string>
   <string name="pa_pie_gravity_title">Привязка PIE</string>
   <string name="pa_pie_gravity_summary">Выберите место, где будет расположен PIE</string>
   <string name="pa_pie_gravity_bottom">Снизу</string>
   <string name="pa_pie_gravity_right">По правой стороне</string>
   <string name="pa_pie_gravity_left">По левой стороне</string>
-  <string name="pa_pie_gap_title">Отступ между элементами</string>
-  <string name="pa_pie_gap_summary">Настроить интервал между элементами PIE</string>
-  <string name="pa_pie_angle_title">Угол PIE</string>
-  <string name="pa_pie_angle_summary">Радиус PIE в зависимости от содержимого</string>
-  <string name="pa_pie_angle_none">Отсутствует (устаревшее)</string>
-  <string name="pa_pie_angle_small">Маленький</string>
-  <string name="pa_pie_angle_big">Нормальный (по умолчанию)</string>
-  <string name="pa_pie_angle_huge">Большой</string>
-  <string name="pa_pie_angle_super">Огромный</string>
-  <string name="pa_pie_gap_none">Нет</string>
-  <string name="pa_pie_gap_small">Маленький</string>
-  <string name="pa_pie_gap_big">Большой (по умолчанию)</string>
-  <string name="pa_pie_gap_huge">Огромный</string>
-  <string name="pa_pie_mode_title">Стиль PIE</string>
-  <string name="pa_pie_mode_summary">Настройка анимации появления уведомлений и дополнительных элементов</string>
-  <string name="pa_pie_mode_bare">Без анимации</string>
-  <string name="pa_pie_mode_quick">Быстрый</string>
-  <string name="pa_pie_mode_default">По умолчанию</string>
-  <string name="pa_pie_mode_slow">Медленно</string>
-  <string name="pa_pie_lastapp_title">Последнее приложение</string>
-  <string name="pa_pie_lastapp_summary">Включить кнопку последнего приложения</string>
-  <string name="pa_pie_killtask_title">Завершить задачу</string>
-  <string name="pa_pie_killtask_summary">Включить кнопку завершения задачи</string>
-  <string name="pa_pie_notifications_title">Уведомления</string>
-  <string name="pa_pie_notifications_summary">Включить кнопку уведомлений</string>
-  <string name="pa_pie_settings_panel_title">Панель быстрых настроек</string>
-  <string name="pa_pie_settings_panel_summary">Включить кнопку расширения панели быстрых настроек</string>
-  <string name="pa_pie_screenshot_title">Скриншот</string>
-  <string name="pa_pie_screenshot_summary">Включить кнопку скриншота</string>
-  <string name="pa_pie_color_title">Настройки цвета PIE</string>
-  <string name="pa_pie_color_style_title">Цветовой стиль PIE</string>
-  <string name="pa_pie_background_title">Цвет фона</string>
-  <string name="pa_pie_select_title">Цвет выбора</string>
-  <string name="pa_pie_outlines_title">Цвет контура</string>
-  <string name="pa_pie_status_clock_title">Цвет часов</string>
-  <string name="pa_pie_status_title">Цвет состояния</string>
-  <string name="pa_pie_chevron_title">Цвет надписи</string>
-  <string name="pa_pie_juice_title">Цвет индикатора заряда батареи</string>
-  <string name="pa_pie_button_color">Цвет кнопки</string>
-  <string name="pa_pie_button_color_title">Цвет кнопок</string>
-  <string name="pa_pie_always_right_title">PIE всегда справа</string>
-  <string name="pa_pie_always_right_summary">В пейзажном режиме PIE всегда находится справа</string>
   <!-- Heads up switch -->
   <string name="heads_up_switch_title">Всплывающие уведомления</string>
   <string name="heads_up_switch_summary">Включить всплывающие уведомления повсеместно, а не для каждого приложения отдельно.</string>
@@ -2253,6 +2216,7 @@
   <!-- In-call DND -->
   <string name="dnd_when_call_title">Режим \"Не беспокоить\" во время голосового вызова</string>
   <string name="dnd_when_call_summary">Автоматическое включение режима \"Не беспокоить\" во время голосовых вызовов</string>
+  <string name="battery_light_allow_on_dnd_title">Индикатор батареи в режиме \"Не беспокоить\"</string>
   <string name="no_sim_cluster_switch_title">Скрыть надпись \"Нет сети\"</string>
   <string name="no_sim_cluster_switch_summary">Скрыть панель сети, если подпись SIM-карты неактивна или отключена. Если SIM-карта не отключена, данный переключатель не будет работать</string>
   <string name="disable_no_sim_title">Отключить значок \"Нет SIM-карты\"</string>
@@ -2305,5 +2269,42 @@
   <string name="button_light_press_summary_off">Кнопки будут подсвечиваться каждый раз при касании экрана.</string>
   <string name="button_light_press_summary_on">Кнопки будут подсвечиваться только при нажатии аппаратных кнопок.</string>
   <string name="lockscreen_alpha">Прозрачность экрана блокировки</string>
-  <string name="lockscreen_security_alpha">Прозрачность экрана безопасности</string>
+  <string name="lockscreen_security_alpha">Прозрачность экрана блокировки при вводе PIN/пароля/ключа</string>
+  <!-- ANBI -->
+  <string name="anbi_title">Случайное нажатие</string>
+  <string name="anbi_summary">Предотвращение взаимодействия с кнопками навигации при нажатии на экран</string>
+  <string name="rr_keys_title">Разное</string>
+  <!-- Pocket judge -->
+  <string name="pocket_judge_title">Режим \"В кармане\"</string>
+  <string name="pocket_judge_summary">Блокировать экран и кнопки, когда устройство находится в кармане</string>
+  <!-- Sensor block per-package -->
+  <string name="sensor_block_title">Блокировка датчиков попакетно</string>
+  <string name="sensor_block_summary">Заблокировать доступ к датчикам для некоторых приложений для экономии заряда батареи.</string>
+  <!-- Burn in protection -->
+  <string name="burnin_protection_title">Защита от выгорания дисплея</string>
+  <string name="burnin_protection_summary">Периодически перемещать элементы, которые постоянно отображаются на экране, чтобы избежать выгорания экрана в этой области</string>
+  <!-- Qs easy tile add -->
+  <string name="single_tap_tile_add_title">Быстрое добавление плитки</string>
+  <string name="single_tap_tile_add_summary">Добавляйте плитки быстрее из настройщика быстрых настроек простым нажатием на них вместо перетаскивания</string>
+  <!-- Color engine -->
+  <string name="theme_switch_palette">Переключение между основным и дополнительным цветом</string>
+  <string name="theme_title">Цветовая схема</string>
+  <string name="theme_summary">Выберите различные цвета для вашей текущей темы</string>
+  <string name="theme_accent_color">Дополнительный цвет</string>
+  <string name="theme_primary_color">Основной/фоновый цвет</string>
+  <string name="theme">Тема</string>
+  <string name="oms_enabled">Режимы темы недоступны, потому что установлено наслоение из Substratum. Пожалуйста, удалите наслоение.</string>
+  <string name="red">Red</string>
+  <string name="orange">Amber</string>
+  <string name="blue">Teal</string>
+  <string name="green">Green</string>
+  <string name="yellow">Yellow</string>
+  <string name="purple">Purple</string>
+  <string name="pink">Pink</string>
+  <string name="dark">Dark</string>
+  <string name="pixel">Pixel</string>
+  <string name="teal">По умолчанию</string>
+  <string name="cyan">Cyan</string>
+  <string name="grey">Grey</string>
+  <string name="default_string">По умолчанию</string>
 </resources>

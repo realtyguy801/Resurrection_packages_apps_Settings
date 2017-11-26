@@ -45,6 +45,7 @@
   <string name="github_varund7726">https://github.com/varund7726</string>
   <string name="github_akhilnarang">https://github.com/akhilnarang</string>
   <string name="github_bdogg718k">https://github.com/bdogg718k</string>
+  <string name="github_apascual89">https://github.com/apascual89</string>
   <string name="rr">Länkar</string>
   <string name="rr_website_title">Webbsida</string>
   <string name="rr_website_summary">Få mer information om Resurrection Remix OS</string>
@@ -64,7 +65,6 @@
   <string name="rr_ls_ui">Lås UI</string>
   <string name="rr_ls_security">Säkerhet</string>
   <string name="updater_title">Uppdateringar</string>
-  <string name="altan_summary">● Grundare \n● Projektledare \n● Huvudutvecklare \n● Gränssnittsdesigner \n● Underhållare</string>
   <string name="varun_summary">● Huvudutvecklare \n● Gränssnittsdesigner \n● Underhållare</string>
   <string name="akhil_summary">● Utvecklare \n● Underhållare \n●Scriptmästare</string>
   <string name="brian_summary">● Utvecklare \n● Underhållare</string>
@@ -161,6 +161,7 @@
   <string name="rr_power_summary">Anpassa dämpningen och genomskinligheten i gränssnittet för Power-menyn</string>
   <string name="lockscreen_weather_summary">Anpassa väderlayout på låsskärmen</string>
   <string name="system_app_remover_summary">Ta bort onödiga systemappar</string>
+  <string name="rr_updater_summary">Sök efter OTA-uppdateringar och andra länkar</string>
   <!-- Manage applications: show substratum overlays -->
   <string name="menu_show_substratum">Visa överlager</string>
   <string name="menu_hide_substratum">Dölj överlager</string>
@@ -172,6 +173,7 @@
   <string name="activity_close_title">Aktivitet - Stäng animering</string>
   <string name="task_open_title">Uppgift - Öppna animering</string>
   <string name="task_open_behind_title">Aktivitet öppna bakom animering</string>
+  <string name="task_close_title">Stänganimation för uppgift</string>
   <string name="animation_duration_title">Tidsintervall för animering</string>
   <string name="animation_duration_default">Standard</string>
   <string name="lv_dur_default">Standard</string>
@@ -329,6 +331,8 @@
   <string name="color_picker_help_ab_menu_title">Menyknapp:</string>
   <string name="color_picker_help_ab_menu_reset_title">Nollställ:</string>
   <string name="color_picker_help_ab_menu_favorites_title">Visa/dölj favoriter:</string>
+  <string name="color_picker_help_ab_menu_help_title">Visa/göm hjälp:</string>
+  <string name="color_picker_help_ab_menu_help_summary">Visar/gömmer den här hjälpskärmen.</string>
   <string name="color_picker_help_colors_title">Färger:</string>
   <string name="color_picker_help_picker_view_title">Färgpanel:</string>
   <string name="color_picker_help_color_buttons_title">Färgknappar:</string>
@@ -349,6 +353,8 @@
   <string name="power_menu_animation_slide">Glid</string>
   <string name="power_menu_animation_fly">Glöd</string>
   <string name="power_menu_animation_card">3D</string>
+  <string name="power_menu_animation_translucent_top">Genomskinlig (längst upp)</string>
+  <string name="power_menu_animation_translucent_bottom">Genomskinlig (längst ner)</string>
   <string name="rr_qs_title">Snabbinställningar</string>
   <string name="rr_battery_title">Batteri</string>
   <string name="rr_qs_animation">Snabbanimationer</string>
@@ -439,6 +445,8 @@
   <string name="trigger_width_title">Bredd på sidostapel</string>
   <string name="trigger_width_summary">Justera bredden på stapeln</string>
   <string name="picker_activities">Aktiviteter</string>
+  <string name="select_custom_app_title">Välj anpassad app</string>
+  <string name="select_custom_activity_title">Välj anpassad aktivitet</string>
   <string name="profile_applist_title">Appar</string>
   <string name="ga_0">0px</string>
   <string name="ga_1">1px</string>
@@ -489,6 +497,10 @@
   <string name="double_tap_sleep_anywhere_summary">Dubbeltryck på låsskärmen för att få enheten att somna</string>
   <!-- Battery Bar -->
   <string name="battery_icon">Stil för batteriikon</string>
+  <string name="battery_not_title">Batteri-ikon i aviseringar</string>
+  <string name="battery_bar">Batterifält</string>
+  <string name="battery_bar_animate_title">Animation vid laddning</string>
+  <string name="battery_bar_style_regular">Vanlig</string>
   <string name="battery_bar_low_color">Färg vid låg nivå</string>
   <string name="battery_bar_hide">Göm</string>
   <string name="battery_bar_statusbar">Statusfält</string>
@@ -546,11 +558,13 @@
   <string name="shortcut_action_help_button">knapp</string>
   <string name="shortcut_action_help_app">app</string>
   <string name="shortcuts_applications">Appar</string>
+  <string name="shortcuts_select_custom_app_title">Välj anpassad applikation</string>
   <string name="shortcuts_icon_picker_type">Välj ikontyp:</string>
   <string name="shortcuts_icon_default">Standard</string>
   <string name="shortcuts_icon_presets">Systemikoner</string>
   <string name="shortcuts_icon_custom">Galleri</string>
   <string name="shortcuts_icon_picker_choose_icon_title">Välj ikon</string>
+  <string name="image_exceeds_max_allowed_size">Bilden får icke överstiga 512x512</string>
   <string name="lockscreen_shortcuts_category">Genvägar</string>
   <string name="keyguard_torch_title">Låsskärm - Ficklampa</string>
   <!-- Lockscreen shortcuts -->
@@ -632,8 +646,10 @@
   <string name="shortcut_action_select_action_longpress">Välj långtrycksåtgärd:</string>
   <string name="shortcut_action_select_action">Välj åtgärd:</string>
   <string name="shortcut_action_select_action_newaction">Välj ny åtgärd:</string>
+  <string name="shortcut_action_reset">Återställ</string>
   <string name="shortcut_action_add">Lägg till</string>
   <string name="shortcut_action_warning">Varning</string>
+  <string name="shortcut_action_help_shortcut">genväg</string>
   <string name="shortcut_action_help_button">knapp</string>
   <string name="shortcut_action_help_app">app</string>
   <string name="shortcut_picker_choose_longpress_action">Välj långtrycksåtgärd:</string>
@@ -671,14 +687,24 @@
   <string name="ebay">Ebay</string>
   <string name="email">E-post</string>
   <string name="evernote">Evernote</string>
+  <string name="explorer">Explorer</string>
   <string name="falcon">Falcon</string>
   <string name="fb">Facebook</string>
   <string name="firefox">Firefox</string>
+  <string name="googledocs">Google Dokument</string>
+  <string name="googlewallet">Google Plånbok</string>
   <string name="line">Linje</string>
+  <string name="mic">Mikrofon</string>
+  <string name="rootexplorer">Rot-utforskare</string>
+  <string name="sim">Sim</string>
   <string name="teamviewer">TeamViewer</string>
   <string name="weather">Väder</string>
+  <string name="googletalk">Google Talk</string>
   <string name="meebo">Meebo</string>
   <string name="maps2">Maps2</string>
+  <string name="memorycleaner">Minnesrensare</string>
+  <string name="navigation">Navigering</string>
+  <string name="pulse">Pulsera</string>
   <string name="shazam">Shazam</string>
   <string name="swiftkey">Swiftkey</string>
   <string name="tmobile">Tmobile</string>
@@ -799,6 +825,7 @@
   <string name="volbtn_cursor_control_off">Inaktiverad</string>
   <string name="power_end_call_title">Avsluta samtal</string>
   <string name="swap_volume_buttons_title">Omorientera</string>
+  <string name="button_wake_title">Väck upp enhet</string>
   <string name="home_answer_call_title">Besvara samtal</string>
   <!-- Key backlight -->
   <string name="button_backlight_title">Bakgrundsbelysning</string>
@@ -806,20 +833,28 @@
   <string name="keyboard_backlight_enabled">Lys upp tangentbord</string>
   <string name="backlight_timeout_unlimited">Stäng inte av</string>
   <string name="backlight_summary_disabled">Inaktiverad</string>
+  <string name="backlight_summary_enabled_with_timeout">Aktiverad för <xliff:g id="timeout">%s</xliff:g></string>
   <string name="backlight_summary_enabled">Aktiverad</string>
   <!-- Buttons - Enable navbar -->
+  <string name="disable_navkeys_title">Inaktivera hårdvarutangenter</string>
+  <string name="disable_navkeys_summary">Aktivera/Inaktivera hårdvaruknappar i enheter som har stöd för hårdvarutangenter</string>
   <!-- Navigation Bar -->
   <string name="navigation_bar_category">Navigeringsfält</string>
+  <string name="navigation_bar_title">Knappar och utformning</string>
+  <string name="navigation_bar_left_title">Läge för vänsterhänta</string>
   <!-- Power menu -->
   <string name="power_menu_title">Avstängningsmeny</string>
   <string name="power_menu_reboot_title">Omstartsmeny</string>
   <string name="power_menu_screenshot_title">Skärmdump</string>
   <string name="power_menu_airplane_title">Flygplansläge</string>
+  <string name="power_menu_users_title">Användarväxlare</string>
   <string name="power_menu_bug_report_title">Felrapport</string>
   <string name="power_menu_sound_title">Ljudpanel</string>
   <string name="power_menu_screenrecord_title">Skärminspelning</string>
   <string name="power_menu_torch">Ficklampa</string>
+  <string name="power_menu_onthego_title">På väg-läge</string>
   <string name="power_menu_emergency_title">Nödknapp</string>
+  <string name="power_menu_bug_report_disabled">Buggrapportering är avstängt i utvecklingsinställningarna</string>
   <string name="volume_answer_call_title">Besvara samtal</string>
   <!-- Description of setting that controls gesture to open camera by double tapping the power button [CHAR LIMIT=NONE] -->
   <!-- Media art -->
@@ -972,11 +1007,14 @@
   <string name="status_bar_weather_font_medium">Medium</string>
   <string name="status_bar_weather_font_medium_italic">Medium kursiv</string>
   <string name="status_bar_weather_font_black">Svart</string>
+  <string name="status_bar_weather_font_black_italic">Svart kursiv</string>
   <string name="weather_settings_title">Väder</string>
   <!-- Lockscreen weather -->
   <string name="lockscreen_weather_title">Väder</string>
   <string name="lock_screen_weather_settings_title">Väderalternativ</string>
   <string name="weather_show_weather_title">Visa väder</string>
+  <string name="weather_show_location_title">Visa plats</string>
+  <string name="weather_show_location_summary">Aktivera att visa platsen</string>
   <string name="weather_show_timestamp_title">Visa tidsstämpel</string>
   <string name="weather_condition_icon_monochrome_title">Monokrom</string>
   <string name="weather_condition_icon_colored_title">Färgad</string>
@@ -986,6 +1024,8 @@
   <string name="position_centered_title">Centrerad</string>
   <string name="hidden_title">Dold</string>
   <string name="weather_cat_notifications_title">Aviseringar</string>
+  <string name="weather_hide_panel_title">Göm väderpanel</string>
+  <string name="weather_hide_panel_dlg_title">Välj när väderpanelen ska vara gömd</string>
   <string name="weather_hide_panel_auto_title">Auto</string>
   <string name="weather_hide_panel_custom_title">Anpassad</string>
   <string name="weather_hide_panel_never_title">Aldrig</string>
@@ -1010,16 +1050,26 @@
   <string name="clear_animation_style">Rensa alla animeringar</string>
   <string name="button1">Standard</string>
   <string name="button3">Graf</string>
+  <string name="button4">Lodräta rader 1</string>
+  <string name="button5">Lodräta rader 2</string>
   <string name="button6">Urklipp </string>
   <string name="button7">Färga </string>
   <string name="button8">Horisontella linjer</string>
   <string name="button9">Cirkulär kryssruta </string>
   <string name="button10">Svep för att radera </string>
   <string name="button11">Zzzzz</string>
+  <string name="button13">Gilla-knapp</string>
+  <string name="button15">Klocka </string>
   <string name="button19">Lager</string>
+  <string name="button20">Arkiv </string>
   <string name="button23">Google</string>
   <string name="button26">Timer</string>
+  <string name="button27">Resurrection</string>
+  <string name="button28">Stock-Android</string>
+  <string name="button29">Resurrection Lollipop</string>
   <string name="button30">Android N</string>
+  <string name="animation0">Rotering </string>
+  <string name="animation10">Tona ut långsamt </string>
   <string name="animation12">Tona ut</string>
   <string name="animation15">Snabb Rotation</string>
   <!-- OmniSwitch -->
@@ -1042,6 +1092,7 @@
   <string name="less_notification_sounds_5m">5 minuter</string>
   <!-- Development Settings -->
   <!-- ADB always notify -->
+  <string name="rr_trans_title">Aviseringspanel</string>
   <string name="power">Ström</string>
   <!-- QS shade transparency -->
   <!-- QS header transparency -->
@@ -1069,7 +1120,9 @@
   <string name="qs_rows_landscape_title">Rader (liggande)</string>
   <string name="qs_columns_title">Kolumner</string>
   <!-- Battery saver color -->
+  <string name="status_bar_rr_logo_color">Logotypfärg</string>
   <string name="status_bar_logo">Resurrection logotyp</string>
+  <string name="status_bar_rr_logo_position">Plats för logotyp</string>
   <string name="status_bar_logo_position_right">Höger</string>
   <string name="status_bar_logo_position_left">Vänster</string>
   <string name="status_bar_logo_position_center">Centrera</string>
@@ -1082,7 +1135,9 @@
   <string name="status_bar_weather_image_color_title">Bildfärg</string>
   <string name="sb_weather_ic_title">Ikonpaket</string>
   <string name="rr_config_n">Nougat</string>
+  <string name="rr_config_mm">Klassisk</string>
   <!-- Status bar - double tap to sleep -->
+  <string name="status_bar_double_tap_to_sleep_title">Dubbeltryck för att sova</string>
   <!-- BT easy toggle -->
   <!-- Battery Saver easy toggle -->
   <!-- Location easy toggle -->
@@ -1091,6 +1146,7 @@
   <!-- Circle app bar -->
   <!-- Breathing Notifications -->
   <!-- Navigation Bar -->
+  <string name="navigation_category">Navigering</string>
   <string name="navbar_interface_title">Gränssnitt</string>
   <string name="navbar_general_title">Avancerat</string>
   <string name="info_pref_note_title">Anteckning</string>
@@ -1174,40 +1230,11 @@
   <string name="colors_title">Färger</string>
   <!-- Superuser indicator on status bar -->
   <string name="show_su_indicator_title">SU indikator</string>
-  <!-- PA Pie control -->
-  <string name="reset_android">Android</string>
-  <string name="pa_pie_control_title">Paj - Kontroller</string>
-  <string name="pa_pie_control_enable_title">Aktivera Pajkontroll</string>
-  <string name="pa_pie_style_title">Paj - Stil</string>
-  <string name="pa_pie_size_title">Paj - Storlek</string>
-  <string name="pa_pie_size_small">Liten</string>
-  <string name="pa_pie_size_large">Stor</string>
-  <string name="pa_pie_size_gigantic">Gigantisk</string>
-  <string name="pa_pie_size_monster">Monster</string>
-  <string name="pa_pie_size_enormous">Enorm</string>
-  <string name="pa_pie_mode_default">Standard</string>
+  <!-- Pie -->
   <string name="pa_pie_gravity_title">Paj - Gravitation</string>
   <string name="pa_pie_gravity_summary">Välj den plats där pajen kommer att placeras på</string>
   <string name="pa_pie_gravity_right">Höger</string>
   <string name="pa_pie_gravity_left">Vänster</string>
-  <string name="pa_pie_angle_small">Liten</string>
-  <string name="pa_pie_angle_huge">Stor</string>
-  <string name="pa_pie_angle_super">Enorm</string>
-  <string name="pa_pie_gap_none">Ingen</string>
-  <string name="pa_pie_gap_small">Liten</string>
-  <string name="pa_pie_gap_huge">Jättestor</string>
-  <string name="pa_pie_mode_quick">Snabb</string>
-  <string name="pa_pie_mode_default">Standard</string>
-  <string name="pa_pie_mode_slow">Långsam</string>
-  <string name="pa_pie_lastapp_title">Senaste app</string>
-  <string name="pa_pie_notifications_title">Aviseringar</string>
-  <string name="pa_pie_screenshot_title">Skärmdump</string>
-  <string name="pa_pie_color_title">Paj - Färginställningar</string>
-  <string name="pa_pie_color_style_title">Paj - Färgstil</string>
-  <string name="pa_pie_background_title">Bakgrundsfärg</string>
-  <string name="pa_pie_status_clock_title">Färg på klocka</string>
-  <string name="pa_pie_always_right_title">Paj - Alltid till höger</string>
-  <string name="pa_pie_always_right_summary">Paj kommer alltid visas till höger i landskapsläge</string>
   <!-- Heads up switch -->
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Time-out</string>
@@ -1400,4 +1427,11 @@
   <string name="button_light_press_title">Lys upp knappar vid användning av ficklampa</string>
   <string name="button_light_press_summary_off">Knappar tänds när som helst när skärmingång upptäcks.</string>
   <string name="button_light_press_summary_on">Knapparna lyser endast om hårdvarutangenter trycks.</string>
+  <!-- ANBI -->
+  <!-- Pocket judge -->
+  <!-- Sensor block per-package -->
+  <!-- Burn in protection -->
+  <!-- Qs easy tile add -->
+  <!-- Color engine -->
+  <string name="default_string">Standard</string>
 </resources>

@@ -45,6 +45,7 @@
   <string name="github_varund7726">https://github.com/varund7726</string>
   <string name="github_akhilnarang">https://github.com/akhilnarang</string>
   <string name="github_bdogg718k">https://github.com/bdogg718k</string>
+  <string name="github_apascual89">https://github.com/apascual89</string>
   <string name="rr">الروابط</string>
   <string name="rr_website_title">موقع ويب</string>
   <string name="rr_website_summary">احصل على المزيد من المعلومات حول نظام تشغيل ريمكس القيامة</string>
@@ -64,8 +65,9 @@
   <string name="rr_ls_ui">قفل واجهة المستخدم</string>
   <string name="rr_ls_security">الأمان</string>
   <string name="updater_title">تحديثات</string>
-  <string name="altan_summary">● مؤسس \n● المشروع زعيم \n● الرأس المطور \n● قرينة مصمم \n● معيل</string>
+  <string name="altankrk_summary">شريك مؤسس \n● المطور الرئيسي \n● مصمم تجربة المستخدم \n● المعيل</string>
   <string name="varun_summary">● رئيس المطور \n● قرينة مصمم \n● معيل</string>
+  <string name="andres_summary">● المطور \n● المعيل</string>
   <string name="akhil_summary">●المطور \n ●المعيل \n ●سيد النص</string>
   <string name="brian_summary">● المطور \n● المعيل</string>
   <string name="device_maintainers_title">الأجهزة و المشرفين</string>
@@ -132,6 +134,7 @@
   <string name="system_animations">مؤثرات النظام الحركية</string>
   <string name="rr_ui_title">واجهة المستخدم</string>
   <string name="rr_dash_board_title">لوحة الإعدادات</string>
+  <string name="rr_fp_title">إعدادات البصمة</string>
   <string name="recents_type_title">نوع الحديثة</string>
   <string name="recents_stock">AOSP الأصلي</string>
   <string name="recents_omniswitch">Omniswitch</string>
@@ -187,6 +190,7 @@
   <string name="system_app_remover_summary">إحذف تطبيقات النظام غير الضرورية</string>
   <string name="rr_updater_summary">إفحص التحديثات عبر الهواء وروابط أخرى</string>
   <string name="rr_notif_settings_summary">خصص مظهر تنبيهاتك في لوحة التنبيهات</string>
+  <string name="rr_fp_summary">تخصيص عدة خيارات لمستشعر البصمة</string>
   <!-- Manage applications: show substratum overlays -->
   <string name="filter_substratum_apps">طبقات Substratum</string>
   <string name="menu_show_substratum">أظهر الطبقات</string>
@@ -321,6 +325,7 @@
   <string name="force_expanded_notifications_summary">متاح فقط للتطبيقات التي تدعم التنبيهات الموسعة</string>
   <!-- Disabling FC notifications -->
   <string name="disable_fc_notifications_title">تعطيل إعلامات FC</string>
+  <string name="disable_fc_notifications_summary">سيتم إخفاء جميع إشعارات الإغلاق الإجباري للتطبيقات</string>
   <!-- Disabling immersive mode messages -->
   <string name="disable_immersive_message_title">تعطيل رسائل وضع غامرة</string>
   <string name="disable_immersive_message_summary">هذا وسوف إخفاء كل غامرة وضع الرسائل</string>
@@ -1472,6 +1477,8 @@
   <string name="navbar_button_color">أزرار شريط التنقل</string>
   <string name="navbar_button_custom_icon_switch_title">أضف مرشح لوني لأزرار التطبيق</string>
   <string name="icon_pack_picker_dialog_title">حزم الرموز</string>
+  <string name="navigation_bar_left_title">وضع اليد اليسرى</string>
+  <string name="navigation_bar_left_summary">إظهار شريط التنقل على جانب اليد اليسرى في الوضع الأفقي</string>
   <string name="invalid_icon_from_uri">غير قادر على تحميل الصور من مزود المحتوى</string>
   <string name="picker_activities">النشاطات</string>
   <string name="select_custom_app_title">إختر تطبيقاً معيناً</string>
@@ -1607,6 +1614,10 @@
   <string name="smartbar_config_backup_error_toast">خطأ بحفظ حالة الشريط الذكي</string>
   <string name="smartbar_config_restore_error_toast">خطأ بإستعادة حالة الشريط الذكي</string>
   <string name="navbar_buttons_alpha_title">شفافية الأزرار</string>
+  <string name="smartbar_longpress_delay_title">تأخير الضغط الطويل على الزر</string>
+  <string name="smartbar_longpress_delay_summary">تعيين الوقت الذي سينتظره النظام قبل تنفيذ إجراء الضغط الطويل</string>
+  <string name="smartbar_longpress_delay_default">التأخير الافتراضي (سريع)</string>
+  <string name="smartbar_longpress_delay_normal">تأخير طبيعي</string>
   <string name="rr_navbar_settings">شريط التنقل</string>
   <!--Custom logos-->
   <string name="rr_custom_logo_summary">إختر بين رموز/شعارات شريط حالة مخصصة متعددة</string>
@@ -1694,72 +1705,25 @@
   <!-- Superuser indicator on status bar -->
   <string name="show_su_indicator_title">محدد المستخدم الخارق</string>
   <string name="show_su_indicator_summary">أظهر محدد المستخدم الخارق على شريط الحالة عندما تكون جلسة نشطة</string>
-  <!-- PA Pie control -->
-  <string name="reset_paranoid">Resurrection</string>
-  <string name="reset_android">أندرويد</string>
-  <string name="pa_piecontrol_settings_summary">خصص أهداف الفطيرة، النمط، الحجم واللون</string>
-  <string name="pa_pie_control_title">تحكم الفطيرة</string>
-  <string name="pa_pie_control_enable_title">فعّل تحكم الفطيرة</string>
-  <string name="pa_pie_targets_title">أهداف الفطيرة</string>
-  <string name="pa_pie_style_title">نمط الفطيرة</string>
-  <string name="pa_pie_menu_title">أظهر دوما زر القائمة</string>
-  <string name="pa_pie_menu_summary">إن كان سيتم عرض زر القائمة دوماً أم لا، حتى عند عدم الحاجة له</string>
-  <string name="pa_pie_size_title">حجم الفطيرة</string>
-  <string name="pa_pie_size_summary">حدد حجم تحكم الفطيرة</string>
-  <string name="pa_pie_size_small">صغير</string>
-  <string name="pa_pie_size_default">إفتراضي</string>
-  <string name="pa_pie_size_large">كبير</string>
-  <string name="pa_pie_size_gigantic">عملاق</string>
-  <string name="pa_pie_size_monster">وحش</string>
-  <string name="pa_pie_size_enormous">هائل</string>
-  <string name="pa_pie_mode_default">إفتراضي</string>
+  <!-- Pie -->
+  <string name="pie_theme_mode_title">السمة</string>
+  <string name="pie_auto">تلقائي</string>
+  <string name="pie_white">أبيض</string>
+  <string name="pie_dark">غامق</string>
+  <string name="pie_battery_title">مؤشر مستوى البطارية</string>
+  <string name="pie_battery_text">نص فقط</string>
+  <string name="pie_battery_circle">دائرة فقط</string>
+  <string name="pie_battery_both">كلاهما</string>
+  <string name="pie_status_indicator">مؤشر الشبكة</string>
+  <string name="pie_status_wifi">واي فاي فقط</string>
+  <string name="pie_status_mobile">شبكة الجوال فقط</string>
+  <string name="pie_status_none">لا شيء</string>
+  <string name="pie_status_both">كلاهما</string>
   <string name="pa_pie_gravity_title">جاذبية الفطيرة</string>
   <string name="pa_pie_gravity_summary">إختر مكان وضع الفطيرة</string>
   <string name="pa_pie_gravity_bottom">الأسفل</string>
   <string name="pa_pie_gravity_right">اليمين</string>
   <string name="pa_pie_gravity_left">اليسار</string>
-  <string name="pa_pie_gap_title">فجوة البنود</string>
-  <string name="pa_pie_gap_summary">إضبط الفجوة التي ستفصل بين عناصر الفطيرة</string>
-  <string name="pa_pie_angle_title">زاوية الفطيرة</string>
-  <string name="pa_pie_angle_summary">إضبط زاوية حواف الفطيرة من الإرفاق</string>
-  <string name="pa_pie_angle_none">لا شيء (قديم)</string>
-  <string name="pa_pie_angle_small">صغير</string>
-  <string name="pa_pie_angle_big">عادي (إفتراضي)</string>
-  <string name="pa_pie_angle_huge">كبير</string>
-  <string name="pa_pie_angle_super">ضخم</string>
-  <string name="pa_pie_gap_none">لا شيء</string>
-  <string name="pa_pie_gap_small">صغيرة</string>
-  <string name="pa_pie_gap_big">كبيرة (إفتراضي)</string>
-  <string name="pa_pie_gap_huge">ضخمة</string>
-  <string name="pa_pie_mode_title">نمط الفطيرة</string>
-  <string name="pa_pie_mode_summary">أدر كيفية التعامل مع المؤثرات الحركية وإضافات الحالة</string>
-  <string name="pa_pie_mode_bare">مُجرّد</string>
-  <string name="pa_pie_mode_quick">سريع</string>
-  <string name="pa_pie_mode_default">إفتراضي</string>
-  <string name="pa_pie_mode_slow">بطيء</string>
-  <string name="pa_pie_lastapp_title">آخر تطبيق</string>
-  <string name="pa_pie_lastapp_summary">فعّل زر آخر تطبيق</string>
-  <string name="pa_pie_killtask_title">قتل المهمة</string>
-  <string name="pa_pie_killtask_summary">فعل زر قتل المَهمة</string>
-  <string name="pa_pie_notifications_title">التنبيهات</string>
-  <string name="pa_pie_notifications_summary">فعّل زر التنبيهات</string>
-  <string name="pa_pie_settings_panel_title">لوحة الإعدادات السريعة</string>
-  <string name="pa_pie_settings_panel_summary">فعّل زر توسيع لوحة الإعدادات السريعة</string>
-  <string name="pa_pie_screenshot_title">لقطة الشاشة</string>
-  <string name="pa_pie_screenshot_summary">فعّل زر لقطة الشاشة</string>
-  <string name="pa_pie_color_title">إعدادات لون الفطيرة</string>
-  <string name="pa_pie_color_style_title">نمط لون الفطيرة</string>
-  <string name="pa_pie_background_title">لون الخلفية</string>
-  <string name="pa_pie_select_title">لون الإختيار</string>
-  <string name="pa_pie_outlines_title">لون الخطوط الخارجية</string>
-  <string name="pa_pie_status_clock_title">لون الساعة</string>
-  <string name="pa_pie_status_title">لون الحالة</string>
-  <string name="pa_pie_chevron_title">لون Chevron</string>
-  <string name="pa_pie_juice_title">لون عصير البطارية</string>
-  <string name="pa_pie_button_color">لون الزر</string>
-  <string name="pa_pie_button_color_title">لون الأزرار</string>
-  <string name="pa_pie_always_right_title">الفطيرة دوماً على اليمين</string>
-  <string name="pa_pie_always_right_summary">الفطيرة ستُعرض دوماً على اليمين أثناء الوضع الأفقي</string>
   <!-- Heads up switch -->
   <string name="heads_up_switch_title">الرؤوس العلوية</string>
   <string name="heads_up_switch_summary">تبديل الرؤوس العلوية عام، وليس لكل تطبيق.</string>
@@ -1796,6 +1760,7 @@
   <string name="screenshot_options_category">خيارات لقطة الشاشة</string>
   <string name="screenshot_delay_title">تأخير لقطة الشاشة</string>
   <string name="screenshot_delay_summary">إضبط الوقت لـ متى سيتم تصوير اللقطة</string>
+  <string name="screenshot_options_summary">تعديل سمات لقطة الشاشة كالوقت، التأخير، النوع إلخ</string>
   <!-- Interface -->
   <!--Screenshot crop and share -->
   <string name="screenshot_crop_and_share_title">إقتصاص ومشاركة اللقطة</string>
@@ -2274,4 +2239,11 @@
   <string name="quick_pulldown_fp_summary">وسّع لوحة الإعدادات السريعة بسحبة واحدة فقط لحساس البصمة</string>
   <string name="recents_lock_icon_title">رمز القفل</string>
   <string name="recents_lock_icon_summary">أظهر قفل الحديثة لرمز المهمة في الترويسة</string>
+  <!-- ANBI -->
+  <!-- Pocket judge -->
+  <!-- Sensor block per-package -->
+  <!-- Burn in protection -->
+  <!-- Qs easy tile add -->
+  <!-- Color engine -->
+  <string name="default_string">افتراضي</string>
 </resources>

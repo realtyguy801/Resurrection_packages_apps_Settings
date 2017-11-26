@@ -45,6 +45,7 @@
   <string name="github_varund7726">https://github.com/varund7726</string>
   <string name="github_akhilnarang">https://github.com/akhilnarang</string>
   <string name="github_bdogg718k">https://github.com/bdogg718k</string>
+  <string name="github_apascual89">https://github.com/apascual89</string>
   <string name="rr">Enlaces</string>
   <string name="rr_website_title">Sitio web</string>
   <string name="rr_website_summary">Conseguír más información sobre Resurrection Remix OS</string>
@@ -64,10 +65,15 @@
   <string name="rr_ls_ui">Interfaz bloqueada</string>
   <string name="rr_ls_security">Seguridad</string>
   <string name="updater_title">Actualizaciones</string>
-  <string name="altan_summary">● Fundador \n● Líder del proyecto \n● Desarrollador jefe \n● Diseñador UX \n● Encargado de mantener</string>
+  <string name="altankrk_summary">● CO-Fundador \n● Desarrollador principal \n● Diseñador de UX \n● Encargado de mantenimiento</string>
   <string name="varun_summary">● Desarrollador principal \n● Diseñador de UX \n● Mantenedor</string>
+  <string name="andres_summary">● Desarrollador \n● Encargado de mantenimiento</string>
   <string name="akhil_summary">● Desarrollador \n● Mantenedor \n● Maestro de scripts</string>
   <string name="brian_summary">● Desarrollador \n● Encargado de mantener</string>
+  <string name="christopher_kardas_summary">● Moderador \n● Editor \n● Colaborador</string>
+  <string name="matt_summary">● Moderador \n● Editor \n● Colaborador</string>
+  <string name="justen_summary">● Moderador \n● Editor\n● Colaborador</string>
+  <string name="support_team_title">Etiqueta del Moderador</string>
   <string name="device_maintainers_title">Dispositivos y Mantenedores</string>
   <string name="device_maintainers_title_summary">Lista de dispositivos y sus mantenedores de RR-OS oficiales</string>
   <string name="maintainers_note_title">Nota</string>
@@ -1706,72 +1712,29 @@ https://plus.google.com/communities/109352646351468373340</string>
   <!-- Superuser indicator on status bar -->
   <string name="show_su_indicator_title">Indicador de superusuario</string>
   <string name="show_su_indicator_summary">Mostrar indicador de superusuario en cuando una sesión está activa la barra de estado</string>
-  <!-- PA Pie control -->
-  <string name="reset_paranoid">Resurrection</string>
-  <string name="reset_android">Android</string>
-  <string name="pa_piecontrol_settings_summary">Personalizar color, estilo, tamaño y objetivos de pie</string>
-  <string name="pa_pie_control_title">Control Pie</string>
-  <string name="pa_pie_control_enable_title">Habilita los controles Pie</string>
-  <string name="pa_pie_targets_title">Acciones del Control Pie</string>
-  <string name="pa_pie_style_title">Estilo de Pie</string>
-  <string name="pa_pie_menu_title">Mostrar siempre el botón de menú</string>
-  <string name="pa_pie_menu_summary">El botón de menú debe siempre ser mostrado, incluso cuando no es necesario</string>
-  <string name="pa_pie_size_title">Tamaño de Pie</string>
-  <string name="pa_pie_size_summary">Definir el tamaño de los controles Pie</string>
-  <string name="pa_pie_size_small">Pequeño</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_size_large">Grande</string>
-  <string name="pa_pie_size_gigantic">Gigante</string>
-  <string name="pa_pie_size_monster">Monstruoso</string>
-  <string name="pa_pie_size_enormous">Enorme</string>
-  <string name="pa_pie_mode_default">Por defecto</string>
+  <!-- Pie -->
+  <string name="pie_enable_title">Habilitar el control para Pie</string>
+  <string name="pie_settings">Configuración de Pie</string>
+  <string name="pie_enable_title">Habilitar el control para Pie</string>
+  <string name="pie_settings_summary">Ajusta Pie a tu gusto</string>
+  <string name="pie_theme_mode_title">Tema</string>
+  <string name="pie_auto">Automático</string>
+  <string name="pie_white">Blanco</string>
+  <string name="pie_dark">Oscuro</string>
+  <string name="pie_battery_title">Indicador de batería</string>
+  <string name="pie_battery_text">Solo texto</string>
+  <string name="pie_battery_circle">Solo círculo</string>
+  <string name="pie_battery_both">Ambos</string>
+  <string name="pie_status_indicator">Indicador de red</string>
+  <string name="pie_status_wifi">Solo Wi-Fi</string>
+  <string name="pie_status_mobile">Solo red móvil</string>
+  <string name="pie_status_none">Ninguno</string>
+  <string name="pie_status_both">Ambos</string>
   <string name="pa_pie_gravity_title">Gravedad del Pie</string>
   <string name="pa_pie_gravity_summary">Seleccione la ubicación donde se colocará el Pie</string>
   <string name="pa_pie_gravity_bottom">Abajo</string>
   <string name="pa_pie_gravity_right">Derecha</string>
   <string name="pa_pie_gravity_left">Izquierda</string>
-  <string name="pa_pie_gap_title">Espacio entre ítems</string>
-  <string name="pa_pie_gap_summary">Ajustar el espacio entre los elementos del Pie</string>
-  <string name="pa_pie_angle_title">Ángulo del Pie</string>
-  <string name="pa_pie_angle_summary">Ajustar el ángulo de los bordes del Pie desde el adjunto</string>
-  <string name="pa_pie_angle_none">Ninguno (viejo)</string>
-  <string name="pa_pie_angle_small">Pequeño</string>
-  <string name="pa_pie_angle_big">Normal (predeterminado)</string>
-  <string name="pa_pie_angle_huge">Grande</string>
-  <string name="pa_pie_angle_super">Enorme</string>
-  <string name="pa_pie_gap_none">Ninguno</string>
-  <string name="pa_pie_gap_small">Pequeño</string>
-  <string name="pa_pie_gap_big">Grande (por defecto)</string>
-  <string name="pa_pie_gap_huge">Enorme</string>
-  <string name="pa_pie_mode_title">Estilo de Control Pie</string>
-  <string name="pa_pie_mode_summary">Gestionar cómo se manejarán las animaciones y las adiciones de estado</string>
-  <string name="pa_pie_mode_bare">Vacío</string>
-  <string name="pa_pie_mode_quick">Rápida</string>
-  <string name="pa_pie_mode_default">Por defecto</string>
-  <string name="pa_pie_mode_slow">Lenta</string>
-  <string name="pa_pie_lastapp_title">Última aplicación</string>
-  <string name="pa_pie_lastapp_summary">Activar botón de Última Aplicación</string>
-  <string name="pa_pie_killtask_title">Limpiar tarea</string>
-  <string name="pa_pie_killtask_summary">Habilitar botón para limpiar tareas</string>
-  <string name="pa_pie_notifications_title">Notificaciones</string>
-  <string name="pa_pie_notifications_summary">Habilitar botón de notificaciones</string>
-  <string name="pa_pie_settings_panel_title">Panel de ajustes rápidos</string>
-  <string name="pa_pie_settings_panel_summary">Activar botón de expandir panel de Ajustes Rápidos</string>
-  <string name="pa_pie_screenshot_title">Captura de pantalla</string>
-  <string name="pa_pie_screenshot_summary">Activar botón de captura de pantalla</string>
-  <string name="pa_pie_color_title">Ajustes de color de Control Pie</string>
-  <string name="pa_pie_color_style_title">Estilo de Color Pie</string>
-  <string name="pa_pie_background_title">Color de Fondo</string>
-  <string name="pa_pie_select_title">Selección de Color</string>
-  <string name="pa_pie_outlines_title">Esquemas de color</string>
-  <string name="pa_pie_status_clock_title">Color del reloj</string>
-  <string name="pa_pie_status_title">Colores de Estado</string>
-  <string name="pa_pie_chevron_title">Color de Chevron</string>
-  <string name="pa_pie_juice_title">Color del jugo de la batería</string>
-  <string name="pa_pie_button_color">Color de botón</string>
-  <string name="pa_pie_button_color_title">Color de los botones</string>
-  <string name="pa_pie_always_right_title">Pie siempre en la derecha</string>
-  <string name="pa_pie_always_right_summary">Pie siempre se mostrará a la derecha en modo apaisado</string>
   <!-- Heads up switch -->
   <string name="heads_up_switch_title">Notificacion flotante</string>
   <string name="heads_up_switch_summary">Interruptor para notificaciones emergentes global, no por aplicación.</string>
@@ -2254,6 +2217,7 @@ https://plus.google.com/communities/109352646351468373340</string>
   <!-- In-call DND -->
   <string name="dnd_when_call_title">No molestar en la llamada</string>
   <string name="dnd_when_call_summary">Auto habilitar DND durante las llamadas</string>
+  <string name="battery_light_allow_on_dnd_title">Luz de batería en modo No Molestar</string>
   <string name="no_sim_cluster_switch_title">No ocultar red de sim</string>
   <string name="no_sim_cluster_switch_summary">Ocultar la barra de red si la subscripción de la sim está inactiva y deshabilitada. Si no está desactivada la sim, este toggle no funcionará</string>
   <string name="disable_no_sim_title">Deshabilitar icono de ninguna sim</string>
@@ -2307,4 +2271,41 @@ https://plus.google.com/communities/109352646351468373340</string>
   <string name="button_light_press_summary_on">Botones se encienden sólo si se presionan las teclas de hw.</string>
   <string name="lockscreen_alpha">Bloqueo de Pantalla alfa</string>
   <string name="lockscreen_security_alpha">Seguridad de Bloqueo de Pantalla alfa</string>
+  <!-- ANBI -->
+  <string name="anbi_title">Toque accidental</string>
+  <string name="anbi_summary">Previene la interacción con los botones de navegación mientras se está tocando la pantalla</string>
+  <string name="rr_keys_title">Miscelania</string>
+  <!-- Pocket judge -->
+  <string name="pocket_judge_title">Detección de bolsillo</string>
+  <string name="pocket_judge_summary">Bloquea la pantalla y los botones cuando el dispositivo esté en el bolsillo</string>
+  <!-- Sensor block per-package -->
+  <string name="sensor_block_title">Bloqueo de sensor por paquete</string>
+  <string name="sensor_block_summary">Bloquea el acceso a ciertos sensores de algunas aplicaciones para ahorrar batería.</string>
+  <!-- Burn in protection -->
+  <string name="burnin_protection_title">Protección contra pantalla quemada</string>
+  <string name="burnin_protection_summary">Mover periódicamente los elementos que se muestran de forma permanente en la pantalla para evitar un gasto excesivo de la pantalla en esa área</string>
+  <!-- Qs easy tile add -->
+  <string name="single_tap_tile_add_title">Añadir fácilmente a configuración rápida</string>
+  <string name="single_tap_tile_add_summary">Añadir botones a la configuración rápida desde el editor de configuración rápida simplemente tocando en vez de arrastrarlos</string>
+  <!-- Color engine -->
+  <string name="theme_switch_palette">Cambiar entre colores primarios y de acento</string>
+  <string name="theme_title">Color del motor</string>
+  <string name="theme_summary">Selecciona diferentes colores para tu tema actual</string>
+  <string name="theme_accent_color">Color de acento</string>
+  <string name="theme_primary_color">Principal/Color de fondo</string>
+  <string name="theme">Tema</string>
+  <string name="oms_enabled">Los modos del tema no están disponibles porque actualmente se instala una superposición del tema Substratum. Por favor desinstale la superposición del temas (no deshabilite).</string>
+  <string name="red">Rojo</string>
+  <string name="orange">Ambar</string>
+  <string name="blue">Verde Azulado</string>
+  <string name="green">Verde</string>
+  <string name="yellow">Amarillo</string>
+  <string name="purple">Morado</string>
+  <string name="pink">Rosa</string>
+  <string name="dark">Oscuro</string>
+  <string name="pixel">Pixel</string>
+  <string name="teal">Por defecto</string>
+  <string name="cyan">Cian</string>
+  <string name="grey">Gris</string>
+  <string name="default_string">Por defecto</string>
 </resources>

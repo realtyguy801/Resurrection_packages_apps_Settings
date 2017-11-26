@@ -127,7 +127,6 @@
   <string name="device_n7100">cihaz_n7100</string>
   <string name="device_n7100_summary">N7100 \nMəsul şəxs - Hibin Maheendran </string>
   <string name="device_hlte">cihaz_hlte</string>
-  <string name="device_hlte_summary">hlte \nMəsul şəxs - Mattia Ruggeri</string>
   <string name="device_ha3g">cihaz_ha3g</string>
   <string name="device_ha3g_summary">SM-N900 \nMəsul - Mountaser Halak</string>
   <string name="device_tblte">Galaxy Note Edge</string>
@@ -139,9 +138,7 @@
   <string name="device_i9100">Galaxy S II</string>
   <string name="device_i9100_summary">GT-I9100 \nMəsul şəxs - GreekDragon </string>
   <string name="device_herolte">Galaxy S7</string>
-  <string name="device_herolte_summary">SM-G930F/FD/W8/S/K/L \nMəsul şəxs - Jesse Chan </string>
   <string name="device_hero2lte">Galaxy S7 edge</string>
-  <string name="device_hero2lte_summary">SM-G935F/FD/W8/S/K/L \nMəsul şəxs - Jesse Chan </string>
   <string name="device_fortuna3g">Galaxy Grand Prime</string>
   <string name="device_fortuna3g_summary">SM-G530H \nMəsul şəxs - Hassan Sardar</string>
   <string name="device_fortunave3g">Galaxy Grand Prime</string>
@@ -151,7 +148,6 @@
   <string name="device_grandprimeve3g">Galaxy Grand Prime VE</string>
   <string name="device_grandprimeve3g_summary">SM-G531H \nMəsul şəxs - Hassan Sardar</string>
   <string name="device_j5ltexx">Galaxy J5</string>
-  <string name="device_j5ltexx_summary">SM-J500F/FN/M/G/Y \nMəsul şəxs - SoUnd001 </string>
   <string name="device_i9001">Galaxy S Plus</string>
   <string name="device_i9001_summary">GT-I9001 \nMəsul şəxs - </string>
   <string name="device_w">Samsung Galaxy W I8150</string>
@@ -240,8 +236,6 @@
   <string name="device_4x_summary">LG Optimus \nMəsul şəxs - </string>
   <string name="device_jf">Samsung Galaxy S4 (jflte seriyası)</string>
   <string name="device_jf_summary">i9505 \nMəsul şəxs - Buff99</string>
-  <string name="device_i9500">Samsung Galaxy S4</string>
-  <string name="device_i9500_summary">i9500 \nMəsul şəxs-  </string>
   <string name="device_falcon">Moto G</string>
   <string name="device_falcon_summary">Falcon \nMəsul şəxs - Hasan Okarci</string>
   <string name="device_titan">Moto G 2014</string>
@@ -249,13 +243,11 @@
   <string name="device_osprey">Moto G 2015 </string>
   <string name="device_osprey_summary">Osprey\nMəsul şəxs - Pavan Jadhaw (Arcade)</string>
   <string name="device_athene">Moto G4 Plus</string>
-  <string name="device_athene_summary">athene \nMəsul şəxs - Jleeblanch</string>
   <string name="device_harpia">Moto G4 Play</string>
   <string name="device_harpia_summary">Harpia \nMəsul şəxs - SubhrajyotiSen</string>
   <string name="device_g2_vs980">LG G2 Verizon</string>
   <string name="device_g2_vs980_summary">vs980 \nMaintainer - sixohtew</string>
   <string name="device_g3_tmo">LG G3 T-Mobile</string>
-  <string name="device_g3_tmo_summary">D851 \nMəsul şəxs - Aclegg2011 </string>
   <string name="device_g3">LG G3 Int</string>
   <string name="device_g3_can">LG G3 Canada</string>
   <string name="device_g3_can_summary">D855 \nMəsul şəxs - </string>
@@ -318,7 +310,6 @@
   <string name="device_tomato">Yu Yureka</string>
   <string name="device_tomato_summary">Tomato\nMəsul şəxs - Men_in_black007 (Sanyam Jain)</string>
   <string name="device_jalebi">Yu Yunique</string>
-  <string name="device_jalebi_summary">Jalebi\nMəsul şəxs - Sai Charan</string>
   <string name="device_lettuce">Yu Yuphoria</string>
   <string name="device_sambar">Yu Yutopia</string>
   <string name="device_sambar_summary">Sambar\nMəsul şəxs - Darshan M. (darshan1205)</string>
@@ -345,7 +336,6 @@
   <string name="device_mido">Xiaomi Redmi Note 4</string>
   <string name="device_mido_summary">mido\nMəsul - Sarthak Narang</string>
   <string name="device_hydrogen">Xiaomi Mi Max</string>
-  <string name="device_hydrogen_summary">Hydrogen\nMəsul - sawdoctor</string>
   <string name="device_sprout4">Android One - 4GB variants (1st Gen)</string>
   <string name="device_sprout8">Android One - 8GB variants (1st Gen)</string>
   <string name="device_seed">Android One - 2. Nəsil</string>

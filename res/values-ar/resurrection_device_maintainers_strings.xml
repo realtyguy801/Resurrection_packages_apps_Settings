@@ -26,7 +26,7 @@
   <string name="device_category_lenovo_title">لينوفو</string>
   <string name="device_category_coolpad_title">كول باد</string>
   <string name="device_category_motorola_title">موتورولا</string>
-  <string name="device_category_google_title">جوجل</string>
+  <string name="device_category_google_title">قوقل</string>
   <string name="device_category_oneplus_title">ون بلس</string>
   <string name="device_category_xiaomi_title">شياومي</string>
   <string name="device_category_huawei_title">هواوي</string>
@@ -87,6 +87,7 @@
   <string name="device_surnia">موتو اي 2015 الجيل الثالث 3g</string>
   <string name="device_surnia_summary">Surnia \nMaintainer - El Dainosor</string>
   <string name="device_oneplus">OnePlus One</string>
+  <string name="device_oneplus_summary">باكون \nمعيل - فارون ديت(varund7726)</string>
   <string name="device_find7">OPPO</string>
   <string name="device_find7_summary">Find 7 \nMaintainer - Opposeeker</string>
   <string name="device_find7a">OPPO</string>
@@ -94,8 +95,10 @@
   <string name="device_r7plus">OPPO</string>
   <string name="device_r7plus_summary">R7plus \nMaintainer - Pixelfreak2005</string>
   <string name="device_oneplus2">OnePlus Two</string>
+  <string name="device_oneplus3">ون بلس 3/3t[Unified]</string>
   <string name="device_klte">Galaxy S5</string>
   <string name="device_klte_summary">All klte variants \nMaintainer - ScrawnyB</string>
+  <string name="device_k3gxx">جالكسي اس 5</string>
   <string name="device_n9">Galaxy S5</string>
   <string name="device_n9_summary">Flounder \nMaintainer - sixohtew</string>
   <string name="device_n10">Nexus 10</string>
@@ -106,6 +109,7 @@
   <string name="device_o4x_summary">Int \nMaintainer- </string>
   <string name="device_l9">Optimus L9</string>
   <string name="device_l9_summary">P760-P765-P768 \nMaintainer - </string>
+  <string name="device_sltexx">سامسونج جالكسي ألفا</string>
   <string name="device_serrano3gxx">Galaxy S4 Mini</string>
   <string name="device_serranodsdd">Galaxy S4 Mini</string>
   <string name="device_serranoltexx">Galaxy S4 Mini</string>
@@ -116,7 +120,6 @@
   <string name="device_n7100">Galaxy Note II int</string>
   <string name="device_n7100_summary">N7100 \nMaintainer - Hibin Maheendran </string>
   <string name="device_hlte">Galaxy Note III Qcom</string>
-  <string name="device_hlte_summary">hlte \nMaintainer - Mattia Ruggeri</string>
   <string name="device_ha3g">Galaxy Note 3 Exynos</string>
   <string name="device_ha3g_summary">SM-N900 \nMaintainer - Mountaser Halak</string>
   <string name="device_tblte">Galaxy Note Edge</string>
@@ -128,9 +131,7 @@
   <string name="device_i9100">Galaxy S II</string>
   <string name="device_i9100_summary">GT-I9100 \nMaintainer - GreekDragon </string>
   <string name="device_herolte">Galaxy S7</string>
-  <string name="device_herolte_summary">SM-G930F/FD/W8/S/K/L \nMaintainer - Jesse Chan </string>
   <string name="device_hero2lte">Galaxy S7 edge</string>
-  <string name="device_hero2lte_summary">SM-G935F/FD/W8/S/K/L \nMaintainer - Jesse Chan </string>
   <string name="device_fortuna3g">Galaxy Grand Duos</string>
   <string name="device_fortuna3g_summary">SM-G530H \nMaintainer - Hassan Sardar</string>
   <string name="device_fortunave3g">Galaxy Grand Prime</string>
@@ -140,7 +141,6 @@
   <string name="device_grandprimeve3g">Galaxy Grand Prime VE</string>
   <string name="device_grandprimeve3g_summary">SM-G530H \nMaintainer - Hassan Sardar</string>
   <string name="device_j5ltexx">Galaxy J5</string>
-  <string name="device_j5ltexx_summary">SM-J500F/FN/M/G/Y \nMaintainer - SoUnd001 </string>
   <string name="device_i9001">Galaxy S Plus</string>
   <string name="device_i9001_summary">GT-I9200 \nMaintainer - </string>
   <string name="device_w">Samsung Galaxy W I8150</string>
@@ -226,8 +226,6 @@
   <string name="device_4x_summary">LG Optimus \nMaintainer - </string>
   <string name="device_jf">Samsung Galaxy S4 (jflte series)</string>
   <string name="device_jf_summary">i9505 \nMaintainer - Buff99</string>
-  <string name="device_i9500">Samsung Galaxy S4</string>
-  <string name="device_i9500_summary">i9500 \nMaintainer -  </string>
   <string name="device_falcon">Moto G</string>
   <string name="device_falcon_summary">Falcon \nMaintainer - Hasan Okarci</string>
   <string name="device_titan">Moto G 2014</string>
@@ -235,11 +233,9 @@
   <string name="device_osprey">Moto G 2015 </string>
   <string name="device_osprey_summary">Osprey\nMaintainer - Pavan Jadhaw (Arcade)</string>
   <string name="device_athene">Moto G4 Plus</string>
-  <string name="device_athene_summary">athene \nMaintainer - Jleeblanch</string>
   <string name="device_harpia">Moto G4 Play</string>
   <string name="device_harpia_summary">Harpia \nMaintainer - SubhrajyotiSen</string>
   <string name="device_g3_tmo">LG G3 T-Mobile</string>
-  <string name="device_g3_tmo_summary">D851 \nMaintainer - Aclegg2011 </string>
   <string name="device_g3">LG G3 Int</string>
   <string name="device_g3_can">LG G3 Canada</string>
   <string name="device_g3_can_summary">D852 \nMaintainer - </string>
@@ -301,7 +297,6 @@
   <string name="device_tomato">Yu Yureka</string>
   <string name="device_tomato_summary">Tomato\nMaintainer - Men_in_black007 (Sanyam Jain)</string>
   <string name="device_jalebi">Yu Yunique</string>
-  <string name="device_jalebi_summary">Jalebi\nMaintainer - Sai Charan</string>
   <string name="device_lettuce">Yu Yuphoria</string>
   <string name="device_sambar">Yu Yutopia</string>
   <string name="device_sambar_summary">Sambar\nMaintainer - Darshan M. (darshan1205)</string>
@@ -327,7 +322,6 @@
   <string name="device_mido">Xiaomi Redmi Note 4</string>
   <string name="device_mido_summary">mido\nMaintainer - Sarthak Narang</string>
   <string name="device_hydrogen">Xiaomi Mi Max</string>
-  <string name="device_hydrogen_summary">Hydrogen\nMaintainer - sawdoctor</string>
   <string name="device_sprout4">Android One - 4GB variants (1st Gen)</string>
   <string name="device_sprout8">Android One - 8GB variants (1st Gen)</string>
   <string name="device_seed">Android One - 2nd Gen</string>
@@ -355,6 +349,7 @@
   <string name="device_smp601_summary">SM-P601\nMaintainer - </string>
   <string name="device_huashan">Sony Xperia SP</string>
   <string name="device_huashan_summary">Huashan\nMaintainer - CodeZero, Adrian DC</string>
+  <string name="device_z012d">أسوس زينفون 3</string>
   <string name="device_z00a">Asus Zenfone 2</string>
   <string name="device_z00a_summary">Z00A\nMaintainer - sayeed99</string>
   <string name="device_z008">Asus Zenfone 2</string>
@@ -382,6 +377,7 @@
   <string name="device_bullhead_summary">Bullhead\nMaintainer - Megatron007</string>
   <string name="device_shieldtablet">Nvidia Shield Tablet/K1</string>
   <string name="device_shieldtablet_summary">shieldtablet\nMaintainer - Trafalgar Square</string>
+  <string name="device_nexus7">أسوس Nexus 7 اصدار عام 2013</string>
   <string name="device_google_dragon">Pixel C</string>
   <string name="device_z00t">Asus Zenfone 2 Laser/Selfie (1080p)</string>
   <string name="device_z00t_summary">Z00T\nMaintainer - Fabb2303</string>
@@ -395,6 +391,7 @@
   <string name="device_n5120_summary">n5120 \nMaintainer - Buff99</string>
   <string name="device_paella">BQ Aquaris X5</string>
   <string name="device_paella_summary">Paella\nMaintainer - Darkmet98</string>
+  <string name="device_piccolo">بي كيو أكوارس إم 5</string>
   <string name="device_onyx">OnePlus X</string>
   <string name="device_onyx_summary">Onyx \nMaintainer - Sanjay Varun</string>
   <string name="device_flounder">HTC Nexus 9</string>
@@ -417,4 +414,5 @@
   <string name="device_ville">HTC One S</string>
   <string name="device_ville_summary">Ville \nMaintainer - Moozon</string>
   <string name="device_nubia_nx512j">Nubia Z9 Max</string>
+  <string name="device_helium">شياومي مي ماكس برايم</string>
 </resources>

@@ -22,7 +22,7 @@
   <string name="ok">Ok</string>
   <string name="reset">Resetuj</string>
   <string name="dlg_reset_rr">RR</string>
-  <string name="dlg_reset_android">Domyślna</string>
+  <string name="dlg_reset_android">Domyślne</string>
   <string name="default_string">Domyślne</string>
   <string name="add">Dodaj</string>
   <string name="enabled">Włączono</string>
@@ -45,6 +45,7 @@
   <string name="github_varund7726">https://github.com/varund7726</string>
   <string name="github_akhilnarang">https://github.com/akhilnaranag</string>
   <string name="github_bdogg718k">https://github.com/bdogg718k</string>
+  <string name="github_apascual89">https://github.com/apascual89</string>
   <string name="rr">Linki</string>
   <string name="rr_website_title">Strona internetowa</string>
   <string name="rr_website_summary">Dowiedz się więcej o Resurrection Remix</string>
@@ -64,10 +65,15 @@
   <string name="rr_ls_ui">Wygląd ekranu blokady</string>
   <string name="rr_ls_security">Bezpieczeństwo</string>
   <string name="updater_title">Aktualizacje</string>
-  <string name="altan_summary">● Założyciel \n● Szef projektu \n● Główny deweloper \n● Projektant UX \n● Opiekun</string>
+  <string name="altankrk_summary">● Współzałożyciel \n● Programista główny \n● Projektant UX \n● Opiekun</string>
   <string name="varun_summary">● Główny deweloper \n● Projektant UX \n● Opiekun</string>
+  <string name="andres_summary">● Programista \n● Opiekun</string>
   <string name="akhil_summary">● Deweloper \n● Opiekun \n● Mistrz Javascriptu</string>
   <string name="brian_summary">● Deweloper \n● Opiekun</string>
+  <string name="christopher_kardas_summary">● Moderator \n● Redaktor\n● Pomocnik</string>
+  <string name="matt_summary">● Moderator \n● Redaktor\n● Pomocnik</string>
+  <string name="justen_summary">● Moderator \n● Redaktor\n● Pomocnik</string>
+  <string name="support_team_title">Tag Moderatora</string>
   <string name="device_maintainers_title">Urządzenia i ich opiekunowie</string>
   <string name="device_maintainers_title_summary">Lista urządzeń i ich oficjalnych opiekunów</string>
   <string name="maintainers_note_title">Uwagi</string>
@@ -1705,72 +1711,29 @@
   <!-- Superuser indicator on status bar -->
   <string name="show_su_indicator_title">Wskaźnik Superuser</string>
   <string name="show_su_indicator_summary">Pokaż wskaźnik Superuser gdy sesja jest aktywna</string>
-  <!-- PA Pie control -->
-  <string name="reset_paranoid">Resurrection</string>
-  <string name="reset_android">Android</string>
-  <string name="pa_piecontrol_settings_summary">Dostosuj cele, style, rozmiar i kolor Pie</string>
-  <string name="pa_pie_control_title">Kontrola PIE</string>
-  <string name="pa_pie_control_enable_title">Włącz kontrolę PIE</string>
-  <string name="pa_pie_targets_title">Funkcje Pie</string>
-  <string name="pa_pie_style_title">Styl Pie</string>
-  <string name="pa_pie_menu_title">Zawsze pokazuj przycisk menu</string>
-  <string name="pa_pie_menu_summary">Przycisk menu powinien być zawsze widoczny, nawet gdy nie jest potrzebny</string>
-  <string name="pa_pie_size_title">Rozmiar Pie</string>
-  <string name="pa_pie_size_summary">Zmień rozmiar Pie</string>
-  <string name="pa_pie_size_small">Mały</string>
-  <string name="pa_pie_size_default">Domyślne</string>
-  <string name="pa_pie_size_large">Duży</string>
-  <string name="pa_pie_size_gigantic">Ogromny</string>
-  <string name="pa_pie_size_monster">Olbrzymi</string>
-  <string name="pa_pie_size_enormous">Ogromny</string>
-  <string name="pa_pie_mode_default">Domyślne</string>
+  <!-- Pie -->
+  <string name="pie_enable_title">Włącz kontrolę PIE</string>
+  <string name="pie_settings">Ustawienia PIE</string>
+  <string name="pie_enable_title">Włącz kontrolę PIE</string>
+  <string name="pie_settings_summary">Dostosuj PIE do swoich potrzeb</string>
+  <string name="pie_theme_mode_title">Motyw</string>
+  <string name="pie_auto">Automatycznie</string>
+  <string name="pie_white">Biały</string>
+  <string name="pie_dark">Ciemny</string>
+  <string name="pie_battery_title">Wskaźnik baterii</string>
+  <string name="pie_battery_text">Tylko tekst</string>
+  <string name="pie_battery_circle">Tylko okrąg</string>
+  <string name="pie_battery_both">Oba</string>
+  <string name="pie_status_indicator">Wskaźnik prędkości sieci</string>
+  <string name="pie_status_wifi">Tylko WiFi</string>
+  <string name="pie_status_mobile">Tylko sieć komórkowa</string>
+  <string name="pie_status_none">Brak</string>
+  <string name="pie_status_both">Oba</string>
   <string name="pa_pie_gravity_title">Pozycja Pie</string>
   <string name="pa_pie_gravity_summary">Wybierz miejsce w który ma być umieszczony PIE</string>
   <string name="pa_pie_gravity_bottom">Na dole</string>
   <string name="pa_pie_gravity_right">Z prawej strony</string>
   <string name="pa_pie_gravity_left">Z lewej strony</string>
-  <string name="pa_pie_gap_title">Przerwa pomiędzy elementami</string>
-  <string name="pa_pie_gap_summary">Ustaw odstęp pomiędzy elementami</string>
-  <string name="pa_pie_angle_title">Kąt Pie</string>
-  <string name="pa_pie_angle_summary">Dopasuj kąt Pie krawędzi z załącznika</string>
-  <string name="pa_pie_angle_none">Brak (stary)</string>
-  <string name="pa_pie_angle_small">Mały</string>
-  <string name="pa_pie_angle_big">Normalny (domyślne)</string>
-  <string name="pa_pie_angle_huge">Duży</string>
-  <string name="pa_pie_angle_super">Ogromna</string>
-  <string name="pa_pie_gap_none">Brak</string>
-  <string name="pa_pie_gap_small">Mała</string>
-  <string name="pa_pie_gap_big">Duża (domyślnie)</string>
-  <string name="pa_pie_gap_huge">Ogromna</string>
-  <string name="pa_pie_mode_title">Styl Pie</string>
-  <string name="pa_pie_mode_summary">Zarządzaj, jak animacje i dodatki statusu będą obslugiwane</string>
-  <string name="pa_pie_mode_bare">Bez tła</string>
-  <string name="pa_pie_mode_quick">Szybki</string>
-  <string name="pa_pie_mode_default">Domyślne</string>
-  <string name="pa_pie_mode_slow">Powolne</string>
-  <string name="pa_pie_lastapp_title">Ostatnia aplikacja</string>
-  <string name="pa_pie_lastapp_summary">Włącz przycisk ostatniej aplikacji</string>
-  <string name="pa_pie_killtask_title">Zabij zadanie</string>
-  <string name="pa_pie_killtask_summary">Włącz przycisk zabicia zadania</string>
-  <string name="pa_pie_notifications_title">Powiadomienia</string>
-  <string name="pa_pie_notifications_summary">Włącz przycisk powiadomień</string>
-  <string name="pa_pie_settings_panel_title">Panel szybkich ustawień</string>
-  <string name="pa_pie_settings_panel_summary">Włącz poszerzenie panelu szybkich ustawień</string>
-  <string name="pa_pie_screenshot_title">Zrzut ekranu</string>
-  <string name="pa_pie_screenshot_summary">Włącz przycisk zrzutu ekranu</string>
-  <string name="pa_pie_color_title">Ustawienia kolorów Pie</string>
-  <string name="pa_pie_color_style_title">Styl koloru Pie</string>
-  <string name="pa_pie_background_title">Kolor tła</string>
-  <string name="pa_pie_select_title">Wybór kolorów</string>
-  <string name="pa_pie_outlines_title">Kolor konturu</string>
-  <string name="pa_pie_status_clock_title">Kolor zegara</string>
-  <string name="pa_pie_status_title">Kolor statusu</string>
-  <string name="pa_pie_chevron_title">Kolor naszywki</string>
-  <string name="pa_pie_juice_title">Kolor baterii</string>
-  <string name="pa_pie_button_color">Kolor przycisku</string>
-  <string name="pa_pie_button_color_title">Kolor przycisków</string>
-  <string name="pa_pie_always_right_title">Pie zawsze po prawej</string>
-  <string name="pa_pie_always_right_summary">Pie pojawi się zawsze po prawej stronie w trybie poziomym</string>
   <!-- Heads up switch -->
   <string name="heads_up_switch_title">Wyskakujące powiadomienia</string>
   <string name="heads_up_switch_summary">Przełącz wyskakujące powiadomienia globalnie, nie dla każdej aplikacji z osobna.</string>
@@ -2174,8 +2137,8 @@
   <string name="recent_panel_lefty_mode_title">Pokaż na lewej krawędzi ekranu</string>
   <string name="recent_panel_lefty_mode_summary">Wyświetlaj panel ostatnich aplikacji z lewej strony</string>
   <!-- Fingerprint unlock keystore -->
-  <string name="fp_unlock_keystore_title">Odblokowanie twarzą</string>
-  <string name="fp_unlock_keystore_summary">Odblokuj urządzenie za pomocą linii papilarnych po ponownym uruchomieniu bez kodu PIN/hasła/wzoru\nNote: na własne ryzyko!</string>
+  <string name="fp_unlock_keystore_title">Odblokowywanie odciskiem palca</string>
+  <string name="fp_unlock_keystore_summary">Odblokuj urządzenie za pomocą odcisku palca po ponownym uruchomieniu, bez podawania kodu PIN/hasła/wzoru\nNote: na własne ryzyko!</string>
   <!-- Wired headset ringtone audio focus -->
   <string name="rr_sound_title">Słuchawki</string>
   <string name="rr_sound_summary">Dostosuj ustawienia przewodowego zestawu słuchawkowego</string>
@@ -2253,6 +2216,7 @@
   <!-- In-call DND -->
   <string name="dnd_when_call_title">Nie przerywać połączeń przychodzących</string>
   <string name="dnd_when_call_summary">Automatycznie włącz DND podczas połączeń</string>
+  <string name="battery_light_allow_on_dnd_title">Dioda LED w trybie \"Nie przeszkadzać\"</string>
   <string name="no_sim_cluster_switch_title">Ukryj sieć przy braku karty SIM</string>
   <string name="no_sim_cluster_switch_summary">Ukryj słupki zasięgu gdy karta SIM jest wyłączona lub nieaktywna. Jeśli karta SIM nie jest wyłączona, ten przełącznik nie będzie działać</string>
   <string name="disable_no_sim_title">Wyłącz ikonę braku karty SIM</string>
@@ -2306,4 +2270,41 @@
   <string name="button_light_press_summary_on">Przyciski będą się świecić tylko przy naciskaniu przycisków nawigacyjnych.</string>
   <string name="lockscreen_alpha">Rozmycie ekranu blokady</string>
   <string name="lockscreen_security_alpha">Rozmycie ekranu blokady</string>
+  <!-- ANBI -->
+  <string name="anbi_title">Przypadkowe dotknięcie</string>
+  <string name="anbi_summary">Zapobiegaj przypadkowemu użyciu przycisków nawigacyjnych, gdy dotykasz ekranu</string>
+  <string name="rr_keys_title">Różne</string>
+  <!-- Pocket judge -->
+  <string name="pocket_judge_title">Wykrywanie kieszeni</string>
+  <string name="pocket_judge_summary">Zablokuj funkcje ekranu i przycisków, gdy urządzenie jest w kieszeni</string>
+  <!-- Sensor block per-package -->
+  <string name="sensor_block_title">Blokada czujników dla aplikacji</string>
+  <string name="sensor_block_summary">Blokuj dostęp do niektórych czujników dla części aplikacji, aby oszczędzać baterię</string>
+  <!-- Burn in protection -->
+  <string name="burnin_protection_title">Zabezpieczenie przed zużyciem ekranu</string>
+  <string name="burnin_protection_summary">Co jakiś czas przemieszcza trwale wyświetlane elementy, aby uniknąć nadmiernego zużycia ekranu w danym obszarze</string>
+  <!-- Qs easy tile add -->
+  <string name="single_tap_tile_add_title">Łatwe dodawanie kafelków</string>
+  <string name="single_tap_tile_add_summary">Dodaj szybkie skróty z listy szybkich skrótów poprzez naciśnięcie na nie zamiast przeciągania</string>
+  <!-- Color engine -->
+  <string name="theme_switch_palette">Przełącz pomiędzy kolorami podstawowymi i akcentu</string>
+  <string name="theme_title">Aplikacja Color Engine</string>
+  <string name="theme_summary">Wybierz inne kolory dla aktualnego motywu</string>
+  <string name="theme_accent_color">Kolor akcentu</string>
+  <string name="theme_primary_color">Kolor tła</string>
+  <string name="theme">Motyw</string>
+  <string name="oms_enabled">Nie można zmienić trybów motywu, ponieważ jest zainstalowana nakładka Substratum. Proszę najpierw ODINSTALOWAĆ nakładkę motywu (nie wystarczy wyłączyć).</string>
+  <string name="red">Czerwony</string>
+  <string name="orange">Bursztyn</string>
+  <string name="blue">Morski</string>
+  <string name="green">Zielony</string>
+  <string name="yellow">Żółty</string>
+  <string name="purple">Fioletowy</string>
+  <string name="pink">Różowy</string>
+  <string name="dark">Ciemny</string>
+  <string name="pixel">Pixel</string>
+  <string name="teal">Domyślny</string>
+  <string name="cyan">Cyjan</string>
+  <string name="grey">Szary</string>
+  <string name="default_string">Domyślne</string>
 </resources>
