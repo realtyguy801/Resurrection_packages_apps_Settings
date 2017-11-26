@@ -143,12 +143,6 @@
                 android:summary="%s"
                 android:title="@string/display_vr_pref_title" />
 
-        <PreferenceCategory
-            android:title="@string/theme_title">
-
-            <com.android.settings.display.ThemePreference
-                android:key="theme"
-                android:title="@string/theme" />
-        </PreferenceCategory>
+    </PreferenceCategory>
 
 </PreferenceScreen>
